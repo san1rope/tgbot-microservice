@@ -4,9 +4,9 @@ from datetime import datetime
 from aiohttp import ClientSession
 from telethon import events
 
+from app.api_interface import MessageCreated, FromUser, ChatInfo, APIInterface
 from app.config import Config
 from app.utils import Utils as Ut
-
 
 # @Config.TG_CLIENT.on(events.NewMessage)
 # async def new_message_handler(event):
@@ -25,44 +25,55 @@ from app.utils import Utils as Ut
 
 
 async def main():
-    host = "https://tenerife.chat/chat"
-    url = "/webhook/telegram/create"
+    req_model = MessageCreated(
+        chat_id=-1001234567890,
+        message_id=123456,
+        text="new message text",
+        message_type=1,
+        topic_id=67893,
+        sender=FromUser(
+            id=129381293,
+            first_name="John",
+            username="djqowq",
+            language_code="en"
+        ),
+        chat_info=ChatInfo(
+            title="test group",
+            username="aodjoaewd",
+            type="supergroup",
+            member_count=102,
+            is_forum=True
+        ),
+        timestamp="2025-09-24T14:21:06Z",
+        media=None
+    )
 
-    headers = {
-        "Content-Type": "application/json"
-    }
+    # data = {
+    #     "type": "message_created",
+    #     "chat_id": -1001234567890,
+    #     "message_id": 12345,
+    #     "text": "Привет, это новое сообщение!",
+    #     "message_type": 1,
+    #     "topic_id": 67890,
+    #     "sender": {
+    #         "id": 123456789,
+    #         "first_name": "Иван",
+    #         "username": "ivan_user",
+    #         "language_code": "ru"
+    #     },
+    #     "chat_info": {
+    #         "title": "Тестовая группа",
+    #         "username": "test_group",
+    #         "type": "supergroup",
+    #         "is_forum": True,
+    #         "member_count": 150
+    #     },
+    #     "timestamp": "2025-09-05T10:01:00Z",
+    #     "media": None
+    # }
 
-    data = {
-        "type": "message_created",
-        "chat_id": -1001234567890,
-        "message_id": 12345,
-        "text": "Привет, это новое сообщение!",
-        "message_type": 1,
-        "topic_id": 67890,
-        "sender": {
-            "id": 123456789,
-            "first_name": "Иван",
-            "username": "ivan_user",
-            "language_code": "ru"
-        },
-        "chat_info": {
-            "title": "Тестовая группа",
-            "username": "test_group",
-            "type": "supergroup",
-            "is_forum": True,
-            "member_count": 150
-        },
-        "timestamp": "2025-09-05T10:01:00Z",
-        "media": None
-    }
-
-    async with ClientSession() as session:
-        async with session.post(url=host + url, json=data, headers=headers, timeout=10) as response:
-            print(response.status)
-            answer = await response.json()
-
-    print(type(answer))
-    print(answer)
+    result = await APIInterface.send_request(req_model)
+    print(result)
 
 
 if __name__ == "__main__":

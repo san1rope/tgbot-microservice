@@ -1,0 +1,56 @@
+mtprotosender.py:228 #INFO     [2025-09-24 14:52:09,134] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-24 14:52:09,272] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:10 #INFO     [2025-09-24 14:52:12,718] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+connection.py:345 #WARNING  [2025-09-24 14:53:31,410] - telethon.network.connection.connection - 0| Server closed the connection: [WinError 121] The semaphore timeout period has expired
+mtprotosender.py:511 #INFO     [2025-09-24 14:53:31,411] - telethon.network.mtprotosender - 0| Connection closed while receiving data: [WinError 121] The semaphore timeout period has expired
+mtprotosender.py:352 #INFO     [2025-09-24 14:53:31,414] - telethon.network.mtprotosender - 0| Closing current connection to begin reconnect...
+mtprotosender.py:228 #INFO     [2025-09-24 14:53:31,415] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+connection.py:288 #INFO     [2025-09-24 14:53:31,416] - telethon.network.connection.connection - 0| <class 'OSError'> during disconnect: [WinError 121] The semaphore timeout period has expired
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:41,426] - telethon.network.mtprotosender - 0| Attempt 1 at connecting failed: TimeoutError: 
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:42,441] - telethon.network.mtprotosender - 0| Attempt 2 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:43,452] - telethon.network.mtprotosender - 0| Attempt 3 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:44,461] - telethon.network.mtprotosender - 0| Attempt 4 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:45,471] - telethon.network.mtprotosender - 0| Attempt 5 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:46,488] - telethon.network.mtprotosender - 0| Attempt 6 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:381 #INFO     [2025-09-24 14:53:47,495] - telethon.network.mtprotosender - 0| Failed reconnection attempt 1 with ConnectionError
+mtprotosender.py:228 #INFO     [2025-09-24 14:53:48,504] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:48,505] - telethon.network.mtprotosender - 0| Attempt 1 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:49,520] - telethon.network.mtprotosender - 0| Attempt 2 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:50,533] - telethon.network.mtprotosender - 0| Attempt 3 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:51,545] - telethon.network.mtprotosender - 0| Attempt 4 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:52,556] - telethon.network.mtprotosender - 0| Attempt 5 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:53,568] - telethon.network.mtprotosender - 0| Attempt 6 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:381 #INFO     [2025-09-24 14:53:54,581] - telethon.network.mtprotosender - 0| Failed reconnection attempt 2 with ConnectionError
+mtprotosender.py:228 #INFO     [2025-09-24 14:53:55,592] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:55,595] - telethon.network.mtprotosender - 0| Attempt 1 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:56,604] - telethon.network.mtprotosender - 0| Attempt 2 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:57,614] - telethon.network.mtprotosender - 0| Attempt 3 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:58,627] - telethon.network.mtprotosender - 0| Attempt 4 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:53:59,637] - telethon.network.mtprotosender - 0| Attempt 5 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:00,648] - telethon.network.mtprotosender - 0| Attempt 6 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:381 #INFO     [2025-09-24 14:54:01,659] - telethon.network.mtprotosender - 0| Failed reconnection attempt 3 with ConnectionError
+mtprotosender.py:228 #INFO     [2025-09-24 14:54:02,675] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:02,679] - telethon.network.mtprotosender - 0| Attempt 1 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:03,687] - telethon.network.mtprotosender - 0| Attempt 2 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:04,693] - telethon.network.mtprotosender - 0| Attempt 3 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:05,708] - telethon.network.mtprotosender - 0| Attempt 4 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:06,724] - telethon.network.mtprotosender - 0| Attempt 5 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:07,739] - telethon.network.mtprotosender - 0| Attempt 6 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:381 #INFO     [2025-09-24 14:54:08,748] - telethon.network.mtprotosender - 0| Failed reconnection attempt 4 with ConnectionError
+mtprotosender.py:228 #INFO     [2025-09-24 14:54:09,729] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:09,731] - telethon.network.mtprotosender - 0| Attempt 1 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:10,738] - telethon.network.mtprotosender - 0| Attempt 2 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:11,748] - telethon.network.mtprotosender - 0| Attempt 3 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:12,759] - telethon.network.mtprotosender - 0| Attempt 4 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:13,770] - telethon.network.mtprotosender - 0| Attempt 5 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-24 14:54:14,784] - telethon.network.mtprotosender - 0| Attempt 6 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:381 #INFO     [2025-09-24 14:54:15,799] - telethon.network.mtprotosender - 0| Failed reconnection attempt 5 with ConnectionError
+mtprotosender.py:412 #ERROR    [2025-09-24 14:54:16,807] - telethon.network.mtprotosender - 0| Automatic reconnection failed 5 time(s)
+mtprotosender.py:319 #INFO     [2025-09-24 14:54:16,807] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-24 14:54:16,808] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-24 14:54:16,808] - asyncio - 0| Future exception was never retrieved
+future: <Future finished exception=ConnectionError('Connection to Telegram failed 5 time(s)')>
+ConnectionError: Connection to Telegram failed 5 time(s)
+mtprotosender.py:316 #INFO     [2025-09-24 14:54:16,811] - telethon.network.mtprotosender - 0| Not disconnecting (already have no connection)
+base_events.py:1758 #ERROR    [2025-09-24 14:54:16,875] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001C828B736D0>

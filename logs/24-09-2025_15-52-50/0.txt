@@ -1,0 +1,22 @@
+mtprotosender.py:228 #INFO     [2025-09-24 15:52:50,641] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-24 15:52:50,709] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:13 #INFO     [2025-09-24 15:53:20,837] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 15:53:21,269] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 45, in event_new_message
+    topic_id=msg_obj.reply_to.rereply_to_top_id,
+AttributeError: 'MessageReplyHeader' object has no attribute 'rereply_to_top_id'
+handlers.py:13 #INFO     [2025-09-24 15:53:24,992] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 15:53:24,993] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 34, in event_new_message
+    print(msg_obj.reply_to.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+mtprotosender.py:319 #INFO     [2025-09-24 15:53:52,645] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-24 15:53:52,645] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-24 15:53:52,709] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F1AB159360>

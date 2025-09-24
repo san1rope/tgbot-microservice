@@ -1,0 +1,33 @@
+mtprotosender.py:228 #INFO     [2025-09-24 15:38:17,202] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-24 15:38:17,458] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:443 #INFO     [2025-09-24 15:38:30,708] - telethon.client.updates - 0| Got difference for channel 1968379726 updates
+handlers.py:13 #INFO     [2025-09-24 15:38:30,709] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 15:38:30,710] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 34, in event_new_message
+    print(msg_obj.reply_to.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+handlers.py:13 #INFO     [2025-09-24 15:38:30,718] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:13 #INFO     [2025-09-24 15:40:18,583] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 15:40:18,723] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 34, in event_new_message
+    print(msg_obj.reply_to.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+handlers.py:13 #INFO     [2025-09-24 15:46:18,642] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:13 #INFO     [2025-09-24 15:46:18,646] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 15:46:18,873] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 34, in event_new_message
+    print(msg_obj.reply_to.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+mtprotosender.py:319 #INFO     [2025-09-24 15:52:49,291] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-24 15:52:49,291] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-24 15:52:49,358] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000230A0799270>

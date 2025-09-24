@@ -1,0 +1,2 @@
+base_events.py:1758 #ERROR    [2025-09-24 14:45:00,112] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000015856FA2DD0>

@@ -1,0 +1,47 @@
+mtprotosender.py:228 #INFO     [2025-09-24 16:24:51,180] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-24 16:24:51,288] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:443 #INFO     [2025-09-24 16:24:55,680] - telethon.client.updates - 0| Got difference for channel 1968379726 updates
+handlers.py:15 #INFO     [2025-09-24 16:24:55,680] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-09-24 16:24:55,680] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 16:24:55,973] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 23, in event_new_message
+    chat_type = "supergroup" if chat_obj.supergroup else "channel"
+AttributeError: 'Channel' object has no attribute 'supergroup'
+updates.py:590 #ERROR    [2025-09-24 16:24:55,992] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 23, in event_new_message
+    chat_type = "supergroup" if chat_obj.supergroup else "channel"
+AttributeError: 'Channel' object has no attribute 'supergroup'
+handlers.py:15 #INFO     [2025-09-24 16:25:00,046] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 16:25:00,183] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 23, in event_new_message
+    chat_type = "supergroup" if chat_obj.supergroup else "channel"
+AttributeError: 'Channel' object has no attribute 'supergroup'
+handlers.py:15 #INFO     [2025-09-24 16:26:33,650] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-09-24 16:26:33,652] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-24 16:26:33,773] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 23, in event_new_message
+    chat_type = "supergroup" if chat_obj.megagroup else "channel"
+AttributeError: 'Channel' object has no attribute 'supergroup'
+updates.py:590 #ERROR    [2025-09-24 16:26:33,780] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 23, in event_new_message
+    chat_type = "supergroup" if chat_obj.megagroup else "channel"
+AttributeError: 'Channel' object has no attribute 'supergroup'
+mtprotosender.py:319 #INFO     [2025-09-24 16:26:36,281] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-24 16:26:36,281] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-24 16:26:36,312] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000024BE6AD9300>

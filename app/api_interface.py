@@ -1,4 +1,4 @@
-from typing import Union, List
+from typing import Union, List, Optional
 
 from aiohttp import ClientSession
 from pydantic import BaseModel
@@ -9,8 +9,8 @@ from app.config import Config
 class FromUser(BaseModel):
     id: int
     first_name: str
-    username: str
-    language_code: str
+    username: Optional[str] = None
+    language_code: Optional[str] = None
 
 
 class ChatInfo(BaseModel):
@@ -66,9 +66,9 @@ class MessageCreated(BaseModel):
     type: str = "message_created"
     chat_id: int
     message_id: int
-    text: str
+    text: Optional[str] = None
     message_type: int = 1
-    topic_id: int
+    topic_id: Optional[int] = None
     sender: FromUser
     chat_info: ChatInfo
     timestamp: str
@@ -107,53 +107,35 @@ class BotAdded(BaseModel):
 
 class APIInterface:
 
-    # @staticmethod
-    # async def send_request(req_model:  Union[]):
-
     @staticmethod
-    async def create_message(model: MessageCreated):
+    async def send_request(req_model: Union[MessageCreated, MessageDeleted, TopicCreated, BotAdded]):
         if not Config.AIOHTTP_SESSION:
             Config.AIOHTTP_SESSION = ClientSession()
 
-        url = Config.BASE_URL + "/webhook/telegram/create"
+        print(f"req_model = {req_model}")
+
+        url = Config.BASE_URL
+        if isinstance(req_model, MessageCreated):
+            url += "/webhook/telegram/create"
+
+        elif isinstance(req_model, MessageDeleted):
+            url += "/webhook/telegram/delete"
+
+        elif isinstance(req_model, TopicCreated):
+            url += "/webhook/telegram/topic_created"
+
+        elif isinstance(req_model, BotAdded):
+            url += "/webhook/telegram/bot_added"
+
+        else:
+            return TypeError
+
         headers = {
             "Content-Type": "application/json"
         }
 
         async with Config.AIOHTTP_SESSION.post(
-                url=url, headers=headers, json=model.model_dump(), timeout=15) as response:
-            answer = await response.json()
-
-        return answer
-
-    @staticmethod
-    async def delete_message(model: MessageDeleted):
-        if not Config.AIOHTTP_SESSION:
-            Config.AIOHTTP_SESSION = ClientSession()
-
-        url = Config.BASE_URL + "/webhook/telegram/delete"
-        headers = {
-            "Content-Type": "application/json"
-        }
-
-        async with Config.AIOHTTP_SESSION.post(
-                url=url, headers=headers, json=model.model_dump(), timeout=15) as response:
-            answer = await response.json()
-
-        return answer
-
-    @staticmethod
-    async def create_topic(model: TopicCreated):
-        if not Config.AIOHTTP_SESSION:
-            Config.AIOHTTP_SESSION = ClientSession()
-
-        url = Config.BASE_URL + "/webhook/telegram/topic_created"
-        headers = {
-            "Content-Type": "application/json"
-        }
-
-        async with Config.AIOHTTP_SESSION.post(
-                url=url, headers=headers, json=model.model_dump(), timeout=15) as response:
+                url=url, headers=headers, json=req_model.model_dump(), timeout=15) as response:
             answer = await response.json()
 
         return answer
