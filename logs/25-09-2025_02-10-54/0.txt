@@ -1,0 +1,19 @@
+mtprotosender.py:228 #INFO     [2025-09-25 02:10:54,746] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 02:10:54,782] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:18 #INFO     [2025-09-25 02:10:57,888] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-25 02:10:57,977] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 100, in event_new_message
+    media = MediaVideoGIF(
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for MediaVideoGIF
+duration
+  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=0.003, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_from_float
+mtprotosender.py:319 #INFO     [2025-09-25 02:22:44,541] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 02:22:44,542] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 02:22:44,582] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000252C061A4D0>

@@ -1,0 +1,23 @@
+mtprotosender.py:228 #INFO     [2025-09-25 02:00:26,673] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 02:00:26,715] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:443 #INFO     [2025-09-25 02:00:30,582] - telethon.client.updates - 0| Got difference for channel 3025830796 updates
+handlers.py:18 #INFO     [2025-09-25 02:00:30,582] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:18 #INFO     [2025-09-25 02:00:30,582] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-25 02:00:30,758] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 75, in event_new_message
+    short_name = sticker_set_res[0].title
+TypeError: 'StickerSet' object is not subscriptable
+updates.py:590 #ERROR    [2025-09-25 02:00:30,791] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 75, in event_new_message
+    short_name = sticker_set_res[0].title
+TypeError: 'StickerSet' object is not subscriptable
+mtprotosender.py:319 #INFO     [2025-09-25 02:01:06,455] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 02:01:06,455] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 02:01:06,498] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F0B64EA740>

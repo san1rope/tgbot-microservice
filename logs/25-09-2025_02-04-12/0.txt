@@ -1,0 +1,23 @@
+mtprotosender.py:228 #INFO     [2025-09-25 02:04:12,305] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 02:04:12,340] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:443 #INFO     [2025-09-25 02:04:15,173] - telethon.client.updates - 0| Got difference for channel 3025830796 updates
+handlers.py:18 #INFO     [2025-09-25 02:04:15,173] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:18 #INFO     [2025-09-25 02:04:15,173] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-25 02:04:15,417] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 75, in event_new_message
+    print(list(sticker_set_res)[0])
+TypeError: 'StickerSet' object is not iterable
+updates.py:590 #ERROR    [2025-09-25 02:04:15,478] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 75, in event_new_message
+    print(list(sticker_set_res)[0])
+TypeError: 'StickerSet' object is not iterable
+mtprotosender.py:319 #INFO     [2025-09-25 02:04:45,574] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 02:04:45,574] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 02:04:45,627] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001D73320A4D0>

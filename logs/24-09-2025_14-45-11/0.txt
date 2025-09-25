@@ -1,3 +1,0 @@
-mtprotosender.py:228 #INFO     [2025-09-24 14:45:11,548] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
-mtprotosender.py:279 #INFO     [2025-09-24 14:45:11,654] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
-handlers.py:7 #INFO     [2025-09-24 14:45:18,680] - root - 0| Handler called. NewMessage. type = <class 'telethon.events.newmessage.NewMessage.Event'>

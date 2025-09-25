@@ -1,0 +1,14 @@
+mtprotosender.py:228 #INFO     [2025-09-25 01:59:31,268] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 01:59:31,310] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:18 #INFO     [2025-09-25 01:59:34,734] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-25 01:59:34,878] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 75, in event_new_message
+    short_name = sticker_set_res.title
+AttributeError: 'StickerSet' object has no attribute 'title'
+mtprotosender.py:319 #INFO     [2025-09-25 02:00:25,105] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 02:00:25,106] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 02:00:25,157] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002200448A680>

@@ -1,0 +1,9 @@
+mtprotosender.py:228 #INFO     [2025-09-25 02:07:34,236] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 02:07:34,277] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:443 #INFO     [2025-09-25 02:07:39,298] - telethon.client.updates - 0| Got difference for channel 3025830796 updates
+handlers.py:18 #INFO     [2025-09-25 02:07:39,298] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:18 #INFO     [2025-09-25 02:07:39,299] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+mtprotosender.py:319 #INFO     [2025-09-25 02:09:00,051] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 02:09:00,051] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 02:09:00,098] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000023975E0A830>

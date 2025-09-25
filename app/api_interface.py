@@ -1,4 +1,5 @@
 from typing import Union, List, Optional
+from venv import logger
 
 from aiohttp import ClientSession
 from pydantic import BaseModel
@@ -24,7 +25,7 @@ class ChatInfo(BaseModel):
 class MediaPhoto(BaseModel):
     type_name: str = "photo"
     file_size: int
-    mime_type: str = "image/jpeg"
+    mime_type: str
     width: int
     height: int
 
@@ -32,7 +33,7 @@ class MediaPhoto(BaseModel):
 class MediaSticker(BaseModel):
     type_name: str = "sticker"
     file_size: int
-    mime_type: str = "image/webp"
+    mime_type: str
     emoji: str
     set_name: str
 
@@ -40,14 +41,14 @@ class MediaSticker(BaseModel):
 class MediaDocument(BaseModel):
     type_name: str = "document"
     file_size: int
-    mime_type: str = "application/pdf"
+    mime_type: str
     file_name: str
 
 
-class MediaAudioVoice(BaseModel):
+class MediaAudio(BaseModel):
     type_name: str = "audio_voice"
     file_size: int
-    mime_type: str = "audio/ogg"
+    mime_type: str
     duration: int
     is_voice: bool
 
@@ -55,8 +56,8 @@ class MediaAudioVoice(BaseModel):
 class MediaVideoGIF(BaseModel):
     type_name: str = "video_gif"
     file_size: int
-    mime_type: str = "video/mp4"
-    duration: int
+    mime_type: str
+    duration: float
     width: int
     height: int
     supports_streaming: bool
@@ -72,7 +73,7 @@ class MessageCreated(BaseModel):
     sender: FromUser
     chat_info: ChatInfo
     timestamp: str
-    media: Union[None, MediaPhoto, MediaSticker, MediaDocument, MediaAudioVoice, MediaVideoGIF]
+    media: Union[None, MediaPhoto, MediaSticker, MediaDocument, MediaAudio, MediaVideoGIF]
 
 
 class MessageDeleted(BaseModel):
@@ -137,5 +138,6 @@ class APIInterface:
         async with Config.AIOHTTP_SESSION.post(
                 url=url, headers=headers, json=req_model.model_dump(), timeout=15) as response:
             answer = await response.json()
+            logger.info(f"{response.status} | {url} | {answer}")
 
         return answer
