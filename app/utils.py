@@ -5,6 +5,8 @@ from logging import Logger
 from pathlib import Path
 from typing import Union
 
+from telethon.tl import types
+
 from app.config import Config
 
 
@@ -40,3 +42,29 @@ class Utils:
         logger.addHandler(file_handler)
 
         return logger
+
+    @staticmethod
+    def best_photo_size(photo):
+        best = None
+        best_pixels = -1
+
+        for s in photo.sizes:
+            if isinstance(s, types.PhotoStrippedSize):
+                continue  # пропускаємо інлайн-прев'ю
+
+            if isinstance(s, types.PhotoSize):
+                w, h = s.w, s.h
+                size_bytes = getattr(s, "size", None)
+            elif isinstance(s, types.PhotoSizeProgressive):
+                w, h = s.w, s.h
+                # фактичний розмір файлу — останній елемент
+                size_bytes = s.sizes[-1] if s.sizes else None
+            else:
+                continue
+
+            pixels = (w or 0) * (h or 0)
+            if pixels > best_pixels:
+                best_pixels = pixels
+                best = {"w": w, "h": h, "size_bytes": size_bytes, "obj": s}
+
+        return best  # dict або None

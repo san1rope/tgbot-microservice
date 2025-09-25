@@ -1,20 +1,19 @@
 from telethon import events
-from telethon.events import NewMessage
+from telethon import events
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest, GetStickerSetRequest
-# from telethon.tl.types import PeerChannel, PeerChat, MessageMediaDocument, DocumentAttributeFilename, \
-#     DocumentAttributeSticker
 from telethon.tl import types
 
 from app.api_interface import APIInterface, MessageCreated, FromUser, ChatInfo, MediaDocument, MediaSticker, MediaAudio, \
     MediaVideoGIF, MediaPhoto
 from app.config import Config
+from app.utils import Utils as Ut
 
 
 class HandleEvents:
 
     @staticmethod
-    async def event_new_message(event: NewMessage.Event):
+    async def event_new_message(event: events.NewMessage.Event):
         Config.LOGGER.info(f"Handler called. NewMessage. type = {type(event.message)}")
 
         msg_obj = event.message
@@ -49,10 +48,17 @@ class HandleEvents:
             media = None
 
         elif isinstance(msg_obj.media, types.MessageMediaPhoto):
-            media = MediaPhoto(
-                file_size=doc.size,
-                mime_type=doc.mime_type,
-            )
+            print(msg_obj)
+            # for i in msg_obj.media.photo.sizes:
+            #     print(i.__dict__)
+
+            # media = MediaPhoto(
+            #     file_size=doc.size,
+            #     mime_type=doc.mime_type,
+            # )
+
+            info = Ut.best_photo_size(photo=msg_obj.media.photo)
+            print(f"info = {info}")
 
         elif isinstance(msg_obj.media, types.MessageMediaDocument):
             doc = msg_obj.media.document

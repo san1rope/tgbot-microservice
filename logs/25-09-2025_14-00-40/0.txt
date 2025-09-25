@@ -1,0 +1,6 @@
+mtprotosender.py:228 #INFO     [2025-09-25 14:00:40,973] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 14:00:41,106] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:18 #INFO     [2025-09-25 14:01:05,584] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:141 #INFO     [2025-09-25 14:01:06,542] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+mtprotosender.py:319 #INFO     [2025-09-25 14:05:42,743] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 14:05:42,744] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
