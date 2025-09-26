@@ -1,0 +1,8 @@
+mtprotosender.py:228 #INFO     [2025-09-25 18:36:06,831] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 18:36:06,867] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:17 #INFO     [2025-09-25 18:38:24,526] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:141 #INFO     [2025-09-25 18:38:24,998] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+mtprotosender.py:319 #INFO     [2025-09-25 18:52:14,067] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 18:52:14,067] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 18:52:14,145] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000168BE96C4F0>

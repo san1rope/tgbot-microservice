@@ -1,0 +1,24 @@
+mtprotosender.py:228 #INFO     [2025-09-25 18:52:32,419] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 18:52:32,461] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:17 #INFO     [2025-09-25 18:52:40,079] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:141 #INFO     [2025-09-25 18:52:40,569] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-25 18:52:51,858] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-09-25 18:52:51,859] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-25 18:52:51,954] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 53, in event_new_message
+    file_size=best_size.size_bytes,
+AttributeError: 'dict' object has no attribute 'size_bytes'
+updates.py:590 #ERROR    [2025-09-25 18:52:51,970] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 53, in event_new_message
+    file_size=best_size.size_bytes,
+AttributeError: 'dict' object has no attribute 'size_bytes'
+mtprotosender.py:319 #INFO     [2025-09-25 18:53:00,897] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 18:53:00,897] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 18:53:00,937] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002180F0D05E0>

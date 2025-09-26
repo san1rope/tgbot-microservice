@@ -17,7 +17,7 @@ async def main():
     Config.LOGGER = logger
     Config.AIOHTTP_SESSION = ClientSession()
 
-    Config.TG_CLIENT.add_event_handler(HandleEvents.event_new_message, events.NewMessage)
+    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_new_message, events.NewMessage)
     Config.TG_CLIENT.add_event_handler(HandleEvents.event_message_deleted, events.MessageDeleted)
 
     await Config.TG_CLIENT.start()

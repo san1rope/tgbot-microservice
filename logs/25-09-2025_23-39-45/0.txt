@@ -1,0 +1,31 @@
+mtprotosender.py:228 #INFO     [2025-09-25 23:39:45,335] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-25 23:39:45,370] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:167 #INFO     [2025-09-25 23:39:53,373] - root - 0| Handler called. MessageDeleted
+updates.py:590 #ERROR    [2025-09-25 23:39:53,374] - telethon.client.updates - 0| Unhandled exception on event_message_deleted
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 174, in event_message_deleted
+    req_model=MessageDeleted(
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 5 validation errors for MessageDeleted
+message_ids
+  Field required [type=missing, input_value={'chat_id': 3025830796}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+topic_id
+  Field required [type=missing, input_value={'chat_id': 3025830796}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+deleted_by
+  Field required [type=missing, input_value={'chat_id': 3025830796}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+chat_info
+  Field required [type=missing, input_value={'chat_id': 3025830796}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+timestamp
+  Field required [type=missing, input_value={'chat_id': 3025830796}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+mtprotosender.py:319 #INFO     [2025-09-25 23:39:55,757] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-25 23:39:55,758] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-25 23:39:55,800] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001523852A6E0>

@@ -3,7 +3,7 @@ import logging
 from datetime import datetime
 from logging import Logger
 from pathlib import Path
-from typing import Union
+from typing import Union, Dict
 
 from telethon.tl import types
 
@@ -44,20 +44,19 @@ class Utils:
         return logger
 
     @staticmethod
-    def best_photo_size(photo):
+    async def best_photo_size(photo) -> Union[Dict, None]:
         best = None
         best_pixels = -1
 
         for s in photo.sizes:
             if isinstance(s, types.PhotoStrippedSize):
-                continue  # пропускаємо інлайн-прев'ю
+                continue
 
             if isinstance(s, types.PhotoSize):
                 w, h = s.w, s.h
                 size_bytes = getattr(s, "size", None)
             elif isinstance(s, types.PhotoSizeProgressive):
                 w, h = s.w, s.h
-                # фактичний розмір файлу — останній елемент
                 size_bytes = s.sizes[-1] if s.sizes else None
             else:
                 continue
@@ -65,6 +64,6 @@ class Utils:
             pixels = (w or 0) * (h or 0)
             if pixels > best_pixels:
                 best_pixels = pixels
-                best = {"w": w, "h": h, "size_bytes": size_bytes, "obj": s}
+                best = {"w": w, "h": h, "size_bytes": size_bytes}
 
-        return best  # dict або None
+        return best

@@ -21,3 +21,9 @@ class Config:
 
     BASE_URL: str = os.getenv("BASE_URL").strip()
     AIOHTTP_SESSION: Optional[ClientSession] = None
+
+    DATABASE_CLEANUP = bool(int(os.getenv("DATABASE_CLEANUP")))
+    DB_USER = os.getenv("DB_USER")
+    DB_PASSWORD = os.getenv("DB_PASSWORD")
+    DB_HOST = os.getenv("DB_HOST")
+    DB_NAME = os.getenv("DB_NAME")

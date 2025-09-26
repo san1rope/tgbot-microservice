@@ -3,9 +3,10 @@ from telethon import events
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest, GetStickerSetRequest
 from telethon.tl import types
+from telethon.tl.types import UpdateDeleteMessages
 
 from app.api_interface import APIInterface, MessageCreated, FromUser, ChatInfo, MediaDocument, MediaSticker, MediaAudio, \
-    MediaVideoGIF, MediaPhoto
+    MediaVideoGIF, MediaPhoto, MessageDeleted
 from app.config import Config
 from app.utils import Utils as Ut
 
@@ -48,17 +49,13 @@ class HandleEvents:
             media = None
 
         elif isinstance(msg_obj.media, types.MessageMediaPhoto):
-            print(msg_obj)
-            # for i in msg_obj.media.photo.sizes:
-            #     print(i.__dict__)
-
-            # media = MediaPhoto(
-            #     file_size=doc.size,
-            #     mime_type=doc.mime_type,
-            # )
-
-            info = Ut.best_photo_size(photo=msg_obj.media.photo)
-            print(f"info = {info}")
+            best_size = await Ut.best_photo_size(photo=msg_obj.media.photo)
+            media = MediaPhoto(
+                file_size=best_size["size_bytes"],
+                mime_type="image/jpeg",
+                width=best_size["w"],
+                height=best_size["h"],
+            )
 
         elif isinstance(msg_obj.media, types.MessageMediaDocument):
             doc = msg_obj.media.document
@@ -132,7 +129,8 @@ class HandleEvents:
                 )
 
         else:
-            print(f"media; type={type(msg_obj.media)}; {msg_obj.media}")
+            # print(f"media; type={type(msg_obj.media)}; {msg_obj.media}")
+            return
 
         try:
             await APIInterface.send_request(
@@ -156,7 +154,7 @@ class HandleEvents:
                         member_count=full_chat.full_chat.participants_count
                     ),
                     timestamp=msg_obj.date.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                    media=None
+                    media=media
                 )
             )
 
@@ -166,5 +164,20 @@ class HandleEvents:
             print(f"sender; type = {type(sender)}; {sender}")
 
     @staticmethod
-    async def event_message_deleted(event):
+    async def event_message_deleted(event: events.MessageDeleted.Event):
         Config.LOGGER.info("Handler called. MessageDeleted")
+
+        print(f"event; type={type(event)}; {event}")
+
+        original_upd = event.original_update
+        if isinstance(original_upd, types.UpdateDeleteChannelMessages):
+            chat_id = int(f"-100{original_upd.channel_id}")
+
+        elif isinstance(original_upd, UpdateDeleteMessages):
+            print(f"updateDeleteMessages; {event.__dict__}")
+
+        # await APIInterface.send_request(
+        #     req_model=MessageDeleted(
+        #         chat_id=original_upd.channel_id
+        #     )
+        # )
