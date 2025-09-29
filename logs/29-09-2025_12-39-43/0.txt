@@ -1,0 +1,14 @@
+mtprotosender.py:228 #INFO     [2025-09-29 12:39:43,800] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-29 12:39:43,874] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:17 #INFO     [2025-09-29 12:39:59,022] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-09-29 12:40:00,029] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 39, in event_new_message
+    if sender.bot or (not isinstance(sender, types.User)):
+AttributeError: 'Channel' object has no attribute 'bot'
+mtprotosender.py:319 #INFO     [2025-09-29 12:40:10,148] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-29 12:40:10,148] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-29 12:40:10,188] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001C92C5B2320>

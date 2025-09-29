@@ -1,0 +1,4 @@
+mtprotosender.py:228 #INFO     [2025-09-29 12:07:32,095] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-29 12:07:32,165] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-29 12:07:32,221] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001DD1FF822F0>

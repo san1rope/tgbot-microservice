@@ -16,7 +16,7 @@ class FromUser(BaseModel):
 
 class ChatInfo(BaseModel):
     title: str
-    username: str
+    username: Optional[str]
     type: str
     is_forum: bool
     member_count: int
@@ -76,6 +76,12 @@ class MessageCreated(BaseModel):
     media: Union[None, MediaPhoto, MediaSticker, MediaDocument, MediaAudio, MediaVideoGIF]
 
 
+class MessageEdited(BaseModel):
+    message_id: int
+    chat_id: int
+    sender: FromUser
+
+
 class MessageDeleted(BaseModel):
     type: str = "message_deleted"
     chat_id: int
@@ -109,7 +115,7 @@ class BotAdded(BaseModel):
 class APIInterface:
 
     @staticmethod
-    async def send_request(req_model: Union[MessageCreated, MessageDeleted, TopicCreated, BotAdded]):
+    async def send_request(req_model: Union[MessageCreated, MessageEdited, MessageDeleted, TopicCreated, BotAdded]):
         if not Config.AIOHTTP_SESSION:
             Config.AIOHTTP_SESSION = ClientSession()
 
@@ -118,6 +124,9 @@ class APIInterface:
         url = Config.BASE_URL
         if isinstance(req_model, MessageCreated):
             url += "/webhook/telegram/create"
+
+        elif isinstance(req_model, MessageEdited):
+            url += "/webhook/telegram/update"
 
         elif isinstance(req_model, MessageDeleted):
             url += "/webhook/telegram/delete"

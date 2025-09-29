@@ -1,0 +1,91 @@
+mtprotosender.py:228 #INFO     [2025-09-29 12:40:43,393] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-29 12:40:43,464] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:17 #INFO     [2025-09-29 12:40:45,890] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:40:46,568] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:40:49,067] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:40:49,380] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:23,262] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:23,882] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:24,642] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:24,930] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:32,728] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:33,037] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:42,772] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:43,141] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:43,839] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:44,116] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:44,266] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:44,560] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:47,218] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:47,473] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:49,184] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+users.py:122 #INFO     [2025-09-29 12:41:49,297] - telethon.client.users - 0| Sleeping for 5s (0:00:05) on GetFullChannelRequest flood wait
+api_interface.py:150 #INFO     [2025-09-29 12:41:54,596] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:41:54,812] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:41:55,081] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:42:14,045] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:42:14,548] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:42:16,635] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:42:16,888] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:42:27,290] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:42:27,545] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:43:19,287] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:43:19,730] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:43:21,543] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:43:21,778] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:43:28,167] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:43:28,457] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:43:52,874] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:43:53,322] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:43:57,553] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:43:57,788] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:43:59,767] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:44:00,056] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:44:02,294] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 12:44:02,542] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-09-29 12:44:20,868] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+mtprotosender.py:187 #ERROR    [2025-09-29 12:44:20,868] - telethon.network.mtprotosender - 0| Request caused struct.error: required argument is not an integer: GetFullChatRequest(chat_id=PeerChat(chat_id=4826852660))
+updates.py:590 #ERROR    [2025-09-29 12:44:20,868] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 29, in event_new_message
+    full_chat = await Config.TG_CLIENT(GetFullChatRequest(msg_obj.peer_id))
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\users.py", line 72, in _call
+    future = sender.send(request, ordered=ordered)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\network\mtprotosender.py", line 183, in send
+    state = RequestState(request)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\network\requeststate.py", line 17, in __init__
+    self.data = bytes(request)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\tl\tlobject.py", line 194, in __bytes__
+    return self._bytes()
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\tl\functions\messages.py", line 3021, in _bytes
+    struct.pack('<q', self.chat_id),
+struct.error: required argument is not an integer
+handlers.py:17 #INFO     [2025-09-29 12:44:45,816] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+mtprotosender.py:187 #ERROR    [2025-09-29 12:44:45,816] - telethon.network.mtprotosender - 0| Request caused struct.error: required argument is not an integer: GetFullChatRequest(chat_id=PeerChat(chat_id=4826852660))
+updates.py:590 #ERROR    [2025-09-29 12:44:45,816] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 29, in event_new_message
+    full_chat = await Config.TG_CLIENT(GetFullChatRequest(msg_obj.peer_id))
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\users.py", line 72, in _call
+    future = sender.send(request, ordered=ordered)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\network\mtprotosender.py", line 183, in send
+    state = RequestState(request)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\network\requeststate.py", line 17, in __init__
+    self.data = bytes(request)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\tl\tlobject.py", line 194, in __bytes__
+    return self._bytes()
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\tl\functions\messages.py", line 3021, in _bytes
+    struct.pack('<q', self.chat_id),
+struct.error: required argument is not an integer
+mtprotosender.py:319 #INFO     [2025-09-29 12:46:45,692] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-29 12:46:45,692] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-29 12:46:45,744] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000261B67A22C0>

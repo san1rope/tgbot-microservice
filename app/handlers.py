@@ -5,8 +5,7 @@ from telethon.tl.functions.messages import GetFullChatRequest, GetStickerSetRequ
 from telethon.tl import types
 from telethon.tl.types import UpdateDeleteMessages
 
-from app.api_interface import APIInterface, MessageCreated, FromUser, ChatInfo, MediaDocument, MediaSticker, MediaAudio, \
-    MediaVideoGIF, MediaPhoto, MessageDeleted
+from app.api_interface import *
 from app.config import Config
 from app.utils import Utils as Ut
 
@@ -16,6 +15,7 @@ class HandleEvents:
     @staticmethod
     async def event_new_message(event: events.NewMessage.Event):
         Config.LOGGER.info(f"Handler called. NewMessage. type = {type(event.message)}")
+        print(f"{event.message}")
 
         msg_obj = event.message
         if isinstance(msg_obj.peer_id, types.PeerChannel):
@@ -26,7 +26,7 @@ class HandleEvents:
             chat_type = "supergroup" if chat_obj.megagroup else "channel"
 
         elif isinstance(msg_obj.peer_id, types.PeerChat):
-            full_chat = await Config.TG_CLIENT(GetFullChatRequest(msg_obj.peer_id))
+            full_chat = await Config.TG_CLIENT(GetFullChatRequest(msg_obj.peer_id.chat_id))
             chat_obj = full_chat.chats[0]
             chat_id = int(f"-{chat_obj.id}")
 
@@ -36,7 +36,7 @@ class HandleEvents:
             return
 
         sender = await msg_obj.get_sender()
-        if sender.bot:
+        if (not isinstance(sender, types.User)) or sender.bot:
             return
 
         try:
@@ -129,7 +129,6 @@ class HandleEvents:
                 )
 
         else:
-            # print(f"media; type={type(msg_obj.media)}; {msg_obj.media}")
             return
 
         try:
@@ -167,7 +166,30 @@ class HandleEvents:
     async def event_message_edited(event: events.MessageEdited.Event):
         Config.LOGGER.info("Handler called. MessageEdited")
 
-        print(f"event; type={type(event)}; {event}")
+        msg_obj = event.message
+        sender = await msg_obj.get_sender()
+
+        if isinstance(msg_obj.peer_id, types.PeerChannel):
+            chat_id = int(f"-100{msg_obj.peer_id.channel_id}")
+
+        elif isinstance(msg_obj.peer_id, types.PeerChat):
+            chat_id = int(f"-{msg_obj.peer_id.chat_id}")
+
+        else:
+            return
+
+        await APIInterface.send_request(
+            req_model=MessageEdited(
+                message_id=event.message.id,
+                chat_id=chat_id,
+                sender=FromUser(
+                    id=sender.id,
+                    first_name=sender.first_name,
+                    username=sender.username,
+                    language_code=sender.lang_code
+                )
+            )
+        )
 
     @staticmethod
     async def event_message_deleted(event: events.MessageDeleted.Event):
@@ -187,3 +209,14 @@ class HandleEvents:
         #         chat_id=original_upd.channel_id
         #     )
         # )
+
+    @staticmethod
+    async def event_chat_action(event: events.ChatAction.Event):
+        Config.LOGGER.info("Handler called. ChatAction")
+
+        print(f"ChatAction; type={type(event)}. {event}")
+
+        me = await Config.TG_CLIENT.get_me()
+        if event.user_id != me.id:
+            print("not my id")
+            return

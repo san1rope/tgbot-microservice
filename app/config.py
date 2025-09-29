@@ -22,6 +22,8 @@ class Config:
     BASE_URL: str = os.getenv("BASE_URL").strip()
     AIOHTTP_SESSION: Optional[ClientSession] = None
 
+    PHONE_NUMBER = os.getenv("PHONE_NUMBER").strip()
+
     DATABASE_CLEANUP = bool(int(os.getenv("DATABASE_CLEANUP")))
     DB_USER = os.getenv("DB_USER")
     DB_PASSWORD = os.getenv("DB_PASSWORD")
