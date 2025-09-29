@@ -164,6 +164,12 @@ class HandleEvents:
             print(f"sender; type = {type(sender)}; {sender}")
 
     @staticmethod
+    async def event_message_edited(event: events.MessageEdited.Event):
+        Config.LOGGER.info("Handler called. MessageEdited")
+
+        print(f"event; type={type(event)}; {event}")
+
+    @staticmethod
     async def event_message_deleted(event: events.MessageDeleted.Event):
         Config.LOGGER.info("Handler called. MessageDeleted")
 
