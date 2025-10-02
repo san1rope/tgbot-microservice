@@ -1,0 +1,28 @@
+mtprotosender.py:228 #INFO     [2025-09-29 15:18:19,206] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-09-29 15:18:19,281] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:17 #INFO     [2025-09-29 15:18:46,790] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 15:18:47,352] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+updates.py:443 #INFO     [2025-09-29 15:18:58,592] - telethon.client.updates - 0| Got difference for channel 2725559734 updates
+handlers.py:17 #INFO     [2025-09-29 15:18:58,593] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 15:18:58,832] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+updates.py:344 #INFO     [2025-09-29 15:19:03,440] - telethon.client.updates - 0| Got difference for account updates
+handlers.py:17 #INFO     [2025-09-29 15:19:06,533] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-09-29 15:19:07,804] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+mtprotosender.py:319 #INFO     [2025-09-29 15:19:23,641] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-09-29 15:19:23,642] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-09-29 15:19:23,674] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000210FA642320>
+base_events.py:1758 #ERROR    [2025-09-29 15:19:23,674] - asyncio - 0| Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000210FA6553C0>, 959900.312)])']
+connector: <aiohttp.connector.TCPConnector object at 0x00000210FA6423E0>
+base_events.py:1758 #ERROR    [2025-09-29 15:19:23,674] - asyncio - 0| Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x00000210FA643AF0>
+transport: <_ProactorSocketTransport fd=1032 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 365, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 401, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'

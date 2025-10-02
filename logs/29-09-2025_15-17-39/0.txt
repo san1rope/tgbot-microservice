@@ -1,0 +1,9 @@
+mtprotosender.py:228 #INFO     [2025-09-29 15:17:39,582] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:288 #WARNING  [2025-09-29 15:17:39,582] - telethon.network.mtprotosender - 0| Attempt 1 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-29 15:17:40,593] - telethon.network.mtprotosender - 0| Attempt 2 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-29 15:17:41,607] - telethon.network.mtprotosender - 0| Attempt 3 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-29 15:17:42,623] - telethon.network.mtprotosender - 0| Attempt 4 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-29 15:17:43,634] - telethon.network.mtprotosender - 0| Attempt 5 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+mtprotosender.py:288 #WARNING  [2025-09-29 15:17:44,634] - telethon.network.mtprotosender - 0| Attempt 6 at connecting failed: OSError: [WinError 1232] The network location cannot be reached. For information about network troubleshooting, see Windows Help
+base_events.py:1758 #ERROR    [2025-09-29 15:17:45,434] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F941152380>

@@ -220,3 +220,7 @@ class HandleEvents:
         if event.user_id != me.id:
             print("not my id")
             return
+
+    @staticmethod
+    async def event_raw(event):
+        print(f"raw; type={type(event)}; {event}")
