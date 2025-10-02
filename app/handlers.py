@@ -1,9 +1,7 @@
 from telethon import events
-from telethon import events
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest, GetStickerSetRequest
 from telethon.tl import types
-from telethon.tl.types import UpdateDeleteMessages
 
 from app.api_interface import *
 from app.config import Config
@@ -15,9 +13,8 @@ class HandleEvents:
     @staticmethod
     async def event_new_message(event: events.NewMessage.Event):
         Config.LOGGER.info(f"Handler called. NewMessage. type = {type(event.message)}")
-        print(f"{event.message}")
-
         msg_obj = event.message
+
         if isinstance(msg_obj.peer_id, types.PeerChannel):
             full_chat = await Config.TG_CLIENT(GetFullChannelRequest(msg_obj.peer_id))
             chat_obj = full_chat.chats[0]
@@ -36,14 +33,47 @@ class HandleEvents:
             return
 
         sender = await msg_obj.get_sender()
-        if (not isinstance(sender, types.User)) or sender.bot:
+        from_user = await FromUser.obj_from_sender(sender)
+        if not from_user:
             return
 
-        try:
-            topic_id = msg_obj.reply_to.reply_to_top_id
+        chat_info = ChatInfo(
+            title=chat_obj.title,
+            username=chat_obj.username,
+            type=chat_type,
+            is_forum=chat_obj.forum,
+            member_count=full_chat.full_chat.participants_count
+        )
+        msg_timestamp = msg_obj.date.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        except AttributeError:
-            topic_id = None
+        topic_id, title, icon_color = await Ut.get_topic_info_from_msg(msg_obj)
+        if topic_id:
+            pass
+
+        # topic_id = None
+        # title = ""
+        # icon_color = 0
+        # if isinstance(msg_obj.reply_to, types.MessageReplyHeader) and msg_obj.reply_to.forum_topic:
+        #     topic_id = msg_obj.reply_to.reply_to_top_id if msg_obj.reply_to.reply_to_top_id \
+        #         else msg_obj.reply_to.reply_to_msg_id
+        #
+        #     topic_msg = await Config.TG_CLIENT.get_messages(msg_obj.peer_id, ids=topic_id)
+        #     if isinstance(topic_msg, types.MessageService) and \
+        #             isinstance(topic_msg.action, types.MessageActionTopicCreate):
+        #         title = topic_msg.action.title
+        #         icon_color = topic_msg.action.icon_color
+        #
+        #     await APIInterface.send_request(
+        #         req_model=TopicCreated(
+        #             chat_id=chat_id,
+        #             topic_id=topic_id,
+        #             title=title,
+        #             icon_color=icon_color,
+        #             created_by=from_user,
+        #             chat_info=chat_info,
+        #             timestamp=msg_timestamp
+        #         )
+        #     )
 
         if not msg_obj.media:
             media = None
@@ -139,20 +169,9 @@ class HandleEvents:
                     text=msg_obj.message,
                     message_type=1,
                     topic_id=topic_id,
-                    sender=FromUser(
-                        id=sender.id,
-                        first_name=sender.first_name,
-                        username=sender.username,
-                        language_code=sender.lang_code
-                    ),
-                    chat_info=ChatInfo(
-                        title=chat_obj.title,
-                        username=chat_obj.username,
-                        type=chat_type,
-                        is_forum=chat_obj.forum,
-                        member_count=full_chat.full_chat.participants_count
-                    ),
-                    timestamp=msg_obj.date.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                    sender=from_user,
+                    chat_info=chat_info,
+                    timestamp=msg_timestamp,
                     media=media
                 )
             )
@@ -167,27 +186,21 @@ class HandleEvents:
         Config.LOGGER.info("Handler called. MessageEdited")
 
         msg_obj = event.message
+
+        chat_id = await Ut.get_chat_id_from_peer(msg_obj.peer_id)
+        if not chat_id:
+            return
+
         sender = await msg_obj.get_sender()
-
-        if isinstance(msg_obj.peer_id, types.PeerChannel):
-            chat_id = int(f"-100{msg_obj.peer_id.channel_id}")
-
-        elif isinstance(msg_obj.peer_id, types.PeerChat):
-            chat_id = int(f"-{msg_obj.peer_id.chat_id}")
-
-        else:
+        from_user = await FromUser.obj_from_sender(sender)
+        if not from_user:
             return
 
         await APIInterface.send_request(
             req_model=MessageEdited(
                 message_id=event.message.id,
                 chat_id=chat_id,
-                sender=FromUser(
-                    id=sender.id,
-                    first_name=sender.first_name,
-                    username=sender.username,
-                    language_code=sender.lang_code
-                )
+                sender=from_user
             )
         )
 
@@ -196,6 +209,8 @@ class HandleEvents:
         Config.LOGGER.info("Handler called. MessageDeleted")
 
         print(f"event; type={type(event)}; {event}")
+
+        return
 
         original_upd = event.original_update
         if isinstance(original_upd, types.UpdateDeleteChannelMessages):
@@ -224,3 +239,29 @@ class HandleEvents:
     @staticmethod
     async def event_raw(event):
         print(f"raw; type={type(event)}; {event}")
+
+        if isinstance(event, types.UpdateNewChannelMessage):
+            action = event.message.action
+            if not action:
+                return None
+
+            if isinstance(action, types.MessageActionTopicEdit):
+                peer_id = event.message.peer_id
+                if isinstance(peer_id, types.PeerChannel):
+                    chat_id = int(f"-100{peer_id.channel_id}")
+
+                elif isinstance(peer_id, types.PeerChat):
+                    chat_id = int(f"-{peer_id.chat_id}")
+
+                else:
+                    return None
+
+                return await APIInterface.send_request(
+                    req_model=TopicEdited(
+                        topic_id=1,
+                        chat_id=chat_id,
+                        title=action.title
+                    )
+                )
+
+        return None

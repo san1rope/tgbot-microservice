@@ -67,3 +67,36 @@ class Utils:
                 best = {"w": w, "h": h, "size_bytes": size_bytes}
 
         return best
+
+    @staticmethod
+    async def get_chat_id_from_peer(peer_id) -> Union[int]:
+        if isinstance(peer_id, types.PeerChannel):
+            chat_id = int(f"-100{peer_id.channel_id}")
+
+        elif isinstance(peer_id, types.PeerChat):
+            chat_id = int(f"-{peer_id.chat_id}")
+
+        else:
+            chat_id = 0
+
+        return chat_id
+
+    @staticmethod
+    async def get_topic_info_from_msg(msg_obj: types.Message, only_id: bool = False):
+        topic_id = None
+        title = ""
+        icon_color = 0
+        if isinstance(msg_obj.reply_to, types.MessageReplyHeader) and msg_obj.reply_to.forum_topic:
+            topic_id = msg_obj.reply_to.reply_to_top_id if msg_obj.reply_to.reply_to_top_id \
+                else msg_obj.reply_to.reply_to_msg_id
+
+            topic_msg = await Config.TG_CLIENT.get_messages(msg_obj.peer_id, ids=topic_id)
+            if isinstance(topic_msg, types.MessageService) and \
+                    isinstance(topic_msg.action, types.MessageActionTopicCreate):
+                title = topic_msg.action.title
+                icon_color = topic_msg.action.icon_color
+
+        if only_id:
+            return topic_id
+
+        return topic_id, title, icon_color

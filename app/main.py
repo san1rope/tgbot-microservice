@@ -17,11 +17,11 @@ async def main():
     Config.LOGGER = logger
     Config.AIOHTTP_SESSION = ClientSession()
 
-    Config.TG_CLIENT.add_event_handler(HandleEvents.event_new_message, events.NewMessage)
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_message_deleted, events.MessageDeleted)
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_message_edited, events.MessageEdited)
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_chat_action, events.ChatAction)
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_raw, events.Raw)
+    Config.TG_CLIENT.add_event_handler(HandleEvents.event_new_message, events.NewMessage())
+    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_message_deleted, events.MessageDeleted())
+    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_message_edited, events.MessageEdited())
+    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_chat_action, events.ChatAction())
+    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_raw, events.Raw())
 
     await Config.TG_CLIENT.start(phone=Config.PHONE_NUMBER)
     await Config.TG_CLIENT.run_until_disconnected()

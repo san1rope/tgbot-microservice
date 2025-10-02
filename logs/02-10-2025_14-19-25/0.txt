@@ -1,0 +1,42 @@
+mtprotosender.py:228 #INFO     [2025-10-02 14:19:25,466] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-02 14:19:25,536] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:17 #INFO     [2025-10-02 14:19:34,490] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:19:34,495] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-10-02 14:19:35,207] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+api_interface.py:150 #INFO     [2025-10-02 14:19:36,479] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-10-02 14:19:46,595] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:19:46,598] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-10-02 14:19:47,129] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+api_interface.py:150 #INFO     [2025-10-02 14:19:47,325] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-10-02 14:19:55,513] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:150 #INFO     [2025-10-02 14:19:56,102] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:17 #INFO     [2025-10-02 14:19:57,417] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+mtprotosender.py:319 #INFO     [2025-10-02 14:20:01,929] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-02 14:20:01,929] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-10-02 14:20:02,010] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F9E44123B0>
+base_events.py:1758 #ERROR    [2025-10-02 14:20:02,010] - asyncio - 0| Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F9E442BD60>, 1215539.843), (<aiohttp.client_proto.ResponseHandler object at 0x000001F9E4429480>, 1215548.609)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F9E4412470>
+base_events.py:1758 #ERROR    [2025-10-02 14:20:02,011] - asyncio - 0| Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001F9E4560EB0>
+transport: <_ProactorSocketTransport fd=628 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 365, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 401, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+base_events.py:1758 #ERROR    [2025-10-02 14:20:02,012] - asyncio - 0| Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001F9E4412410>
+transport: <_ProactorSocketTransport fd=1156 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 365, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 401, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'

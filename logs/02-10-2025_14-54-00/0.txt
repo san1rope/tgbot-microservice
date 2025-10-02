@@ -1,0 +1,55 @@
+mtprotosender.py:228 #INFO     [2025-10-02 14:54:00,424] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-02 14:54:00,533] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:17 #INFO     [2025-10-02 14:54:04,500] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:344 #INFO     [2025-10-02 14:54:18,778] - telethon.client.updates - 0| Got difference for account updates
+updates.py:443 #INFO     [2025-10-02 14:54:19,099] - telethon.client.updates - 0| Got difference for channel 2725559734 updates
+handlers.py:17 #INFO     [2025-10-02 14:54:19,100] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:54:30,422] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:01,273] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:01,274] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:01,284] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:01,285] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:01,286] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:01,287] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:27,802] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:27,803] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:27,803] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:35,495] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:35,496] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:48,025] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:48,026] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:56:53,477] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,263] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,263] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,264] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,264] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,265] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,265] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,265] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,266] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,266] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,266] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,266] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,268] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,268] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,269] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,269] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,269] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,269] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,271] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:58:01,271] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,274] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,275] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,276] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,276] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,280] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,280] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,281] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,281] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,281] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,281] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:17 #INFO     [2025-10-02 14:59:01,283] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+mtprotosender.py:319 #INFO     [2025-10-02 14:59:13,810] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-02 14:59:13,811] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
+base_events.py:1758 #ERROR    [2025-10-02 14:59:13,870] - asyncio - 0| Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000270DD5962F0>

@@ -3,6 +3,7 @@ from venv import logger
 
 from aiohttp import ClientSession
 from pydantic import BaseModel
+from telethon.tl import types
 
 from app.config import Config
 
@@ -12,6 +13,19 @@ class FromUser(BaseModel):
     first_name: str
     username: Optional[str] = None
     language_code: Optional[str] = None
+
+    @staticmethod
+    async def obj_from_sender(sender):
+        obj = None
+        if isinstance(sender, types.User) and (not sender.bot):
+            obj = FromUser(
+                id=sender.id,
+                first_name=sender.first_name,
+                username=sender.username,
+                language_code=sender.lang_code
+            )
+
+        return obj
 
 
 class ChatInfo(BaseModel):
@@ -77,9 +91,16 @@ class MessageCreated(BaseModel):
 
 
 class MessageEdited(BaseModel):
-    message_id: int
+    type: str = "message_update"
     chat_id: int
+    message_id: int
+    text: Optional[str] = None
+    message_type: int
+    topic_id: Optional[int] = None
     sender: FromUser
+    chat_info: ChatInfo
+    timestamp: str
+    media: Union[None, MediaPhoto, MediaSticker, MediaDocument, MediaAudio, MediaVideoGIF]
 
 
 class MessageDeleted(BaseModel):
@@ -103,6 +124,13 @@ class TopicCreated(BaseModel):
     timestamp: str
 
 
+class TopicEdited(BaseModel):
+    type: str = "topic_edited"
+    topic_id: int
+    chat_id: int
+    title: str
+
+
 class BotAdded(BaseModel):
     type: str = "bot_added_to_chat"
     chat_id: int
@@ -115,7 +143,11 @@ class BotAdded(BaseModel):
 class APIInterface:
 
     @staticmethod
-    async def send_request(req_model: Union[MessageCreated, MessageEdited, MessageDeleted, TopicCreated, BotAdded]):
+    async def send_request(req_model: Union[
+        MessageCreated, MessageEdited, MessageDeleted,
+        TopicCreated, TopicEdited,
+        BotAdded
+    ]):
         if not Config.AIOHTTP_SESSION:
             Config.AIOHTTP_SESSION = ClientSession()
 
@@ -133,6 +165,9 @@ class APIInterface:
 
         elif isinstance(req_model, TopicCreated):
             url += "/webhook/telegram/topic_created"
+
+        elif isinstance(req_model, TopicEdited):
+            url += "/webhook/telegram/topicEdited"
 
         elif isinstance(req_model, BotAdded):
             url += "/webhook/telegram/bot_added"
