@@ -14,6 +14,9 @@ class HandleEvents:
     async def event_new_message(event: events.NewMessage.Event):
         Config.LOGGER.info(f"Handler called. NewMessage. type = {type(event.message)}")
         msg_obj = event.message
+        print(msg_obj)
+
+        return
 
         if isinstance(msg_obj.peer_id, types.PeerChannel):
             full_chat = await Config.TG_CLIENT(GetFullChannelRequest(msg_obj.peer_id))

@@ -1,0 +1,7 @@
+mtprotosender.py:228 #INFO     [2025-10-02 17:17:19,606] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-02 17:17:19,723] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:15 #INFO     [2025-10-02 17:17:29,385] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-10-02 17:17:29,386] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-10-02 17:17:29,973] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+mtprotosender.py:319 #INFO     [2025-10-02 17:17:30,368] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-02 17:17:30,371] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
