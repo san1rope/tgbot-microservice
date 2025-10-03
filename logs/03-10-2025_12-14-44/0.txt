@@ -1,0 +1,38 @@
+mtprotosender.py:228 #INFO     [2025-10-03 12:14:44,241] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 12:14:44,907] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:126 #INFO     [2025-10-03 12:14:46,598] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+handlers.py:126 #INFO     [2025-10-03 12:14:47,251] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateReadChannelDiscussionInbox'>
+handlers.py:12 #INFO     [2025-10-03 12:14:47,252] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:126 #INFO     [2025-10-03 12:14:48,628] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+api_interface.py:234 #INFO     [2025-10-03 12:14:49,121] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:126 #INFO     [2025-10-03 12:14:49,121] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateNewChannelMessage'>
+handlers.py:126 #INFO     [2025-10-03 12:14:50,046] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+handlers.py:126 #INFO     [2025-10-03 12:14:50,428] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+handlers.py:126 #INFO     [2025-10-03 12:14:53,217] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+handlers.py:12 #INFO     [2025-10-03 12:15:34,171] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:126 #INFO     [2025-10-03 12:15:34,182] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateReadChannelInbox'>
+handlers.py:12 #INFO     [2025-10-03 12:15:34,204] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:443 #INFO     [2025-10-03 12:15:36,040] - telethon.client.updates - 0| Got difference for channel 3182171584 updates
+handlers.py:126 #INFO     [2025-10-03 12:15:36,041] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateMessageID'>
+handlers.py:126 #INFO     [2025-10-03 12:15:36,041] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateMessageID'>
+handlers.py:12 #INFO     [2025-10-03 12:15:36,041] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:126 #INFO     [2025-10-03 12:15:36,042] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateNewChannelMessage'>
+handlers.py:126 #INFO     [2025-10-03 12:15:36,046] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateReadChannelDiscussionInbox'>
+handlers.py:126 #INFO     [2025-10-03 12:15:36,047] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+api_interface.py:234 #INFO     [2025-10-03 12:15:37,337] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:126 #INFO     [2025-10-03 12:15:37,337] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:234 #INFO     [2025-10-03 12:15:38,253] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:126 #INFO     [2025-10-03 12:15:38,254] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:234 #INFO     [2025-10-03 12:15:38,255] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:126 #INFO     [2025-10-03 12:15:38,255] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateNewChannelMessage'>
+handlers.py:126 #INFO     [2025-10-03 12:15:48,496] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+handlers.py:64 #INFO     [2025-10-03 12:15:48,496] - root - 0| Handler called. MessageEdited
+api_interface.py:234 #INFO     [2025-10-03 12:15:50,012] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/update | {'success': True, 'method': 'update'}
+handlers.py:126 #INFO     [2025-10-03 12:15:50,012] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateEditChannelMessage'>
+handlers.py:126 #INFO     [2025-10-03 12:15:50,027] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+handlers.py:12 #INFO     [2025-10-03 12:15:50,028] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:64 #INFO     [2025-10-03 12:15:50,028] - root - 0| Handler called. MessageEdited
+handlers.py:126 #INFO     [2025-10-03 12:15:50,276] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateNewChannelMessage'>
+handlers.py:126 #INFO     [2025-10-03 12:15:50,734] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateEditChannelMessage'>
+mtprotosender.py:319 #INFO     [2025-10-03 12:16:06,222] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 12:16:06,223] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

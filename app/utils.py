@@ -3,11 +3,9 @@ import logging
 from datetime import datetime
 from logging import Logger
 from pathlib import Path
-from typing import Union, Dict, Tuple
+from typing import Dict
 
-from telethon.tl import types
-from telethon.tl.functions.channels import GetFullChannelRequest
-from telethon.tl.functions.messages import GetStickerSetRequest, GetFullChatRequest
+from telethon.tl.functions.messages import GetStickerSetRequest
 
 from app.api_interface import *
 from app.config import Config
@@ -70,34 +68,6 @@ class Utils:
                 best = {"w": w, "h": h, "size_bytes": size_bytes}
 
         return best
-
-    @staticmethod
-    async def get_chat_data_from_peer(peer_id, only_chat_id: bool = False) -> Union[ChatInfo, None]:
-        if isinstance(peer_id, types.PeerChannel):
-            full_chat = await Config.TG_CLIENT(GetFullChannelRequest(peer_id))
-            chat_obj = full_chat.chats[0]
-            chat_id = int(f"-100{chat_obj.id}")
-
-            chat_type = "supergroup" if chat_obj.megagroup else "channel"
-
-        elif isinstance(peer_id, types.PeerChat):
-            full_chat = await Config.TG_CLIENT(GetFullChatRequest(peer_id.chat_id))
-            chat_obj = full_chat.chats[0]
-            chat_id = int(f"-{chat_obj.id}")
-
-            chat_type = "chat"
-
-        else:
-            return None if only_chat_id else (None, None)
-
-        chat_info = ChatInfo(
-            title=chat_obj.title,
-            username=chat_obj.username,
-            type=chat_type,
-            is_forum=chat_obj.forum,
-            member_count=full_chat.full_chat.participants_count
-        )
-        return chat_id if only_chat_id else (chat_id, chat_info)
 
     @staticmethod
     async def get_topic_data_from_msg(msg_obj: types.Message, only_id: bool = False):

@@ -1,0 +1,47 @@
+mtprotosender.py:228 #INFO     [2025-10-03 12:14:10,708] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 12:14:10,818] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:126 #INFO     [2025-10-03 12:14:13,207] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+updates.py:590 #ERROR    [2025-10-03 12:14:13,207] - telethon.client.updates - 0| Unhandled exception on event_raw
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 127, in event_raw
+    msg_obj = event.message
+AttributeError: 'UpdateUserStatus' object has no attribute 'message'
+handlers.py:126 #INFO     [2025-10-03 12:14:17,160] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateReadChannelDiscussionInbox'>
+updates.py:590 #ERROR    [2025-10-03 12:14:17,160] - telethon.client.updates - 0| Unhandled exception on event_raw
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 127, in event_raw
+    msg_obj = event.message
+AttributeError: 'UpdateReadChannelDiscussionInbox' object has no attribute 'message'
+handlers.py:12 #INFO     [2025-10-03 12:14:17,161] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:234 #INFO     [2025-10-03 12:14:17,876] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:126 #INFO     [2025-10-03 12:14:17,877] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateNewChannelMessage'>
+handlers.py:126 #INFO     [2025-10-03 12:14:18,328] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+updates.py:590 #ERROR    [2025-10-03 12:14:18,328] - telethon.client.updates - 0| Unhandled exception on event_raw
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 127, in event_raw
+    msg_obj = event.message
+AttributeError: 'UpdateUserStatus' object has no attribute 'message'
+handlers.py:126 #INFO     [2025-10-03 12:14:18,933] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+updates.py:590 #ERROR    [2025-10-03 12:14:18,933] - telethon.client.updates - 0| Unhandled exception on event_raw
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 127, in event_raw
+    msg_obj = event.message
+AttributeError: 'UpdateUserStatus' object has no attribute 'message'
+handlers.py:126 #INFO     [2025-10-03 12:14:19,272] - root - 0| Handler called. Raw: <class 'telethon.tl.types.UpdateUserStatus'>
+updates.py:590 #ERROR    [2025-10-03 12:14:19,272] - telethon.client.updates - 0| Unhandled exception on event_raw
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "D:\PythonProjects\tgbot-microservice\app\handlers.py", line 127, in event_raw
+    msg_obj = event.message
+AttributeError: 'UpdateUserStatus' object has no attribute 'message'
+mtprotosender.py:319 #INFO     [2025-10-03 12:14:20,229] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 12:14:20,231] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

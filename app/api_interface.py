@@ -4,6 +4,8 @@ from venv import logger
 from aiohttp import ClientSession
 from pydantic import BaseModel
 from telethon.tl import types
+from telethon.tl.functions.channels import GetFullChannelRequest
+from telethon.tl.functions.messages import GetFullChatRequest
 
 from app.config import Config
 
@@ -34,6 +36,34 @@ class ChatInfo(BaseModel):
     type: str
     is_forum: bool
     member_count: int
+
+    @staticmethod
+    async def obj_from_peer(peer_id, only_chat_id: bool = False):
+        if isinstance(peer_id, types.PeerChannel):
+            full_chat = await Config.TG_CLIENT(GetFullChannelRequest(peer_id))
+            chat_obj = full_chat.chats[0]
+            chat_id = int(f"-100{chat_obj.id}")
+
+            chat_type = "supergroup" if chat_obj.megagroup else "channel"
+
+        elif isinstance(peer_id, types.PeerChat):
+            full_chat = await Config.TG_CLIENT(GetFullChatRequest(peer_id.chat_id))
+            chat_obj = full_chat.chats[0]
+            chat_id = int(f"-{chat_obj.id}")
+
+            chat_type = "chat"
+
+        else:
+            return None if only_chat_id else (None, None)
+
+        chat_info = ChatInfo(
+            title=chat_obj.title,
+            username=chat_obj.username,
+            type=chat_type,
+            is_forum=chat_obj.forum,
+            member_count=full_chat.full_chat.participants_count
+        )
+        return chat_id if only_chat_id else (chat_id, chat_info)
 
 
 class MediaPhoto(BaseModel):
@@ -125,10 +155,23 @@ class TopicCreated(BaseModel):
 
 
 class TopicEdited(BaseModel):
-    type: str = "topic_edited"
-    topic_id: int
+    type: str = "topic_updated"
     chat_id: int
+    topic_id: int
     title: str
+    icon_color: int
+    sender: FromUser
+    chat_info: ChatInfo
+    timestamp: str
+
+
+class TopicDeleted(BaseModel):
+    type: str = "topic_deleted"
+    chat_id: int
+    topic_id: int
+    sender: FromUser
+    chat_info: ChatInfo
+    timestamp: str
 
 
 class BotAdded(BaseModel):
@@ -137,6 +180,12 @@ class BotAdded(BaseModel):
     chat_info: ChatInfo
     owner_info: FromUser
     added_by: FromUser
+    timestamp: str
+
+
+class BotDeleted(BaseModel):
+    type: str = "bot_deleted_from_chat"
+    chat_id: int
     timestamp: str
 
 
