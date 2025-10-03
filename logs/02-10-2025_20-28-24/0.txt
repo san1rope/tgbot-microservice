@@ -1,0 +1,39 @@
+mtprotosender.py:228 #INFO     [2025-10-02 20:28:24,908] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-02 20:28:24,945] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:15 #INFO     [2025-10-02 20:28:30,716] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-10-02 20:28:30,718] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:185 #INFO     [2025-10-02 20:28:31,122] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+updates.py:590 #ERROR    [2025-10-02 20:28:31,489] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 50, in event_new_message
+    if topic_id + 1 == msg_obj.id:
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+handlers.py:15 #INFO     [2025-10-02 20:28:32,344] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-10-02 20:28:32,493] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 50, in event_new_message
+    if topic_id + 1 == msg_obj.id:
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+handlers.py:15 #INFO     [2025-10-02 20:28:33,490] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-10-02 20:28:33,652] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 50, in event_new_message
+    if topic_id + 1 == msg_obj.id:
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+handlers.py:15 #INFO     [2025-10-02 20:28:34,721] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-10-02 20:28:34,724] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-10-02 20:28:34,955] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 50, in event_new_message
+    if topic_id + 1 == msg_obj.id:
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+mtprotosender.py:319 #INFO     [2025-10-02 20:28:35,435] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-02 20:28:35,435] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

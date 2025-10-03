@@ -3,10 +3,13 @@ import logging
 from datetime import datetime
 from logging import Logger
 from pathlib import Path
-from typing import Union, Dict
+from typing import Union, Dict, Tuple
 
 from telethon.tl import types
+from telethon.tl.functions.channels import GetFullChannelRequest
+from telethon.tl.functions.messages import GetStickerSetRequest, GetFullChatRequest
 
+from app.api_interface import *
 from app.config import Config
 
 
@@ -69,20 +72,35 @@ class Utils:
         return best
 
     @staticmethod
-    async def get_chat_id_from_peer(peer_id) -> Union[int]:
+    async def get_chat_data_from_peer(peer_id, only_chat_id: bool = False) -> Union[ChatInfo, None]:
         if isinstance(peer_id, types.PeerChannel):
-            chat_id = int(f"-100{peer_id.channel_id}")
+            full_chat = await Config.TG_CLIENT(GetFullChannelRequest(peer_id))
+            chat_obj = full_chat.chats[0]
+            chat_id = int(f"-100{chat_obj.id}")
+
+            chat_type = "supergroup" if chat_obj.megagroup else "channel"
 
         elif isinstance(peer_id, types.PeerChat):
-            chat_id = int(f"-{peer_id.chat_id}")
+            full_chat = await Config.TG_CLIENT(GetFullChatRequest(peer_id.chat_id))
+            chat_obj = full_chat.chats[0]
+            chat_id = int(f"-{chat_obj.id}")
+
+            chat_type = "chat"
 
         else:
-            chat_id = 0
+            return None if only_chat_id else (None, None)
 
-        return chat_id
+        chat_info = ChatInfo(
+            title=chat_obj.title,
+            username=chat_obj.username,
+            type=chat_type,
+            is_forum=chat_obj.forum,
+            member_count=full_chat.full_chat.participants_count
+        )
+        return chat_id if only_chat_id else (chat_id, chat_info)
 
     @staticmethod
-    async def get_topic_info_from_msg(msg_obj: types.Message, only_id: bool = False):
+    async def get_topic_data_from_msg(msg_obj: types.Message, only_id: bool = False):
         topic_id = None
         title = ""
         icon_color = 0
@@ -100,3 +118,97 @@ class Utils:
             return topic_id
 
         return topic_id, title, icon_color
+
+    @staticmethod
+    async def get_media_data_from_msg(msg_obj: types.Message):
+        media = None
+        msg_type = 1
+
+        if isinstance(msg_obj.media, types.MessageMediaPhoto):
+            best_size = await Utils.best_photo_size(photo=msg_obj.media.photo)
+            media = MediaPhoto(
+                file_size=best_size["size_bytes"],
+                mime_type="image/jpeg",
+                width=best_size["w"],
+                height=best_size["h"],
+            )
+            msg_type = 2
+
+        elif isinstance(msg_obj.media, types.MessageMediaDocument):
+            doc = msg_obj.media.document
+
+            attr_sticker, attr_video, attr_audio, attr_filename, attr_animated = None, None, None, None, None
+            for attr in doc.attributes:
+                if isinstance(attr, types.DocumentAttributeSticker):
+                    attr_sticker = attr
+
+                elif isinstance(attr, types.DocumentAttributeVideo):
+                    attr_video = attr
+
+                elif isinstance(attr, types.DocumentAttributeAudio):
+                    attr_audio = attr
+
+                elif isinstance(attr, types.DocumentAttributeFilename):
+                    attr_filename = attr
+
+                elif isinstance(attr, types.DocumentAttributeAnimated):
+                    attr_animated = attr
+
+            if attr_sticker:
+                if isinstance(attr_sticker.stickerset, types.InputStickerSetShortName):
+                    short_name = attr_sticker.stickerset.short_name
+
+                else:
+                    print(f"stickerset = {attr_sticker.stickerset}")
+                    sticker_set_res = await Config.TG_CLIENT(
+                        GetStickerSetRequest(stickerset=attr_sticker.stickerset, hash=0))
+                    short_name = getattr(sticker_set_res.set, "short_name", None)
+
+                media = MediaSticker(
+                    file_size=doc.size,
+                    mime_type=doc.mime_type,
+                    set_name=short_name,
+                    emoji=attr_sticker.alt
+                )
+                msg_type = 4
+
+            elif attr_audio:
+                media = MediaAudio(
+                    file_size=doc.size,
+                    mime_type=doc.mime_type,
+                    duration=attr_audio.duration,
+                    is_voice=attr_audio.voice
+                )
+                msg_type = 7
+
+            elif attr_animated:
+                media = MediaVideoGIF(
+                    file_size=doc.size,
+                    mime_type="image/gif",
+                    duration=attr_video.duration,
+                    width=attr_video.w,
+                    height=attr_video.h,
+                    supports_streaming=attr_video.supports_streaming
+                )
+                msg_type = 11
+
+            elif attr_video:
+                media = MediaVideoGIF(
+                    file_size=doc.size,
+                    mime_type=doc.mime_type,
+                    duration=attr_video.duration,
+                    width=attr_video.w,
+                    height=attr_video.h,
+                    supports_streaming=attr_video.supports_streaming
+                )
+                msg_type = 11
+
+            elif attr_filename:
+                media = MediaDocument(
+                    file_size=doc.size,
+                    mime_type=doc.mime_type,
+                    file_name=attr_filename.file_name
+                )
+                msg_type = 6
+
+        return msg_type, media
