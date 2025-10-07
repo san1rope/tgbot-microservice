@@ -6,7 +6,6 @@ from telethon.tl import types
 from app.config import Config
 from app.tg.handlers import HandleEvents
 from app.tg.tg_tools import TgTools
-from app.utils import Utils as Ut
 
 
 class EventsCatcher:
@@ -42,7 +41,7 @@ class EventsCatcher:
     @staticmethod
     async def event_message_edited(event: events.MessageEdited.Event):
         if await EventsCatcher.check_chat_id(event.message.peer_id):
-            pass  # add message edited task in queue
+            await Config.QUEUE_EVENTS.put(HandleEvents.processing_message_edited(event))
 
     @staticmethod
     async def event_message_deleted(event: events.MessageDeleted.Event):
@@ -64,22 +63,23 @@ class EventsCatcher:
             return
 
         if await EventsCatcher.check_chat_id(chat_id):
-            pass  # add task in queue
+            await Config.QUEUE_EVENTS.put(HandleEvents.processing_message_deleted(event))
 
     @staticmethod
-    async def processing_chat_action(event: events.ChatAction.Event):
+    async def event_chat_action(event: events.ChatAction.Event):
         act_msg = event.action_message
         if not await EventsCatcher.check_chat_id(act_msg.peer_id):
             return
 
-        if isinstance(act_msg, types.MessageActionChatAddUser):
-            pass  # add task in queue
+        me = await Config.TG_CLIENT.get_me()
+        if isinstance(act_msg, types.MessageActionChatAddUser) and me.id in act_msg.action.users:
+            await Config.QUEUE_EVENTS.put(HandleEvents.processing_action_add_chat_user(event))
 
-        elif isinstance(act_msg, types.MessageActionChatDeleteUser):
-            pass  # add task in queue
+        elif isinstance(act_msg, types.MessageActionChatDeleteUser) and me.id in act_msg.action.users:
+            await Config.QUEUE_EVENTS.put(HandleEvents.processing_action_chat_delete_user(event))
 
     @staticmethod
-    async def processing_raw(event: events.Raw):
+    async def event_raw(event: events.Raw):
         if isinstance(event, types.UpdateNewChannelMessage):
             action = event.message.action
             if not action:
@@ -89,4 +89,4 @@ class EventsCatcher:
                 if await EventsCatcher.check_chat_id(event.message.peer_id):
                     return
 
-                pass  # add task in queue
+                await Config.QUEUE_EVENTS.put(HandleEvents.processing_topic_edited(event))

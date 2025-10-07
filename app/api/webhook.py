@@ -197,8 +197,8 @@ class APIInterface:
     @staticmethod
     async def send_request(req_model: Union[
         MessageCreated, MessageEdited, MessageDeleted,
-        TopicCreated, TopicEdited,
-        BotAdded
+        TopicCreated, TopicEdited, TopicDeleted,
+        BotAdded, BotDeleted
     ], utils_obj):
         if not Config.AIOHTTP_SESSION:
             Config.AIOHTTP_SESSION = ClientSession()
@@ -206,27 +206,35 @@ class APIInterface:
         url = Config.BASE_URL
         if isinstance(req_model, MessageCreated):
             url += "/webhook/telegram/create"
+            text = "Event: Message Created"
 
         elif isinstance(req_model, MessageEdited):
             url += "/webhook/telegram/update"
+            text = "Event: Message Edited"
 
         elif isinstance(req_model, MessageDeleted):
             url += "/webhook/telegram/delete"
+            text = "Event: Message Deleted"
 
         elif isinstance(req_model, TopicCreated):
             url += "/webhook/telegram/topic_created"
+            text = "Event: Topic Created"
 
         elif isinstance(req_model, TopicEdited):
             url += "/webhook/telegram/topicEdited"
+            text = "Event: Topic Edited"
 
         elif isinstance(req_model, TopicDeleted):
             url += "/webhook/telegram/topicDeleted"
+            text = "Event: Topic Deleted"
 
         elif isinstance(req_model, BotAdded):
             url += "/webhook/telegram/bot_added"
+            text = "Event: Bot Added To Chat"
 
         elif isinstance(req_model, BotDeleted):
             url += "/webhook/telegram/deleteChat"
+            text = "Event: Bot Deleted From Chat"
 
         else:
             return TypeError
@@ -241,6 +249,6 @@ class APIInterface:
 
             body_request = "<pre>" + json.dumps(req_model.model_dump(), indent=2, ensure_ascii=False) + "</pre>"
 
-            await utils_obj.log(f"Request. status: {response.status}. {url} \n{body_request}")
+            await utils_obj.log(f"{text}\nRequest | {response.status} | {url} \n{body_request}")
 
         return answer

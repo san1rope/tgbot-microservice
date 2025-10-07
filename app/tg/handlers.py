@@ -107,7 +107,6 @@ class HandleEvents:
 
     @staticmethod
     async def processing_message_deleted(event: events.MessageDeleted.Event):
-
         org_upd = event.original_update
         if isinstance(org_upd, types.UpdateDeleteChannelMessages):
             input_chat = await event.get_input_chat()
@@ -172,119 +171,106 @@ class HandleEvents:
         await APIInterface.send_request(utils_obj=Ut, req_model=req_model)
 
     @staticmethod
-    async def event_chat_action(event: events.ChatAction.Event):
-        me = await Config.TG_CLIENT.get_me()
+    async def processing_action_add_chat_user(event: events.ChatAction.Event):
         act_msg = event.action_message
-        if isinstance(act_msg.action, types.MessageActionChatAddUser) and (me.id in act_msg.action.users):
-            await Ut.log(f"Event called. Bot added to chat")
 
-            chat_id, chat_info = await ChatInfo.obj_from_peer(act_msg.peer_id)
-            if not chat_id:
-                return
+        chat_id, chat_info = await ChatInfo.obj_from_peer(act_msg.peer_id)
+        if not chat_id:
+            return
 
-            added_by_user = await Config.TG_CLIENT.get_entity(act_msg.from_id)
-            added_by = await FromUser.obj_from_sender(added_by_user)
-            if not added_by:
-                return
+        added_by_user = await Config.TG_CLIENT.get_entity(act_msg.from_id)
+        added_by = await FromUser.obj_from_sender(added_by_user)
+        if not added_by:
+            return
 
-            owner_info = None
-            if isinstance(act_msg.peer_id, types.PeerChat):
-                full_chat = await Config.TG_CLIENT(GetFullChatRequest(act_msg.peer_id.chat_id))
-                for member in full_chat.full_chat.participants.participants:
-                    if isinstance(member, types.ChatParticipantCreator):
-                        user = await Config.TG_CLIENT.get_entity(member)
-                        owner_info = await FromUser.obj_from_sender(user)
-                        break
-
-            elif isinstance(act_msg.peer_id, types.PeerChannel):
-                channel_admins = await Config.TG_CLIENT(GetParticipantsRequest(
-                    channel=act_msg.peer_id,
-                    filter=types.ChannelParticipantsAdmins(),
-                    offset=0,
-                    limit=200,
-                    hash=0
-                ))
-
-                for member in channel_admins.participants:
-                    if not isinstance(member, types.ChannelParticipantCreator):
-                        continue
-
-                    for user in channel_admins.users:
-                        if member.user_id != user.id:
-                            continue
-
-                        owner_info = await FromUser.obj_from_sender(user)
-                        break
-
+        owner_info = None
+        if isinstance(act_msg.peer_id, types.PeerChat):
+            full_chat = await Config.TG_CLIENT(GetFullChatRequest(act_msg.peer_id.chat_id))
+            for member in full_chat.full_chat.participants.participants:
+                if isinstance(member, types.ChatParticipantCreator):
+                    user = await Config.TG_CLIENT.get_entity(member)
+                    owner_info = await FromUser.obj_from_sender(user)
                     break
 
-            else:
-                return
+        elif isinstance(act_msg.peer_id, types.PeerChannel):
+            channel_admins = await Config.TG_CLIENT(GetParticipantsRequest(
+                channel=act_msg.peer_id,
+                filter=types.ChannelParticipantsAdmins(),
+                offset=0,
+                limit=200,
+                hash=0
+            ))
 
-            await APIInterface.send_request(
-                utils_obj=Ut,
-                req_model=BotAdded(
-                    chat_id=chat_id,
-                    chat_info=chat_info,
-                    owner_info=owner_info,
-                    added_by=added_by,
-                    timestamp=act_msg.date.strftime("%Y-%m-%dT%H:%M:%SZ")
-                )
+            for member in channel_admins.participants:
+                if not isinstance(member, types.ChannelParticipantCreator):
+                    continue
+
+                for user in channel_admins.users:
+                    if member.user_id != user.id:
+                        continue
+
+                    owner_info = await FromUser.obj_from_sender(user)
+                    break
+
+                break
+
+        else:
+            return
+
+        await APIInterface.send_request(
+            utils_obj=Ut,
+            req_model=BotAdded(
+                chat_id=chat_id,
+                chat_info=chat_info,
+                owner_info=owner_info,
+                added_by=added_by,
+                timestamp=act_msg.date.strftime("%Y-%m-%dT%H:%M:%SZ")
             )
-
-        elif isinstance(act_msg.action, types.MessageActionChatDeleteUser) and (me.id == act_msg.action.user_id):
-            await Ut.log(f"Event called. Bot deleted from chat")
-
-            if isinstance(act_msg.peer_id, types.PeerChannel):
-                chat_id = int(f"-100{act_msg.peer_id.channel_id}")
-
-            elif isinstance(act_msg.peer_id, types.PeerChat):
-                chat_id = int(f"-{act_msg.peer_id.chat_id}")
-
-            else:
-                return
-
-            await APIInterface.send_request(
-                utils_obj=Ut,
-                req_model=BotDeleted(
-                    chat_id=chat_id,
-                    timestamp=act_msg.date.strftime("%Y-%m-%dT%H:%M:%SZ")
-                )
-            )
+        )
 
     @staticmethod
-    async def event_raw(event):
-        if isinstance(event, types.UpdateNewChannelMessage):
-            action = event.message.action
-            if not action:
-                return None
+    async def processing_action_chat_delete_user(event: events.ChatAction.Event):
+        act_msg = event.action_message
+        if isinstance(act_msg.peer_id, types.PeerChannel):
+            chat_id = int(f"-100{act_msg.peer_id.channel_id}")
 
-            if isinstance(action, types.MessageActionTopicEdit):
-                Config.LOGGER.info(f"Handler called. Topic has edited!")
-                msg_obj = event.message
+        elif isinstance(act_msg.peer_id, types.PeerChat):
+            chat_id = int(f"-{act_msg.peer_id.chat_id}")
 
-                sender = await Config.TG_CLIENT.get_entity(msg_obj.from_id)
-                from_user = await FromUser.obj_from_sender(sender)
-                if not from_user:
-                    return None
+        else:
+            return
 
-                chat_id, chat_info = await ChatInfo.obj_from_peer(msg_obj.peer_id)
-                if not chat_id:
-                    return None
+        await APIInterface.send_request(
+            utils_obj=Ut,
+            req_model=BotDeleted(
+                chat_id=chat_id,
+                timestamp=act_msg.date.strftime("%Y-%m-%dT%H:%M:%SZ")
+            )
+        )
 
-                topic_id, title, icon_color = await Ut.get_topic_data_from_msg(msg_obj)
+    @staticmethod
+    async def processing_topic_edited(event: types.UpdateNewChannelMessage):
+        msg_obj = event.message
 
-                return await APIInterface.send_request(
-                    utils_obj=Ut,
-                    req_model=TopicEdited(
-                        chat_id=chat_id,
-                        topic_id=topic_id,
-                        title=title,
-                        icon_color=icon_color,
-                        sender=from_user,
-                        chat_info=chat_info,
-                        timestamp=msg_obj.date.strftime("%Y-%m-%dT%H:%M:%SZ")
-                    )
-                )
+        sender = await Config.TG_CLIENT.get_entity(msg_obj.from_id)
+        from_user = await FromUser.obj_from_sender(sender)
+        if not from_user:
+            return None
 
-        return None
+        chat_id, chat_info = await ChatInfo.obj_from_peer(msg_obj.peer_id)
+        if not chat_id:
+            return None
+
+        topic_id, title, icon_color = await TgTools.get_topic_data_from_msg(msg_obj)
+        return await APIInterface.send_request(
+            utils_obj=Ut,
+            req_model=TopicEdited(
+                chat_id=chat_id,
+                topic_id=topic_id,
+                title=title,
+                icon_color=icon_color,
+                sender=from_user,
+                chat_info=chat_info,
+                timestamp=msg_obj.date.strftime("%Y-%m-%dT%H:%M:%SZ")
+            )
+        )

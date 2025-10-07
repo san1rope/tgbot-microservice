@@ -2,40 +2,34 @@ import asyncio
 from datetime import datetime
 
 from aiohttp import ClientSession
+from fastapi import FastAPI
 from redis.asyncio import Redis
-from telethon import events
+from telethon import events, TelegramClient
 
 from app.config import Config
 from app.tg.events_catcher import EventsCatcher
 from app.utils import Utils as Ut
 
+rest_api = FastAPI()
 
-async def worker_events():
-    await Ut.log("Events worker has been started!")
 
+async def worker(worker_id: int, event: bool = False, cmd: bool = False):
+    if event:
+        text = f"Events worker {worker_id} has been started!"
+        current_queue = Config.QUEUE_EVENTS
+
+    elif cmd:
+        text = f"Commands worker {worker_id} has been started!"
+        current_queue = Config.QUEUE_CMDS
+
+    else:
+        return
+
+    await Ut.log(text)
     while True:
         await asyncio.sleep(1)
         try:
-            task = await Config.QUEUE_EVENTS.get()
-            for retry in range(1, 4):
-                result = await task
-                if result:
-                    break
-
-                else:
-                    await Ut.log(f"Не удалось завершить event задачу! Осталось попыток: {retry}")
-
-        except Exception as ex:
-            pass
-
-
-async def worker_cmds():
-    await Ut.log("Commands worker has been started!")
-
-    while True:
-        await asyncio.sleep(1)
-        try:
-            task = await Config.QUEUE_CMDS.get()
+            task = await current_queue.get()
             for retry in range(1, 4):
                 result = await task
                 if result:
@@ -61,6 +55,7 @@ async def main():
     loop = asyncio.get_event_loop()
     loop.create_task(Ut.logging_queue())
 
+    Config.TG_CLIENT = TelegramClient(session="work-app", api_id=Config.TG_API_ID, api_hash=Config.TG_API_HASH)
     await Config.TG_CLIENT.start(phone=Config.PHONE_NUMBER)
     await Ut.log("Client has been connected!")
 
@@ -71,14 +66,14 @@ async def main():
     await Ut.log("Redis has been initialized!")
     await Ut.load_data_in_redis()
 
-    asyncio.create_task(worker_events())
-    asyncio.create_task(worker_cmds())
+    workers_events = [asyncio.create_task(worker(n, event=True)) for n in range(Config.EVENT_WORKERS_COUNT)]
+    worker_cmds = [asyncio.create_task(worker(n, cmd=True)) for n in range(Config.CMD_WORKERS_COUNT)]
 
     Config.TG_CLIENT.add_event_handler(EventsCatcher.event_new_message, events.NewMessage())
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_message_edited, events.MessageEdited())
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_message_deleted, events.MessageDeleted())
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_chat_action, events.ChatAction())
-    # Config.TG_CLIENT.add_event_handler(HandleEvents.event_raw, events.Raw())
+    Config.TG_CLIENT.add_event_handler(EventsCatcher.event_message_edited, events.MessageEdited())
+    Config.TG_CLIENT.add_event_handler(EventsCatcher.event_message_deleted, events.MessageDeleted())
+    Config.TG_CLIENT.add_event_handler(EventsCatcher.event_chat_action, events.ChatAction())
+    Config.TG_CLIENT.add_event_handler(EventsCatcher.event_raw, events.Raw())
     await Ut.log("Event handlers has been registered!")
 
     await Config.TG_CLIENT.run_until_disconnected()

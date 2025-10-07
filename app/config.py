@@ -18,7 +18,7 @@ LOG_LIST: List[str] = []
 class Config:
     TG_API_ID = int(os.getenv("TG_API_ID").strip())
     TG_API_HASH = os.getenv("TG_API_HASH").strip()
-    TG_CLIENT = TelegramClient(session="work-app", api_id=TG_API_ID, api_hash=TG_API_HASH)
+    TG_CLIENT: Optional[TelegramClient] = None
 
     DATETIME_FORMAT = os.getenv("DATETIME_FORMAT").strip()
     LOGGING_DIR = Path(os.path.abspath("logs"))
