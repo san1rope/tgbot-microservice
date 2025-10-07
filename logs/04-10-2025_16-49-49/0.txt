@@ -1,0 +1,29 @@
+mtprotosender.py:228 #INFO     [2025-10-04 16:49:49,778] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-04 16:49:49,830] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:99 #INFO     [2025-10-04 16:51:13,131] - root - 0| Handler called. MessageDeleted
+updates.py:590 #ERROR    [2025-10-04 16:51:13,875] - telethon.client.updates - 0| Unhandled exception on event_message_deleted
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 126, in event_message_deleted
+    res = await Config.TG_CLIENT(
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 92, in _call
+    result = await future
+telethon.errors.rpcerrorlist.ChatAdminRequiredError: Chat admin privileges are required to do that in the specified chat (for example, to send a message in a channel which is not yours), or invalid permissions used for the channel or group (caused by GetAdminLogRequest)
+handlers.py:99 #INFO     [2025-10-04 16:51:27,634] - root - 0| Handler called. MessageDeleted
+updates.py:590 #ERROR    [2025-10-04 16:51:27,802] - telethon.client.updates - 0| Unhandled exception on event_message_deleted
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 126, in event_message_deleted
+    res = await Config.TG_CLIENT(
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 92, in _call
+    result = await future
+telethon.errors.rpcerrorlist.ChatAdminRequiredError: Chat admin privileges are required to do that in the specified chat (for example, to send a message in a channel which is not yours), or invalid permissions used for the channel or group (caused by GetAdminLogRequest)
+handlers.py:99 #INFO     [2025-10-04 16:51:36,467] - root - 0| Handler called. MessageDeleted
+mtprotosender.py:319 #INFO     [2025-10-04 16:51:38,869] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-04 16:51:38,869] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

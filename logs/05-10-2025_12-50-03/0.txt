@@ -1,0 +1,15 @@
+mtprotosender.py:228 #INFO     [2025-10-05 12:50:03,216] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 12:50:03,251] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:99 #INFO     [2025-10-05 12:50:50,791] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-05 12:50:51,418] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+handlers.py:99 #INFO     [2025-10-05 12:50:56,889] - root - 0| Handler called. MessageDeleted
+handlers.py:99 #INFO     [2025-10-05 12:51:48,722] - root - 0| Handler called. MessageDeleted
+updates.py:590 #ERROR    [2025-10-05 12:51:49,333] - telethon.client.updates - 0| Unhandled exception on event_message_deleted
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 110, in event_message_deleted
+    if result["type"] == "delete_messages":
+TypeError: tuple indices must be integers or slices, not str
+mtprotosender.py:319 #INFO     [2025-10-05 12:51:56,508] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 12:51:56,508] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

@@ -1,0 +1,50 @@
+mtprotosender.py:228 #INFO     [2025-10-03 23:35:33,226] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 23:35:33,264] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:97 #INFO     [2025-10-03 23:35:36,800] - root - 0| Handler called. MessageDeleted
+updates.py:590 #ERROR    [2025-10-03 23:35:36,800] - telethon.client.updates - 0| Unhandled exception on event_message_deleted
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\sessions\memory.py", line 197, in get_input_entity
+    return utils.get_input_peer(key)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\utils.py", line 230, in get_input_peer
+    _raise_cast_fail(entity, 'InputPeer')
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\utils.py", line 133, in _raise_cast_fail
+    raise TypeError('Cannot cast {} to any kind of {}.'.format(
+TypeError: Cannot cast UpdateDeleteChannelMessages to any kind of InputPeer.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\utils.py", line 1029, in get_peer_id
+    peer = get_peer(peer)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\utils.py", line 1002, in get_peer
+    _raise_cast_fail(peer, 'Peer')
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\utils.py", line 133, in _raise_cast_fail
+    raise TypeError('Cannot cast {} to any kind of {}.'.format(
+TypeError: Cannot cast UpdateDeleteChannelMessages to any kind of Peer.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 103, in event_message_deleted
+    chat_id, chat_info = await ChatInfo.obj_from_peer(org_upd, channel=True)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\api_interface.py", line 46, in obj_from_peer
+    full_chat = await Config.TG_CLIENT(GetFullChannelRequest(peer_id))
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 44, in _call
+    await r.resolve(self, utils)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\tl\functions\channels.py", line 1102, in resolve
+    self.channel = utils.get_input_channel(await client.get_input_entity(self.channel))
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 438, in get_input_entity
+    input_entity = await utils.maybe_async(self.session.get_input_entity(peer))
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\sessions\memory.py", line 201, in get_input_entity
+    key = utils.get_peer_id(key)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\utils.py", line 1031, in get_peer_id
+    _raise_cast_fail(peer, 'int')
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\utils.py", line 133, in _raise_cast_fail
+    raise TypeError('Cannot cast {} to any kind of {}.'.format(
+TypeError: Cannot cast UpdateDeleteChannelMessages to any kind of int.
+mtprotosender.py:319 #INFO     [2025-10-03 23:35:46,191] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 23:35:46,191] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

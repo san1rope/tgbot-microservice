@@ -1,0 +1,23 @@
+mtprotosender.py:228 #INFO     [2025-10-04 09:48:52,771] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-04 09:48:52,808] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:15 #INFO     [2025-10-04 09:48:55,444] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:241 #INFO     [2025-10-04 09:48:56,683] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:15 #INFO     [2025-10-04 09:48:59,419] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-10-04 09:48:59,420] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:241 #INFO     [2025-10-04 09:48:59,710] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+api_interface.py:241 #INFO     [2025-10-04 09:48:59,811] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:15 #INFO     [2025-10-04 09:49:08,053] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:241 #INFO     [2025-10-04 09:49:08,293] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:15 #INFO     [2025-10-04 09:49:08,344] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:241 #INFO     [2025-10-04 09:49:08,508] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:15 #INFO     [2025-10-04 09:49:08,548] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+handlers.py:15 #INFO     [2025-10-04 09:49:08,723] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:241 #INFO     [2025-10-04 09:49:08,733] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+users.py:122 #INFO     [2025-10-04 09:49:08,818] - telethon.client.users - 0| Sleeping for 3s (0:00:03) on GetFullChatRequest flood wait
+api_interface.py:241 #INFO     [2025-10-04 09:49:11,952] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:15 #INFO     [2025-10-04 09:50:19,453] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:241 #INFO     [2025-10-04 09:50:19,725] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+handlers.py:15 #INFO     [2025-10-04 09:50:34,071] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+api_interface.py:241 #INFO     [2025-10-04 09:50:34,231] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+mtprotosender.py:319 #INFO     [2025-10-04 09:50:45,990] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-04 09:50:45,990] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

@@ -1,0 +1,100 @@
+mtprotosender.py:228 #INFO     [2025-10-06 11:12:48,823] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-06 11:12:48,858] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-06 11:12:50,948] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 11:12:51,558] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 161,
+  "text": "l",
+  "message_type": 1,
+  "topic_id": 150,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T08:12:48Z",
+  "media": null
+}</pre>
+updates.py:443 #INFO     [2025-10-06 11:14:10,000] - telethon.client.updates - 0| Got difference for channel 2975286347 updates
+utils.py:67 #INFO     [2025-10-06 11:14:10,001] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 11:14:10,327] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/topic_created 
+<pre>{
+  "type": "topic_created",
+  "chat_id": -1002975286347,
+  "topic_id": 162,
+  "title": "asdas",
+  "icon_color": 16749490,
+  "created_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T08:14:07Z"
+}</pre>
+utils.py:67 #INFO     [2025-10-06 11:14:10,395] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 163,
+  "text": "asd",
+  "message_type": 1,
+  "topic_id": 162,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T08:14:07Z",
+  "media": null
+}</pre>
+handlers.py:267 #INFO     [2025-10-06 11:14:23,818] - root - 0| Handler called: UpdateNewChannelMessage. action: TopicEdited
+utils.py:67 #INFO     [2025-10-06 11:14:24,352] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/topicEdited 
+<pre>{
+  "type": "topic_updated",
+  "chat_id": -1002975286347,
+  "topic_id": 162,
+  "title": "asdas",
+  "icon_color": 16749490,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T08:14:21Z"
+}</pre>
+mtprotosender.py:319 #INFO     [2025-10-06 11:19:06,263] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-06 11:19:06,263] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

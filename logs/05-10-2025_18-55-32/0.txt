@@ -1,0 +1,170 @@
+mtprotosender.py:228 #INFO     [2025-10-05 18:55:32,132] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 18:55:32,167] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:63 #INFO     [2025-10-05 18:55:32,814] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2025-10-05 18:55:32,814] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2025-10-05 18:55:32,814] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2025-10-05 18:55:32,814] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2025-10-05 18:55:32,961] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2025-10-05 18:55:32,962] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2025-10-05 18:55:41,049] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,049] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,049] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,049] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,049] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,050] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,050] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,050] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,050] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,050] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,051] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,051] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,051] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,051] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,051] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:55:41,051] - root - 0| Event called. NewMessage
+users.py:122 #INFO     [2025-10-05 18:55:41,183] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,185] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,186] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,187] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,189] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,190] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,191] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,193] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,194] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,205] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,207] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:41,208] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+utils.py:63 #INFO     [2025-10-05 18:55:41,442] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:55:41,444] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:55:41,448] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:55:41,494] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+updates.py:344 #INFO     [2025-10-05 18:55:41,994] - telethon.client.updates - 0| Got difference for account updates
+utils.py:63 #INFO     [2025-10-05 18:55:42,074] - root - 0| Event called: ChatAction. action: MessageActionChatAddUser
+users.py:53 #INFO     [2025-10-05 18:55:42,074] - telethon.client.users - 0| Sleeping early for 10s (0:00:10) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,230] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,231] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,232] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,236] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,237] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,241] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,242] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,246] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,247] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:55:52,249] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+utils.py:63 #INFO     [2025-10-05 18:55:52,351] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:55:52,362] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:55:52,362] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+users.py:122 #INFO     [2025-10-05 18:56:03,346] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,348] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,351] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,352] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,353] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,354] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,356] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,357] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,358] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:03,359] - telethon.client.users - 0| Sleeping for 9s (0:00:09) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:12,404] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:12,405] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:12,406] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:12,414] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:12,416] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:12,427] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+utils.py:63 #INFO     [2025-10-05 18:56:12,668] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:56:12,669] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:56:12,674] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:56:12,677] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+users.py:122 #INFO     [2025-10-05 18:56:23,464] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+users.py:122 #INFO     [2025-10-05 18:56:23,504] - telethon.client.users - 0| Sleeping for 11s (0:00:11) on GetFullChatRequest flood wait
+utils.py:63 #INFO     [2025-10-05 18:56:23,613] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:56:23,618] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:56:23,623] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:56:23,625] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 18:56:34,164] - root - 0| Event called. ChatAction. action: MessageActionChatDeleteUser
+updates.py:590 #ERROR    [2025-10-05 18:56:34,217] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 233, in event_chat_action
+    chat_id = await ChatInfo.obj_from_peer(act_msg.peer_id, only_chat_id=True)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\api_interface.py", line 58, in obj_from_peer
+    participants_count = len(full_chat.full_chat.participants.participants)
+AttributeError: 'ChatParticipantsForbidden' object has no attribute 'participants'
+updates.py:590 #ERROR    [2025-10-05 18:56:34,530] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 189, in event_chat_action
+    for member in full_chat.full_chat.participants.participants:
+AttributeError: 'ChatParticipantsForbidden' object has no attribute 'participants'
+updates.py:590 #ERROR    [2025-10-05 18:56:34,535] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 30, in event_new_message
+    chat_id, chat_info = await ChatInfo.obj_from_peer(msg_obj.peer_id)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\api_interface.py", line 58, in obj_from_peer
+    participants_count = len(full_chat.full_chat.participants.participants)
+AttributeError: 'ChatParticipantsForbidden' object has no attribute 'participants'
+mtprotosender.py:319 #INFO     [2025-10-05 18:57:01,192] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 18:57:01,192] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

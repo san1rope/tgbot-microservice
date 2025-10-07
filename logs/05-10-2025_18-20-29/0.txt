@@ -1,0 +1,135 @@
+mtprotosender.py:228 #INFO     [2025-10-05 18:20:29,591] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 18:20:29,632] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:64 #INFO     [2025-10-05 18:20:29,953] - root - 0| Client has been connected!
+utils.py:64 #INFO     [2025-10-05 18:20:29,953] - root - 0| Redis has been initialized!
+utils.py:64 #INFO     [2025-10-05 18:20:29,953] - root - 0| Prepare to load data in redis...
+utils.py:64 #INFO     [2025-10-05 18:20:29,953] - root - 0| Loading messages data from small groups...
+utils.py:64 #INFO     [2025-10-05 18:20:30,009] - root - 0| Data from small groups has been loaded!
+utils.py:64 #INFO     [2025-10-05 18:20:30,010] - root - 0| Event handlers has been registered!
+updates.py:590 #ERROR    [2025-10-05 18:21:03,633] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,645] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,645] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,646] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,646] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,647] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,648] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,648] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,648] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,649] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,649] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,650] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:590 #ERROR    [2025-10-05 18:21:03,650] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 16, in event_new_message
+    await Ut.log(f"Event called. {event.__name__}")
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\events\newmessage.py", line 217, in __getattr__
+    return getattr(self.message, item)
+AttributeError: 'Message' object has no attribute '__name__'
+updates.py:344 #INFO     [2025-10-05 18:21:04,515] - telethon.client.updates - 0| Got difference for account updates
+updates.py:590 #ERROR    [2025-10-05 18:21:04,574] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 169, in event_chat_action
+    await Ut.log(f"Event called. {event.__name__}. action: {act_msg.action.__name__}")
+AttributeError: 'Event' object has no attribute '__name__'
+mtprotosender.py:319 #INFO     [2025-10-05 18:21:05,870] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 18:21:05,870] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

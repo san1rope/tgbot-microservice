@@ -1,0 +1,16 @@
+mtprotosender.py:228 #INFO     [2025-10-05 18:16:51,256] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 18:16:51,291] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:64 #INFO     [2025-10-05 18:16:51,779] - root - 0| Client has been connected!
+utils.py:64 #INFO     [2025-10-05 18:16:51,779] - root - 0| Redis has been initialized!
+utils.py:64 #INFO     [2025-10-05 18:16:51,779] - root - 0| Prepare to load data in redis...
+utils.py:64 #INFO     [2025-10-05 18:16:51,779] - root - 0| Loading messages data from small groups...
+utils.py:64 #INFO     [2025-10-05 18:16:51,832] - root - 0| Data from small groups has been loaded!
+utils.py:64 #INFO     [2025-10-05 18:16:51,833] - root - 0| Event handlers has been registered!
+utils.py:291 #ERROR    [2025-10-05 18:16:53,321] - root - 0| Failed to send log to administrator! The message cannot be empty unless a file is provided
+utils.py:291 #ERROR    [2025-10-05 18:16:54,329] - root - 0| Failed to send log to administrator! The message cannot be empty unless a file is provided
+utils.py:291 #ERROR    [2025-10-05 18:16:55,342] - root - 0| Failed to send log to administrator! The message cannot be empty unless a file is provided
+utils.py:291 #ERROR    [2025-10-05 18:16:56,352] - root - 0| Failed to send log to administrator! The message cannot be empty unless a file is provided
+utils.py:291 #ERROR    [2025-10-05 18:16:57,357] - root - 0| Failed to send log to administrator! The message cannot be empty unless a file is provided
+utils.py:291 #ERROR    [2025-10-05 18:16:58,385] - root - 0| Failed to send log to administrator! The message cannot be empty unless a file is provided
+mtprotosender.py:319 #INFO     [2025-10-05 18:16:58,841] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 18:16:58,841] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

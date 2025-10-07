@@ -1,0 +1,59 @@
+mtprotosender.py:228 #INFO     [2025-10-05 19:54:11,289] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 19:54:11,324] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:64 #INFO     [2025-10-05 19:54:11,687] - root - 0| Client has been connected!
+utils.py:64 #INFO     [2025-10-05 19:54:11,688] - root - 0| Redis has been initialized!
+utils.py:64 #INFO     [2025-10-05 19:54:11,688] - root - 0| Prepare to load data in redis...
+utils.py:64 #INFO     [2025-10-05 19:54:11,688] - root - 0| Loading messages data from small groups...
+utils.py:64 #INFO     [2025-10-05 19:54:12,175] - root - 0| Data from small groups has been loaded!
+utils.py:64 #INFO     [2025-10-05 19:54:12,176] - root - 0| Event handlers has been registered!
+updates.py:443 #INFO     [2025-10-05 19:54:14,861] - telethon.client.updates - 0| Got difference for channel 2975286347 updates
+utils.py:64 #INFO     [2025-10-05 19:54:14,862] - root - 0| Event called. NewMessage
+utils.py:64 #INFO     [2025-10-05 19:54:15,250] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/topic_created 
+<pre>{
+  "type": "topic_created",
+  "chat_id": -1002975286347,
+  "topic_id": 107,
+  "title": "sd",
+  "icon_color": 16749490,
+  "created_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-05T16:54:13Z"
+}</pre>
+utils.py:64 #INFO     [2025-10-05 19:54:15,339] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 108,
+  "text": "sd",
+  "message_type": 1,
+  "topic_id": 107,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-05T16:54:13Z",
+  "media": null
+}</pre>
+utils.py:64 #INFO     [2025-10-05 19:54:15,905] - root - 0| Event called. MessageDeleted
+mtprotosender.py:319 #INFO     [2025-10-05 19:54:20,335] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 19:54:20,335] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

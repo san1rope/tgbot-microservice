@@ -1,0 +1,18 @@
+mtprotosender.py:228 #INFO     [2025-10-05 18:17:32,883] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 18:17:32,924] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:64 #INFO     [2025-10-05 18:17:33,428] - root - 0| Client has been connected!
+utils.py:64 #INFO     [2025-10-05 18:17:33,428] - root - 0| Redis has been initialized!
+utils.py:64 #INFO     [2025-10-05 18:17:33,428] - root - 0| Prepare to load data in redis...
+utils.py:64 #INFO     [2025-10-05 18:17:33,428] - root - 0| Loading messages data from small groups...
+utils.py:64 #INFO     [2025-10-05 18:17:33,521] - root - 0| Data from small groups has been loaded!
+utils.py:64 #INFO     [2025-10-05 18:17:33,522] - root - 0| Event handlers has been registered!
+utils.py:64 #INFO     [2025-10-05 18:17:35,923] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+utils.py:64 #INFO     [2025-10-05 18:17:36,167] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+utils.py:64 #INFO     [2025-10-05 18:17:37,403] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+utils.py:64 #INFO     [2025-10-05 18:17:38,495] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+utils.py:64 #INFO     [2025-10-05 18:17:39,577] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+utils.py:64 #INFO     [2025-10-05 18:17:40,708] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+utils.py:64 #INFO     [2025-10-05 18:17:42,535] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+utils.py:64 #INFO     [2025-10-05 18:17:42,998] - root - 0| Event called. <class 'telethon.tl.types.UpdateReadHistoryOutbox'>
+mtprotosender.py:319 #INFO     [2025-10-05 18:17:44,019] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 18:17:44,019] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

@@ -1,0 +1,14 @@
+mtprotosender.py:228 #INFO     [2025-10-03 20:10:08,391] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 20:10:08,426] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:12 #INFO     [2025-10-03 20:10:25,442] - root - 0| Handler called. NewMessage. type = <class 'telethon.tl.patched.Message'>
+updates.py:590 #ERROR    [2025-10-03 20:10:25,542] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 20, in event_new_message
+    chat_id, chat_info = await ChatInfo.obj_from_peer(msg_obj.peer_id)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\api_interface.py", line 66, in obj_from_peer
+    member_count=full_chat.full_chat.participants_count
+AttributeError: 'ChatFull' object has no attribute 'participants_count'
+mtprotosender.py:319 #INFO     [2025-10-03 20:10:28,066] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 20:10:28,066] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

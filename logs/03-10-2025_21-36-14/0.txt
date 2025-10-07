@@ -1,0 +1,8 @@
+mtprotosender.py:228 #INFO     [2025-10-03 21:36:14,688] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 21:36:14,724] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:344 #INFO     [2025-10-03 21:36:32,595] - telethon.client.updates - 0| Got difference for account updates
+handlers.py:116 #INFO     [2025-10-03 21:36:32,595] - root - 0| Handler called. ChatAction
+updates.py:443 #INFO     [2025-10-03 21:36:33,190] - telethon.client.updates - 0| Got difference for channel 3139065215 updates
+handlers.py:116 #INFO     [2025-10-03 21:36:33,190] - root - 0| Handler called. ChatAction
+mtprotosender.py:319 #INFO     [2025-10-03 21:36:36,690] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 21:36:36,691] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

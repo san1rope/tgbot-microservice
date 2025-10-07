@@ -1,0 +1,8 @@
+mtprotosender.py:228 #INFO     [2025-10-03 21:42:01,500] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 21:42:01,537] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:344 #INFO     [2025-10-03 21:42:23,908] - telethon.client.updates - 0| Got difference for account updates
+handlers.py:116 #INFO     [2025-10-03 21:42:23,908] - root - 0| Handler called. ChatAction
+handlers.py:116 #INFO     [2025-10-03 21:42:23,909] - root - 0| Handler called. ChatAction
+api_interface.py:234 #INFO     [2025-10-03 21:42:24,304] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/bot_added | {'success': True, 'method': 'bot_added'}
+mtprotosender.py:319 #INFO     [2025-10-03 21:42:44,702] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 21:42:44,702] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

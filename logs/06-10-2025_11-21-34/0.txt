@@ -1,0 +1,27 @@
+mtprotosender.py:228 #INFO     [2025-10-06 11:21:34,193] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-06 11:21:34,234] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+handlers.py:264 #INFO     [2025-10-06 11:21:41,367] - root - 0| Handler called: UpdateNewChannelMessage. action: TopicEdited
+utils.py:67 #INFO     [2025-10-06 11:21:41,948] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/topicEdited 
+<pre>{
+  "type": "topic_updated",
+  "chat_id": -1002975286347,
+  "topic_id": 162,
+  "title": "newname12",
+  "icon_color": 16749490,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T08:21:39Z"
+}</pre>
+mtprotosender.py:319 #INFO     [2025-10-06 11:21:56,800] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-06 11:21:56,800] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

@@ -1,0 +1,20 @@
+mtprotosender.py:228 #INFO     [2025-10-05 18:53:03,718] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 18:53:03,759] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:63 #INFO     [2025-10-05 18:53:04,471] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2025-10-05 18:53:04,471] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2025-10-05 18:53:04,471] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2025-10-05 18:53:04,471] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2025-10-05 18:53:04,932] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2025-10-05 18:53:04,932] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2025-10-05 18:54:18,765] - root - 0| Event called. ChatAction. action: MessageActionChatDeleteUser
+updates.py:590 #ERROR    [2025-10-05 18:54:18,824] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 233, in event_chat_action
+    chat_id = await ChatInfo.obj_from_peer(act_msg.peer_id, only_chat_id=True)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\api_interface.py", line 57, in obj_from_peer
+    participants_count = len(full_chat.full_chat.participants.participants)
+AttributeError: 'ChatParticipantsForbidden' object has no attribute 'participants'
+mtprotosender.py:319 #INFO     [2025-10-05 18:54:41,762] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 18:54:41,762] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

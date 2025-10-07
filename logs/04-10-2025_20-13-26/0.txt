@@ -1,0 +1,16 @@
+mtprotosender.py:228 #INFO     [2025-10-04 20:13:26,973] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-04 20:13:27,010] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:99 #INFO     [2025-10-04 20:13:37,677] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:13:38,119] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+handlers.py:99 #INFO     [2025-10-04 20:13:47,126] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:13:47,547] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+connection.py:345 #WARNING  [2025-10-04 20:16:46,589] - telethon.network.connection.connection - 0| Server closed the connection: [WinError 121] Превышен таймаут семафора
+mtprotosender.py:511 #INFO     [2025-10-04 20:16:46,589] - telethon.network.mtprotosender - 0| Connection closed while receiving data: [WinError 121] Превышен таймаут семафора
+mtprotosender.py:352 #INFO     [2025-10-04 20:16:46,589] - telethon.network.mtprotosender - 0| Closing current connection to begin reconnect...
+mtprotosender.py:228 #INFO     [2025-10-04 20:16:46,589] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+connection.py:288 #INFO     [2025-10-04 20:16:46,590] - telethon.network.connection.connection - 0| <class 'OSError'> during disconnect: [WinError 121] Превышен таймаут семафора
+mtprotosender.py:288 #WARNING  [2025-10-04 20:16:46,590] - telethon.network.mtprotosender - 0| Attempt 1 at connecting failed: OSError: [WinError 1232] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows
+mtprotosender.py:288 #WARNING  [2025-10-04 20:16:57,612] - telethon.network.mtprotosender - 0| Attempt 2 at connecting failed: TimeoutError: 
+mtprotosender.py:279 #INFO     [2025-10-04 20:16:58,656] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+mtprotosender.py:319 #INFO     [2025-10-04 20:17:00,420] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-04 20:17:00,420] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

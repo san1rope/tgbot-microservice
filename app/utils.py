@@ -1,17 +1,25 @@
+import asyncio
 import os
 import logging
+import traceback
 from datetime import datetime
 from logging import Logger
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Union, List
 
+from telethon.errors import ChatAdminRequiredError
+from telethon.tl.functions.channels import GetAdminLogRequest
 from telethon.tl.functions.messages import GetStickerSetRequest
+from telethon.tl import types
 
-from app.api_interface import *
-from app.config import Config
+from app.api.webhook import MediaPhoto, MediaSticker, MediaAudio, MediaVideoGIF, MediaDocument, FromUser
+from app.config import Config, LOG_LIST
 
 
 class Utils:
+
+    MSG_INDEX_KEY = "msg:index"
+    MSG_K = lambda mid: f"msg:{mid}"
 
     @staticmethod
     async def add_logging(process_id: int, datetime_of_start: Union[datetime, str]) -> Logger:
@@ -45,6 +53,35 @@ class Utils:
         return logger
 
     @staticmethod
+    async def log(text: str, log_level: int = 0):
+        if log_level == 1:
+            Config.LOGGER.warning(text)
+
+        elif log_level == 2:
+            Config.LOGGER.error(text)
+
+        elif log_level == 3:
+            Config.LOGGER.critical(text)
+
+        else:
+            Config.LOGGER.info(text)
+
+        if Config.DEBUG:
+            lvl_text = "INFO"
+            if log_level == 1:
+                lvl_text = "WARNING"
+
+            elif log_level == 2:
+                lvl_text = "ERROR"
+
+            elif log_level == 3:
+                lvl_text = "CRITICAL"
+
+            LOG_LIST.append(
+                f"{datetime.now(tz=Config.DEBUG_TIMEZONE).strftime('%d.%m.%Y %H:%M:%S')} | {lvl_text} | {text}"
+            )
+
+    @staticmethod
     async def best_photo_size(photo) -> Union[Dict, None]:
         best = None
         best_pixels = -1
@@ -70,115 +107,51 @@ class Utils:
         return best
 
     @staticmethod
-    async def get_topic_data_from_msg(msg_obj: types.Message, only_id: bool = False):
-        topic_id = None
-        title = ""
-        icon_color = 0
-        if isinstance(msg_obj.reply_to, types.MessageReplyHeader) and msg_obj.reply_to.forum_topic:
-            topic_id = msg_obj.reply_to.reply_to_top_id if msg_obj.reply_to.reply_to_top_id \
-                else msg_obj.reply_to.reply_to_msg_id
+    async def logging_queue():
+        while True:
+            await asyncio.sleep(3)
 
-            topic_msg = await Config.TG_CLIENT.get_messages(msg_obj.peer_id, ids=topic_id)
-            if isinstance(topic_msg, types.MessageService) and \
-                    isinstance(topic_msg.action, types.MessageActionTopicCreate):
-                title = topic_msg.action.title
-                icon_color = topic_msg.action.icon_color
+            if not LOG_LIST:
+                continue
 
-        if only_id:
-            return topic_id
+            try:
+                await Config.TG_CLIENT.send_message(
+                    Config.DEBUG_USER_ID,
+                    "\n".join(LOG_LIST),
+                    parse_mode="html"
+                )
 
-        return topic_id, title, icon_color
+            except ValueError as ex:
+                Config.LOGGER.error(f"Failed to send log to administrator! {ex}")
+                continue
+
+            LOG_LIST.clear()
 
     @staticmethod
-    async def get_media_data_from_msg(msg_obj: types.Message):
-        media = None
-        msg_type = 1
+    async def load_data_in_redis(batch_size: int = 1000):
+        await Utils.log("Prepare to load data in redis...")
 
-        if isinstance(msg_obj.media, types.MessageMediaPhoto):
-            best_size = await Utils.best_photo_size(photo=msg_obj.media.photo)
-            media = MediaPhoto(
-                file_size=best_size["size_bytes"],
-                mime_type="image/jpeg",
-                width=best_size["w"],
-                height=best_size["h"],
-            )
-            msg_type = 2
+        pipe = Config.REDIS.pipeline(transaction=False)
+        queued = 0
 
-        elif isinstance(msg_obj.media, types.MessageMediaDocument):
-            doc = msg_obj.media.document
+        await Utils.log("Loading messages data from small groups...")
+        async for dialog in Config.TG_CLIENT.iter_dialogs():
+            chat = dialog.entity
+            if not isinstance(chat, types.Chat):
+                continue
 
-            attr_sticker, attr_video, attr_audio, attr_filename, attr_animated = None, None, None, None, None
-            for attr in doc.attributes:
-                if isinstance(attr, types.DocumentAttributeSticker):
-                    attr_sticker = attr
+            async for msg in Config.TG_CLIENT.iter_messages(chat, limit=200):
+                await pipe.sadd(Utils.MSG_INDEX_KEY, msg.id)
 
-                elif isinstance(attr, types.DocumentAttributeVideo):
-                    attr_video = attr
+                await pipe.setnx(Utils.MSG_K(msg.id), f"-{chat.id}")
 
-                elif isinstance(attr, types.DocumentAttributeAudio):
-                    attr_audio = attr
+                queued += 2
+                if queued >= batch_size:
+                    await pipe.execute()
+                    pipe = Config.REDIS.pipeline(transaction=False)
+                    queued = 0
 
-                elif isinstance(attr, types.DocumentAttributeFilename):
-                    attr_filename = attr
+        if queued:
+            await pipe.execute()
 
-                elif isinstance(attr, types.DocumentAttributeAnimated):
-                    attr_animated = attr
-
-            if attr_sticker:
-                if isinstance(attr_sticker.stickerset, types.InputStickerSetShortName):
-                    short_name = attr_sticker.stickerset.short_name
-
-                else:
-                    print(f"stickerset = {attr_sticker.stickerset}")
-                    sticker_set_res = await Config.TG_CLIENT(
-                        GetStickerSetRequest(stickerset=attr_sticker.stickerset, hash=0))
-                    short_name = getattr(sticker_set_res.set, "short_name", None)
-
-                media = MediaSticker(
-                    file_size=doc.size,
-                    mime_type=doc.mime_type,
-                    set_name=short_name,
-                    emoji=attr_sticker.alt
-                )
-                msg_type = 4
-
-            elif attr_audio:
-                media = MediaAudio(
-                    file_size=doc.size,
-                    mime_type=doc.mime_type,
-                    duration=attr_audio.duration,
-                    is_voice=attr_audio.voice
-                )
-                msg_type = 7
-
-            elif attr_animated:
-                media = MediaVideoGIF(
-                    file_size=doc.size,
-                    mime_type="image/gif",
-                    duration=attr_video.duration,
-                    width=attr_video.w,
-                    height=attr_video.h,
-                    supports_streaming=attr_video.supports_streaming
-                )
-                msg_type = 11
-
-            elif attr_video:
-                media = MediaVideoGIF(
-                    file_size=doc.size,
-                    mime_type=doc.mime_type,
-                    duration=attr_video.duration,
-                    width=attr_video.w,
-                    height=attr_video.h,
-                    supports_streaming=attr_video.supports_streaming
-                )
-                msg_type = 11
-
-            elif attr_filename:
-                media = MediaDocument(
-                    file_size=doc.size,
-                    mime_type=doc.mime_type,
-                    file_name=attr_filename.file_name
-                )
-                msg_type = 6
-
-        return msg_type, media
+        await Utils.log("Data from small groups has been loaded!")

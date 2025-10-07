@@ -1,0 +1,78 @@
+mtprotosender.py:228 #INFO     [2025-10-05 17:26:10,490] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 17:26:10,528] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+utils.py:63 #INFO     [2025-10-05 17:26:12,591] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:13,089] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:14,052] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:14,211] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:15,851] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:16,251] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:21,891] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:22,166] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:24,912] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:25,147] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:29,926] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:30,159] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:31,464] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:31,656] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:32,960] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:33,246] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:36,982] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:37,250] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:40,022] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:40,360] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:43,048] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:43,341] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:45,049] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:45,501] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+updates.py:443 #INFO     [2025-10-05 17:26:49,629] - telethon.client.updates - 0| Got difference for channel 1680980716 updates
+utils.py:63 #INFO     [2025-10-05 17:26:49,629] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:49,799] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:51,076] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:26:51,078] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:51,307] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+api_interface.py:236 #INFO     [2025-10-05 17:26:51,574] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:52,087] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:26:52,321] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:26:53,088] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+users.py:122 #INFO     [2025-10-05 17:26:53,405] - telethon.client.users - 0| Sleeping for 8s (0:00:08) on GetFullChannelRequest flood wait
+utils.py:63 #INFO     [2025-10-05 17:26:57,135] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:26:57,136] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+users.py:53 #INFO     [2025-10-05 17:26:57,277] - telethon.client.users - 0| Sleeping early for 4s (0:00:04) on GetFullChannelRequest flood wait
+users.py:53 #INFO     [2025-10-05 17:26:57,279] - telethon.client.users - 0| Sleeping early for 4s (0:00:04) on GetFullChannelRequest flood wait
+updates.py:590 #ERROR    [2025-10-05 17:27:01,475] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 28, in event_new_message
+    await Config.REDIS.set(f"msg:{msg_obj.id}", chat_id)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\client.py", line 677, in execute_command
+    return await conn.retry.call_with_retry(
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\retry.py", line 50, in call_with_retry
+    return await do()
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\client.py", line 652, in _send_command_parse_response
+    return await self.parse_response(conn, command_name, **options)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\client.py", line 698, in parse_response
+    response = await connection.read_response()
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\connection.py", line 627, in read_response
+    raise response from None
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+api_interface.py:236 #INFO     [2025-10-05 17:27:01,509] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+api_interface.py:236 #INFO     [2025-10-05 17:27:01,520] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:27:03,194] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+updates.py:590 #ERROR    [2025-10-05 17:27:03,345] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 28, in event_new_message
+    await Config.REDIS.set(f"msg:{msg_obj.id}", chat_id)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\client.py", line 677, in execute_command
+    return await conn.retry.call_with_retry(
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\retry.py", line 50, in call_with_retry
+    return await do()
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\client.py", line 652, in _send_command_parse_response
+    return await self.parse_response(conn, command_name, **options)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\client.py", line 698, in parse_response
+    response = await connection.read_response()
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\redis\asyncio\connection.py", line 627, in read_response
+    raise response from None
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.

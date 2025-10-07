@@ -1,0 +1,15 @@
+mtprotosender.py:228 #INFO     [2025-10-03 19:57:17,188] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 19:57:17,225] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:115 #INFO     [2025-10-03 19:57:21,090] - root - 0| Handler called. ChatAction
+handlers.py:115 #INFO     [2025-10-03 19:57:25,786] - root - 0| Handler called. ChatAction
+updates.py:590 #ERROR    [2025-10-03 19:57:26,001] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 122, in event_chat_action
+    chat_id, chat_info = await ChatInfo.obj_from_peer(act_msg.peer_id)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\api_interface.py", line 63, in obj_from_peer
+    is_forum=chat_obj.forum,
+AttributeError: 'Chat' object has no attribute 'forum'
+mtprotosender.py:319 #INFO     [2025-10-03 19:58:53,419] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 19:58:53,419] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

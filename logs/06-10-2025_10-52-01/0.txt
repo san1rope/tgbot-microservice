@@ -1,0 +1,318 @@
+mtprotosender.py:228 #INFO     [2025-10-06 10:52:01,543] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-06 10:52:01,578] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-06 10:52:01,888] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-06 10:52:01,889] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-06 10:52:01,889] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-06 10:52:01,889] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-06 10:52:02,414] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-06 10:52:02,415] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-06 10:52:35,360] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 10:52:35,619] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 141,
+  "text": "mseg1",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:52:33Z",
+  "media": null
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:52:54,441] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 10:52:54,730] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 142,
+  "text": "",
+  "message_type": 2,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:52:52Z",
+  "media": {
+    "type_name": "photo",
+    "file_size": 40235,
+    "mime_type": "image/jpeg",
+    "width": 1098,
+    "height": 405
+  }
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:53:22,530] - root - 0| Event called. MessageDeleted
+utils.py:67 #INFO     [2025-10-06 10:53:30,280] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 10:53:30,567] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 143,
+  "text": "",
+  "message_type": 11,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:53:28Z",
+  "media": {
+    "type_name": "video_gif",
+    "file_size": 1187999,
+    "mime_type": "image/gif",
+    "duration": 7.0,
+    "width": 848,
+    "height": 480,
+    "supports_streaming": true
+  }
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:53:33,225] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 10:53:33,487] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 144,
+  "text": "",
+  "message_type": 4,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:53:31Z",
+  "media": {
+    "type_name": "sticker",
+    "file_size": 15938,
+    "mime_type": "image/webp",
+    "emoji": "🌟",
+    "set_name": "ReLab_by_fStikBot"
+  }
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:54:12,773] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 10:54:13,101] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 145,
+  "text": "",
+  "message_type": 6,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:54:10Z",
+  "media": {
+    "type_name": "document",
+    "file_size": 5238,
+    "mime_type": "text/plain",
+    "file_name": ".env"
+  }
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:54:45,001] - root - 0| Event called. NewMessage
+utils.py:67 #INFO     [2025-10-06 10:54:45,178] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1002975286347,
+  "message_id": 146,
+  "text": "",
+  "message_type": 7,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:54:42Z",
+  "media": {
+    "type_name": "audio_voice",
+    "file_size": 9043,
+    "mime_type": "audio/ogg",
+    "duration": 2,
+    "is_voice": true
+  }
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:55:22,021] - root - 0| Event called. MessageEdited
+utils.py:67 #INFO     [2025-10-06 10:55:22,266] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/update 
+<pre>{
+  "type": "message_update",
+  "chat_id": -1002975286347,
+  "message_id": 139,
+  "text": "abcdфвф",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:30:35Z",
+  "media": null
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:55:51,036] - root - 0| Event called. MessageEdited
+utils.py:67 #INFO     [2025-10-06 10:55:51,220] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/update 
+<pre>{
+  "type": "message_update",
+  "chat_id": -1002975286347,
+  "message_id": 141,
+  "text": "mseg13",
+  "message_type": 2,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:52:33Z",
+  "media": {
+    "type_name": "photo",
+    "file_size": 40235,
+    "mime_type": "image/jpeg",
+    "width": 1098,
+    "height": 405
+  }
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:56:20,084] - root - 0| Event called. MessageEdited
+utils.py:67 #INFO     [2025-10-06 10:56:20,343] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/update 
+<pre>{
+  "type": "message_update",
+  "chat_id": -1002975286347,
+  "message_id": 138,
+  "text": "qbcdoba",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:30:05Z",
+  "media": null
+}</pre>
+updates.py:443 #INFO     [2025-10-06 10:56:56,696] - telethon.client.updates - 0| Got difference for channel 2975286347 updates
+utils.py:67 #INFO     [2025-10-06 10:56:56,696] - root - 0| Event called. MessageDeleted
+utils.py:67 #INFO     [2025-10-06 10:56:56,697] - root - 0| Event called. NewMessage
+updates.py:590 #ERROR    [2025-10-06 10:56:56,867] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 38, in event_new_message
+    topic_id, title, icon_color = await Ut.get_topic_data_from_msg(msg_obj)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\utils.py", line 121, in get_topic_data_from_msg
+    title = msg_obj.action.title
+AttributeError: 'NoneType' object has no attribute 'title'
+utils.py:67 #INFO     [2025-10-06 10:56:57,100] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/delete 
+<pre>{
+  "type": "message_deleted",
+  "chat_id": -1002975286347,
+  "message_ids": [
+    139
+  ],
+  "topic_id": null,
+  "deleted_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "aosdlas",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-06T07:56:56Z"
+}</pre>
+utils.py:67 #INFO     [2025-10-06 10:57:25,400] - root - 0| Event called. NewMessage
+updates.py:590 #ERROR    [2025-10-06 10:57:25,526] - telethon.client.updates - 0| Unhandled exception on event_new_message
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 38, in event_new_message
+    topic_id, title, icon_color = await Ut.get_topic_data_from_msg(msg_obj)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\utils.py", line 121, in get_topic_data_from_msg
+    title = msg_obj.action.title
+AttributeError: 'NoneType' object has no attribute 'title'
+mtprotosender.py:319 #INFO     [2025-10-06 10:58:23,555] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-06 10:58:23,555] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

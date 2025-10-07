@@ -1,0 +1,35 @@
+mtprotosender.py:228 #INFO     [2025-10-05 19:04:04,006] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 19:04:04,044] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:63 #INFO     [2025-10-05 19:04:04,406] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2025-10-05 19:04:04,406] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2025-10-05 19:04:04,406] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2025-10-05 19:04:04,406] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2025-10-05 19:04:04,642] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2025-10-05 19:04:04,643] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2025-10-05 19:04:21,016] - root - 0| Event called: ChatAction. action: MessageActionChatAddUser
+utils.py:63 #INFO     [2025-10-05 19:04:21,496] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/bot_added 
+<pre>{
+  "success": true,
+  "method": "bot_added"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 19:06:24,867] - root - 0| Event called: ChatAction. action: MessageActionChatAddUser
+utils.py:63 #INFO     [2025-10-05 19:06:25,268] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/bot_added 
+<pre>{
+  "success": true,
+  "method": "bot_added"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 19:06:36,061] - root - 0| Event called. ChatAction. action: MessageActionChatDeleteUser
+utils.py:63 #INFO     [2025-10-05 19:07:50,770] - root - 0| Event called: ChatAction. action: MessageActionChatAddUser
+utils.py:63 #INFO     [2025-10-05 19:07:51,531] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/bot_added 
+<pre>{
+  "success": true,
+  "method": "bot_added"
+}</pre>
+utils.py:63 #INFO     [2025-10-05 19:08:01,288] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 19:08:01,481] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+mtprotosender.py:319 #INFO     [2025-10-05 19:08:34,219] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 19:08:34,220] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

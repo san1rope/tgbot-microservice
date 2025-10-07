@@ -1,0 +1,18 @@
+mtprotosender.py:228 #INFO     [2025-10-03 19:53:25,476] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 19:53:25,511] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:443 #INFO     [2025-10-03 19:53:51,977] - telethon.client.updates - 0| Got difference for channel 3139065215 updates
+handlers.py:115 #INFO     [2025-10-03 19:53:51,978] - root - 0| Handler called. ChatAction
+handlers.py:115 #INFO     [2025-10-03 19:53:51,978] - root - 0| Handler called. ChatAction
+updates.py:590 #ERROR    [2025-10-03 19:53:52,271] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 131, in event_chat_action
+    full = await Config.TG_CLIENT(GetFullChatRequest(chat_id=chat_id))
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 92, in _call
+    result = await future
+telethon.errors.rpcerrorlist.ChatIdInvalidError: Invalid object ID for a chat. Make sure to pass the right types, for instance making sure that the request is designed for chats (not channels/megagroups) or otherwise look for a different one more suited\nAn example working with a megagroup and AddChatUserRequest, it will fail because megagroups are channels. Use InviteToChannelRequest instead (caused by GetFullChatRequest)
+mtprotosender.py:319 #INFO     [2025-10-03 19:54:36,627] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 19:54:36,627] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

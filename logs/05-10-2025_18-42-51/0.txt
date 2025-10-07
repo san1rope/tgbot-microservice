@@ -1,0 +1,22 @@
+mtprotosender.py:228 #INFO     [2025-10-05 18:42:51,070] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 18:42:51,111] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:63 #INFO     [2025-10-05 18:42:51,444] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2025-10-05 18:42:51,444] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2025-10-05 18:42:51,444] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2025-10-05 18:42:51,444] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2025-10-05 18:42:51,589] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2025-10-05 18:42:51,589] - root - 0| Event handlers has been registered!
+base_events.py:1758 #ERROR    [2025-10-05 18:42:54,140] - asyncio - 0| Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Utils.logging_queue() done, defined at C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\utils.py:277> exception=PeerFloodError('Too many requests (caused by SendMessageRequest)')>
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\utils.py", line 286, in logging_queue
+    await Config.TG_CLIENT.send_message(
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\messages.py", line 926, in send_message
+    result = await self(request)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 92, in _call
+    result = await future
+telethon.errors.rpcerrorlist.PeerFloodError: Too many requests (caused by SendMessageRequest)
+mtprotosender.py:319 #INFO     [2025-10-05 18:42:57,404] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 18:42:57,404] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

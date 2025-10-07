@@ -1,0 +1,83 @@
+mtprotosender.py:228 #INFO     [2025-10-05 17:36:29,745] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 17:36:29,783] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+utils.py:63 #INFO     [2025-10-05 17:36:30,339] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2025-10-05 17:36:30,438] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2025-10-05 17:36:30,501] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2025-10-05 17:36:30,563] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2025-10-05 17:36:39,656] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2025-10-05 17:36:39,730] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2025-10-05 17:36:43,224] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:36:43,681] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:36:43,681] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:36:50,581] - root - 0| Event called. <class 'telethon.tl.types.UpdateUserStatus'>
+utils.py:63 #INFO     [2025-10-05 17:36:50,583] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:36:50,584] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:36:50,585] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:36:50,585] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:36:51,049] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:36:51,049] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:236 #INFO     [2025-10-05 17:36:51,171] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:36:51,171] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:236 #INFO     [2025-10-05 17:36:51,174] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:36:51,174] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:236 #INFO     [2025-10-05 17:36:51,175] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:36:51,176] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:36:51,558] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:36:51,560] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:36:51,561] - root - 0| Event called. <class 'telethon.events.messageedited.MessageEdited.Event'>
+users.py:122 #INFO     [2025-10-05 17:36:51,875] - telethon.client.users - 0| Sleeping for 10s (0:00:10) on GetFullChannelRequest flood wait
+users.py:53 #INFO     [2025-10-05 17:36:51,878] - telethon.client.users - 0| Sleeping early for 10s (0:00:10) on GetFullChannelRequest flood wait
+api_interface.py:236 #INFO     [2025-10-05 17:36:51,989] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:36:51,989] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:36:58,652] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:36:58,654] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+users.py:122 #INFO     [2025-10-05 17:36:58,802] - telethon.client.users - 0| Sleeping for 3s (0:00:03) on GetFullChannelRequest flood wait
+api_interface.py:236 #INFO     [2025-10-05 17:36:58,862] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:36:58,862] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:02,023] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:37:02,023] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:02,076] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:37:02,076] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:02,164] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/update | {'success': True, 'method': 'update'}
+utils.py:63 #INFO     [2025-10-05 17:37:02,164] - root - 0| Event called. <class 'telethon.tl.types.UpdateEditChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:37:06,788] - root - 0| Event called. <class 'telethon.tl.types.UpdateUserStatus'>
+utils.py:63 #INFO     [2025-10-05 17:37:06,975] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:07,244] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:37:07,244] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:37:09,785] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:10,025] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:37:10,025] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+updates.py:443 #INFO     [2025-10-05 17:37:19,463] - telethon.client.updates - 0| Got difference for channel 1223955273 updates
+utils.py:63 #INFO     [2025-10-05 17:37:19,463] - root - 0| Event called. <class 'telethon.tl.types.Updates'>
+utils.py:63 #INFO     [2025-10-05 17:37:19,464] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+utils.py:63 #INFO     [2025-10-05 17:37:19,528] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:37:19,656] - root - 0| Event called. <class 'telethon.tl.types.UpdateUserStatus'>
+utils.py:63 #INFO     [2025-10-05 17:37:19,965] - root - 0| Event called. <class 'telethon.tl.types.UpdateUserStatus'>
+utils.py:63 #INFO     [2025-10-05 17:37:22,735] - root - 0| Event called. <class 'telethon.events.messagedeleted.MessageDeleted.Event'>
+updates.py:590 #ERROR    [2025-10-05 17:37:22,838] - telethon.client.updates - 0| Unhandled exception on event_message_deleted
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 145, in event_message_deleted
+    chat_id, chat_info = await ChatInfo.obj_from_peer(PeerChat(chat_id=int(chat_id[1:])))
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\api_interface.py", line 52, in obj_from_peer
+    full_chat = await Config.TG_CLIENT(GetFullChatRequest(peer_id))
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 92, in _call
+    result = await future
+telethon.errors.rpcerrorlist.ChatIdInvalidError: Invalid object ID for a chat. Make sure to pass the right types, for instance making sure that the request is designed for chats (not channels/megagroups) or otherwise look for a different one more suited\nAn example working with a megagroup and AddChatUserRequest, it will fail because megagroups are channels. Use InviteToChannelRequest instead (caused by GetFullChatRequest)
+utils.py:63 #INFO     [2025-10-05 17:37:22,851] - root - 0| Event called. <class 'telethon.tl.types.UpdateDeleteMessages'>
+utils.py:63 #INFO     [2025-10-05 17:37:23,506] - root - 0| Event called. <class 'telethon.tl.types.UpdateUserStatus'>
+utils.py:63 #INFO     [2025-10-05 17:37:34,585] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:34,879] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:37:34,880] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:37:36,031] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:36,341] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:37:36,341] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:37:39,381] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:39,623] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/create | {'success': True, 'method': 'create'}
+utils.py:63 #INFO     [2025-10-05 17:37:39,623] - root - 0| Event called. <class 'telethon.tl.types.UpdateNewChannelMessage'>
+utils.py:63 #INFO     [2025-10-05 17:37:49,197] - root - 0| Event called. <class 'telethon.events.messageedited.MessageEdited.Event'>
+api_interface.py:236 #INFO     [2025-10-05 17:37:49,444] - root - 0| 200 | https://tenerife.chat/chat/webhook/telegram/update | {'success': True, 'method': 'update'}
+utils.py:63 #INFO     [2025-10-05 17:37:49,444] - root - 0| Event called. <class 'telethon.tl.types.UpdateEditChannelMessage'>

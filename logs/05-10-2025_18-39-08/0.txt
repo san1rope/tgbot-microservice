@@ -1,0 +1,16 @@
+mtprotosender.py:228 #INFO     [2025-10-05 18:39:08,156] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 18:39:08,197] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:63 #INFO     [2025-10-05 18:39:08,921] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2025-10-05 18:39:08,921] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2025-10-05 18:39:08,921] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2025-10-05 18:39:08,922] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2025-10-05 18:39:09,299] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2025-10-05 18:39:09,300] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2025-10-05 18:39:12,642] - root - 0| Event called. NewMessage
+utils.py:63 #INFO     [2025-10-05 18:39:12,986] - root - 0| Request. status: 200. https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "success": true,
+  "method": "create"
+}</pre>
+mtprotosender.py:319 #INFO     [2025-10-05 18:39:21,657] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 18:39:21,657] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

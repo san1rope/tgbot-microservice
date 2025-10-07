@@ -1,13 +1,18 @@
 import os.path
 from logging import Logger
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
+from asyncio import Queue
 
 from aiohttp import ClientSession
 from dotenv import load_dotenv
+from redis.asyncio import Redis
 from telethon import TelegramClient
+from pytz import timezone
 
 load_dotenv()
+
+LOG_LIST: List[str] = []
 
 
 class Config:
@@ -19,10 +24,23 @@ class Config:
     LOGGING_DIR = Path(os.path.abspath("logs"))
     LOGGER: Optional[Logger] = None
 
+    REDIS: Optional[Redis] = None
+
     BASE_URL: str = os.getenv("BASE_URL").strip()
     AIOHTTP_SESSION: Optional[ClientSession] = None
 
     PHONE_NUMBER = os.getenv("PHONE_NUMBER").strip()
+    IGNORE_CHATS = list(map(int, os.getenv("IGNORE_CHATS").split(',')))
+
+    DEBUG: bool = bool(int(os.getenv("DEBUG").strip()))
+    DEBUG_USER_ID = int(os.getenv("DEBUG_USER_ID").strip())
+    DEBUG_TIMEZONE = timezone(os.getenv("DEBUG_TIMEZONE").strip())
+
+    QUEUE_EVENTS: Optional[Queue] = None
+    QUEUE_CMDS: Optional[Queue] = None
+
+    EVENT_WORKERS_COUNT: int = int(os.getenv("EVENT_WORKERS_COUNT").strip())
+    CMD_WORKERS_COUNT: int = int(os.getenv("CMD_WORKERS_COUNT").strip())
 
     DATABASE_CLEANUP = bool(int(os.getenv("DATABASE_CLEANUP")))
     DB_USER = os.getenv("DB_USER")

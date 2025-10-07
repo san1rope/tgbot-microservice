@@ -1,0 +1,10 @@
+mtprotosender.py:228 #INFO     [2025-10-04 20:05:55,714] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-04 20:05:55,751] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:99 #INFO     [2025-10-04 20:06:00,903] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:06:01,771] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+handlers.py:99 #INFO     [2025-10-04 20:06:33,962] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:06:34,583] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+updates.py:344 #INFO     [2025-10-04 20:06:42,022] - telethon.client.updates - 0| Got difference for account updates
+updates.py:443 #INFO     [2025-10-04 20:06:42,116] - telethon.client.updates - 0| Got difference for channel 2975286347 updates
+mtprotosender.py:319 #INFO     [2025-10-04 20:06:45,059] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-04 20:06:45,059] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

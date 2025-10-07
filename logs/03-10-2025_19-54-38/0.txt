@@ -1,0 +1,28 @@
+mtprotosender.py:228 #INFO     [2025-10-03 19:54:38,008] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-03 19:54:38,043] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+updates.py:443 #INFO     [2025-10-03 19:54:49,811] - telethon.client.updates - 0| Got difference for channel 3139065215 updates
+handlers.py:115 #INFO     [2025-10-03 19:54:49,812] - root - 0| Handler called. ChatAction
+handlers.py:115 #INFO     [2025-10-03 19:54:49,812] - root - 0| Handler called. ChatAction
+mtprotosender.py:187 #ERROR    [2025-10-03 19:54:50,288] - telethon.network.mtprotosender - 0| Request caused struct.error: required argument is not an integer: GetFullChatRequest(chat_id=PeerChannel(channel_id=3139065215))
+updates.py:590 #ERROR    [2025-10-03 19:54:50,289] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\handlers.py", line 131, in event_chat_action
+    full = await Config.TG_CLIENT(GetFullChatRequest(act_msg.peer_id))
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 72, in _call
+    future = sender.send(request, ordered=ordered)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\network\mtprotosender.py", line 183, in send
+    state = RequestState(request)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\network\requeststate.py", line 17, in __init__
+    self.data = bytes(request)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\tl\tlobject.py", line 194, in __bytes__
+    return self._bytes()
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\tl\functions\messages.py", line 3021, in _bytes
+    struct.pack('<q', self.chat_id),
+struct.error: required argument is not an integer
+updates.py:344 #INFO     [2025-10-03 19:54:52,138] - telethon.client.updates - 0| Got difference for account updates
+mtprotosender.py:319 #INFO     [2025-10-03 19:55:27,298] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-03 19:55:27,298] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

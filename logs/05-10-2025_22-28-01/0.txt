@@ -1,0 +1,16 @@
+mtprotosender.py:228 #INFO     [2025-10-05 22:28:01,758] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-05 22:28:01,800] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-05 22:28:02,141] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-05 22:28:02,142] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-05 22:28:02,142] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-05 22:28:02,142] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-05 22:28:02,640] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-05 22:28:02,640] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-05 22:28:09,134] - root - 0| Event called. MessageDeleted
+utils.py:67 #INFO     [2025-10-05 22:28:09,628] - root - 0| Could not obtain the event log, insufficient administrator rights! chat_id: -1002975286347
+updates.py:443 #INFO     [2025-10-05 22:28:32,205] - telethon.client.updates - 0| Got difference for channel 2975286347 updates
+utils.py:67 #INFO     [2025-10-05 22:28:37,915] - root - 0| Event called. MessageDeleted
+updates.py:443 #INFO     [2025-10-05 22:29:41,320] - telethon.client.updates - 0| Got difference for channel 3119357139 updates
+utils.py:67 #INFO     [2025-10-05 22:29:46,245] - root - 0| Event called. MessageDeleted
+mtprotosender.py:319 #INFO     [2025-10-05 22:30:49,754] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-05 22:30:49,754] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

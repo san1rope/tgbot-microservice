@@ -1,0 +1,19 @@
+mtprotosender.py:228 #INFO     [2025-10-04 20:17:29,726] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-04 20:17:29,767] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
+handlers.py:99 #INFO     [2025-10-04 20:17:46,180] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:17:46,626] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+handlers.py:99 #INFO     [2025-10-04 20:17:57,720] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:17:58,066] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+handlers.py:99 #INFO     [2025-10-04 20:29:30,259] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:29:31,416] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+updates.py:443 #INFO     [2025-10-04 20:30:30,828] - telethon.client.updates - 0| Got difference for channel 1680980716 updates
+handlers.py:99 #INFO     [2025-10-04 20:30:30,828] - root - 0| Handler called. MessageDeleted
+api_interface.py:237 #INFO     [2025-10-04 20:30:31,356] - venv - 0| 200 | https://tenerife.chat/chat/webhook/telegram/delete | {'success': True, 'method': 'delete'}
+updates.py:443 #INFO     [2025-10-04 20:35:47,005] - telethon.client.updates - 0| Got difference for channel 1680980716 updates
+updates.py:443 #INFO     [2025-10-04 20:39:30,979] - telethon.client.updates - 0| Got difference for channel 1622805074 updates
+updates.py:443 #INFO     [2025-10-04 20:39:38,218] - telethon.client.updates - 0| Got difference for channel 1680980716 updates
+updates.py:443 #INFO     [2025-10-04 20:40:36,793] - telethon.client.updates - 0| Got difference for channel 1680980716 updates
+updates.py:344 #INFO     [2025-10-04 20:41:07,262] - telethon.client.updates - 0| Got difference for account updates
+updates.py:443 #INFO     [2025-10-04 20:41:07,344] - telethon.client.updates - 0| Got difference for channel 1594264114 updates
+mtprotosender.py:319 #INFO     [2025-10-04 20:41:32,621] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-04 20:41:32,621] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
