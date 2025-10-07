@@ -4,8 +4,9 @@ from typing import List
 from telethon.tl import types
 from telethon.errors import ChatAdminRequiredError
 from telethon.tl.functions.channels import GetAdminLogRequest, GetForumTopicsByIDRequest
+from telethon.tl.functions.messages import GetStickerSetRequest
 
-from app.api.webhook import FromUser
+from app.api.webhook import FromUser, MediaPhoto, MediaSticker, MediaAudio, MediaVideoGIF, MediaDocument
 from app.config import Config
 from app.utils import Utils as Ut
 
@@ -41,7 +42,7 @@ class TgTools:
                             if not deleted_by:
                                 raise ValueError("Variable `deleted_by` is empty")
 
-                            topic_id = await Utils.get_topic_data_from_msg(act.message, only_id=True)
+                            topic_id = await TgTools.get_topic_data_from_msg(act.message, only_id=True)
                             return {"type": "delete_messages", "deleted_by": deleted_by, "topic_id": topic_id}
 
                     elif isinstance(act, types.ChannelAdminLogEventActionDeleteTopic):
@@ -56,14 +57,14 @@ class TgTools:
                 max_id = min((ev.id for ev in res.events), default=0)
 
         except ChatAdminRequiredError:
-            await Utils.log(
+            await Ut.log(
                 f"Could not obtain the event log, insufficient administrator rights! chat_id: -100{input_chat.channel_id}"
             )
 
         except Exception:
             print(traceback.format_exc())
             if retries:
-                return await Utils.get_userdata_deleted_by(message_ids, input_chat, retries - 1)
+                return await TgTools.get_userdata_deleted_by(message_ids, input_chat, retries - 1)
 
         return None
 
@@ -177,5 +178,8 @@ class TgTools:
             if topic_data:
                 title = topic_data.topics[0].title
                 icon_color = topic_data.topics[0].icon_color
+
+        if only_id:
+            return topic_id
 
         return topic_id, title, icon_color

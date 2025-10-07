@@ -24,6 +24,7 @@ class Config:
     LOGGING_DIR = Path(os.path.abspath("logs"))
     LOGGER: Optional[Logger] = None
 
+    REDIS_IP: str = os.getenv("REDIS_IP").strip()
     REDIS: Optional[Redis] = None
 
     BASE_URL: str = os.getenv("BASE_URL").strip()

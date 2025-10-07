@@ -18,7 +18,7 @@ class EventsCatcher:
         elif isinstance(chat_id, types.PeerChannel):
             chat_id = int(f"-100{chat_id.channel_id}")
 
-        else:
+        elif not isinstance(chat_id, int):
             return False
 
         if chat_id in Config.IGNORE_CHATS:
@@ -28,26 +28,32 @@ class EventsCatcher:
 
     @staticmethod
     async def event_new_message(event: events.NewMessage.Event):
+        Config.LOGGER.info("New event: NewMessage")
+
         if not await EventsCatcher.check_chat_id(event.message.peer_id):
             return
 
         topic_id = await TgTools.get_topic_data_from_msg(msg_obj=event.message, only_id=True)
         if topic_id and (topic_id + 1 == event.message.id):
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_new_message(event))
+            await Config.QUEUE_EVENTS.put(HandleEvents.processing_create_topic(event))
 
         else:
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_create_topic(event))
+            await Config.QUEUE_EVENTS.put(HandleEvents.processing_new_message(event))
 
     @staticmethod
     async def event_message_edited(event: events.MessageEdited.Event):
+        Config.LOGGER.info("New event: MessageEdited")
+
         if await EventsCatcher.check_chat_id(event.message.peer_id):
             await Config.QUEUE_EVENTS.put(HandleEvents.processing_message_edited(event))
 
     @staticmethod
     async def event_message_deleted(event: events.MessageDeleted.Event):
+        Config.LOGGER.info("New event: MessageDeleted")
+
         org_upd = event.original_update
         if isinstance(org_upd, types.UpdateDeleteChannelMessages):
-            chat_id = org_upd.channel_id
+            chat_id = int(f"100{org_upd.channel_id}")
 
         elif isinstance(org_upd, types.UpdateDeleteMessages):
             chat_id = None
@@ -67,15 +73,17 @@ class EventsCatcher:
 
     @staticmethod
     async def event_chat_action(event: events.ChatAction.Event):
+        Config.LOGGER.info("New event: ChatAction")
+
         act_msg = event.action_message
         if not await EventsCatcher.check_chat_id(act_msg.peer_id):
             return
 
         me = await Config.TG_CLIENT.get_me()
-        if isinstance(act_msg, types.MessageActionChatAddUser) and me.id in act_msg.action.users:
+        if isinstance(act_msg.action, types.MessageActionChatAddUser) and me.id in act_msg.action.users:
             await Config.QUEUE_EVENTS.put(HandleEvents.processing_action_add_chat_user(event))
 
-        elif isinstance(act_msg, types.MessageActionChatDeleteUser) and me.id in act_msg.action.users:
+        elif isinstance(act_msg.action, types.MessageActionChatDeleteUser) and me.id == act_msg.action.user_id:
             await Config.QUEUE_EVENTS.put(HandleEvents.processing_action_chat_delete_user(event))
 
     @staticmethod
@@ -86,7 +94,8 @@ class EventsCatcher:
                 return
 
             if isinstance(action, types.MessageActionTopicEdit):
-                if await EventsCatcher.check_chat_id(event.message.peer_id):
+                Config.LOGGER.info("New event: Raw:MessageActionTopicEdit")
+                if not await EventsCatcher.check_chat_id(event.message.peer_id):
                     return
 
                 await Config.QUEUE_EVENTS.put(HandleEvents.processing_topic_edited(event))

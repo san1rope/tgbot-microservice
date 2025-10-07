@@ -1,0 +1,40 @@
+mtprotosender.py:228 #INFO     [2025-10-08 00:12:23,854] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-08 00:12:23,892] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-08 00:12:24,176] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-08 00:12:24,176] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-08 00:12:24,176] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-08 00:12:24,176] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-08 00:12:24,820] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-08 00:12:24,820] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-08 00:12:24,820] - root - 0| Events worker 0 has been started!
+utils.py:67 #INFO     [2025-10-08 00:12:24,820] - root - 0| Commands worker 0 has been started!
+events_catcher.py:31 #INFO     [2025-10-08 00:12:26,248] - root - 0| New event: NewMessage
+events_catcher.py:95 #INFO     [2025-10-08 00:12:26,248] - root - 0| New event: Raw:UpdateNewChannelMessage
+utils.py:67 #INFO     [2025-10-08 00:12:26,490] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003122787203,
+  "message_id": 9,
+  "text": "jkh",
+  "message_type": 1,
+  "topic_id": 2,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "zxg",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-07T21:12:24Z",
+  "media": null
+}</pre>
+events_catcher.py:52 #INFO     [2025-10-08 00:12:30,271] - root - 0| New event: MessageDeleted
+mtprotosender.py:319 #INFO     [2025-10-08 00:12:35,316] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-08 00:12:35,316] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

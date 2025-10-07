@@ -1,0 +1,13 @@
+mtprotosender.py:228 #INFO     [2025-10-08 00:09:35,997] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-08 00:09:36,039] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-08 00:09:36,391] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-08 00:09:36,391] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-08 00:09:36,391] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-08 00:09:36,391] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-08 00:09:37,092] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-08 00:09:37,092] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-08 00:09:37,092] - root - 0| Events worker 0 has been started!
+utils.py:67 #INFO     [2025-10-08 00:09:37,093] - root - 0| Commands worker 0 has been started!
+events_catcher.py:52 #INFO     [2025-10-08 00:09:39,902] - root - 0| New event: MessageDeleted
+mtprotosender.py:319 #INFO     [2025-10-08 00:12:22,179] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-08 00:12:22,180] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

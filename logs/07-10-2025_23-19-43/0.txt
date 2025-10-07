@@ -1,0 +1,20 @@
+mtprotosender.py:228 #INFO     [2025-10-07 23:19:43,454] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-07 23:19:43,495] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-07 23:19:43,809] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-07 23:19:43,809] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-07 23:19:43,810] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-07 23:19:43,810] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-07 23:19:44,509] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-07 23:19:44,510] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-07 23:19:44,510] - root - 0| Events worker 0 has been started!
+utils.py:67 #INFO     [2025-10-07 23:19:44,510] - root - 0| Commands worker 0 has been started!
+events_catcher.py:74 #INFO     [2025-10-07 23:19:46,759] - root - 0| ChatAction event!
+updates.py:590 #ERROR    [2025-10-07 23:19:46,831] - telethon.client.updates - 0| Unhandled exception on event_chat_action
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\tg\events_catcher.py", line 76, in event_chat_action
+    print(f"users = {act_msg.action.users}")
+AttributeError: 'MessageActionChatDeleteUser' object has no attribute 'users'
+mtprotosender.py:319 #INFO     [2025-10-07 23:24:53,405] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-07 23:24:53,405] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!

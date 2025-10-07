@@ -10,8 +10,6 @@ from app.config import Config
 from app.tg.events_catcher import EventsCatcher
 from app.utils import Utils as Ut
 
-rest_api = FastAPI()
-
 
 async def worker(worker_id: int, event: bool = False, cmd: bool = False):
     if event:
@@ -32,11 +30,6 @@ async def worker(worker_id: int, event: bool = False, cmd: bool = False):
             task = await current_queue.get()
             for retry in range(1, 4):
                 result = await task
-                if result:
-                    break
-
-                else:
-                    await Ut.log(f"Не удалось завершить cmd задачу! Осталось попыток: {retry}")
 
         except Exception as ex:
             pass
@@ -60,7 +53,7 @@ async def main():
     await Ut.log("Client has been connected!")
 
     Config.REDIS = await Redis(
-        host="192.168.26.153", port=6379, db=0, decode_responses=False, socket_keepalive=True,
+        host=Config.REDIS_IP, port=6379, db=0, decode_responses=False, socket_keepalive=True,
         password="784512", health_check_interval=15, socket_connect_timeout=5
     )
     await Ut.log("Redis has been initialized!")

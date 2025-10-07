@@ -1,0 +1,146 @@
+mtprotosender.py:228 #INFO     [2025-10-07 23:38:23,473] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-07 23:38:23,509] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-07 23:38:24,117] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-07 23:38:24,117] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-07 23:38:24,117] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-07 23:38:24,117] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-07 23:38:25,042] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-07 23:38:25,043] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-07 23:38:25,043] - root - 0| Events worker 0 has been started!
+utils.py:67 #INFO     [2025-10-07 23:38:25,043] - root - 0| Commands worker 0 has been started!
+utils.py:67 #INFO     [2025-10-08 00:03:45,566] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -4912534673,
+  "message_id": 368,
+  "text": "l",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "zxg",
+    "username": null,
+    "type": "chat",
+    "is_forum": false,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-07T21:03:43Z",
+  "media": null
+}</pre>
+events_catcher.py:74 #INFO     [2025-10-08 00:04:02,985] - root - 0| ChatAction event!
+utils.py:67 #INFO     [2025-10-08 00:04:03,279] - root - 0| Event: Bot Deleted From Chat
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/deleteChat 
+<pre>{
+  "type": "bot_deleted_from_chat",
+  "chat_id": -4912534673,
+  "timestamp": "2025-10-07T21:04:01Z"
+}</pre>
+events_catcher.py:74 #INFO     [2025-10-08 00:04:16,032] - root - 0| ChatAction event!
+utils.py:67 #INFO     [2025-10-08 00:04:16,501] - root - 0| Event: Bot Added To Chat
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/bot_added 
+<pre>{
+  "type": "bot_added_to_chat",
+  "chat_id": -4912534673,
+  "chat_info": {
+    "title": "zxg",
+    "username": null,
+    "type": "chat",
+    "is_forum": false,
+    "member_count": 2
+  },
+  "owner_info": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "added_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "timestamp": "2025-10-07T21:04:14Z"
+}</pre>
+updates.py:443 #INFO     [2025-10-08 00:05:02,520] - telethon.client.updates - 0| Got difference for channel 3122787203 updates
+utils.py:67 #INFO     [2025-10-08 00:05:02,858] - root - 0| Event: Topic Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/topic_created 
+<pre>{
+  "type": "topic_created",
+  "chat_id": -1003122787203,
+  "topic_id": 2,
+  "title": "asdas",
+  "icon_color": 16749490,
+  "created_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "zxg",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-07T21:05:00Z"
+}</pre>
+utils.py:67 #INFO     [2025-10-08 00:05:20,516] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003122787203,
+  "message_id": 4,
+  "text": "lll",
+  "message_type": 1,
+  "topic_id": 2,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "zxg",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-07T21:05:18Z",
+  "media": null
+}</pre>
+utils.py:67 #INFO     [2025-10-08 00:05:38,576] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003122787203,
+  "message_id": 5,
+  "text": "sedf",
+  "message_type": 1,
+  "topic_id": 2,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1roped",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "zxg",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-07T21:05:36Z",
+  "media": null
+}</pre>
+mtprotosender.py:319 #INFO     [2025-10-08 00:05:49,440] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.92:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-08 00:05:49,440] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.92:443/TcpFull complete!
