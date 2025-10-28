@@ -1,0 +1,20 @@
+mtprotosender.py:228 #INFO     [2025-10-28 22:41:30,634] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.91:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-28 22:41:30,669] - telethon.network.mtprotosender - 0| Connection to 149.154.167.91:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-28 22:41:30,933] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-28 22:41:30,933] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-28 22:41:30,933] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-28 22:41:30,933] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-28 22:41:31,277] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-28 22:41:31,278] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-28 22:41:31,278] - root - 0| Queue worker has been started!
+events_catcher.py:31 #INFO     [2025-10-28 22:41:39,719] - root - 0| New event: NewMessage
+events_catcher.py:52 #INFO     [2025-10-28 22:41:43,837] - root - 0| New event: MessageDeleted
+updates.py:590 #ERROR    [2025-10-28 22:41:43,838] - telethon.client.updates - 0| Unhandled exception on event_message_deleted
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\updates.py", line 574, in _dispatch_update
+    await callback(event)
+  File "C:\Users\Valentyn\PycharmProjects\tgbot-microservice\app\tg\events_catcher.py", line 61, in event_message_deleted
+    chat_id = int(await Config.REDIS.get(f"msg:{msg_id}"))
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+mtprotosender.py:319 #INFO     [2025-10-28 22:42:06,255] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.91:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-28 22:42:06,255] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.91:443/TcpFull complete!

@@ -1,8 +1,0 @@
-mtprotosender.py:228 #INFO     [2025-10-04 18:49:02,301] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
-mtprotosender.py:279 #INFO     [2025-10-04 18:49:02,336] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
-handlers.py:100 #INFO     [2025-10-04 18:49:07,695] - root - 0| Handler called. MessageDeleted
-handlers.py:100 #INFO     [2025-10-04 18:49:21,214] - root - 0| Handler called. MessageDeleted
-handlers.py:100 #INFO     [2025-10-04 18:49:39,735] - root - 0| Handler called. MessageDeleted
-handlers.py:100 #INFO     [2025-10-04 18:50:05,976] - root - 0| Handler called. MessageDeleted
-mtprotosender.py:319 #INFO     [2025-10-04 18:51:09,124] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
-mtprotosender.py:339 #INFO     [2025-10-04 18:51:09,125] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!

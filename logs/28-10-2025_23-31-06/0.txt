@@ -1,0 +1,37 @@
+mtprotosender.py:228 #INFO     [2025-10-28 23:31:06,157] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.91:443/TcpFull...
+mtprotosender.py:279 #INFO     [2025-10-28 23:31:06,193] - telethon.network.mtprotosender - 0| Connection to 149.154.167.91:443/TcpFull complete!
+utils.py:67 #INFO     [2025-10-28 23:31:06,649] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2025-10-28 23:31:06,649] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2025-10-28 23:31:06,649] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2025-10-28 23:31:06,649] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2025-10-28 23:31:07,004] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2025-10-28 23:31:07,004] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2025-10-28 23:31:07,004] - root - 0| Queue worker has been started!
+events_catcher.py:31 #INFO     [2025-10-28 23:31:12,463] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2025-10-28 23:31:12,776] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -4993561488,
+  "message_id": 136,
+  "text": "asdasdasd",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "asdlksa",
+    "username": null,
+    "type": "chat",
+    "is_forum": false,
+    "member_count": 2
+  },
+  "timestamp": "2025-10-28T21:31:11Z",
+  "media": null
+}</pre>
+mtprotosender.py:319 #INFO     [2025-10-28 23:32:35,897] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.91:443/TcpFull...
+mtprotosender.py:339 #INFO     [2025-10-28 23:32:35,897] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.91:443/TcpFull complete!

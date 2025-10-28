@@ -1,3 +1,0 @@
-mtprotosender.py:228 #INFO     [2025-10-05 17:25:35,992] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
-mtprotosender.py:279 #INFO     [2025-10-05 17:25:36,028] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
-utils.py:63 #INFO     [2025-10-05 17:25:38,103] - root - 0| Event called. <class 'telethon.events.newmessage.NewMessage.Event'>

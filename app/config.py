@@ -27,6 +27,8 @@ class Config:
     REDIS_IP: str = os.getenv("REDIS_IP").strip()
     REDIS: Optional[Redis] = None
 
+    KAFKA_BOOTSTRAP_IP: str = os.getenv("KAFKA_BOOTSTRAP_IP").strip()
+
     BASE_URL: str = os.getenv("BASE_URL").strip()
     AIOHTTP_SESSION: Optional[ClientSession] = None
 
@@ -37,8 +39,7 @@ class Config:
     DEBUG_USER_ID = int(os.getenv("DEBUG_USER_ID").strip())
     DEBUG_TIMEZONE = timezone(os.getenv("DEBUG_TIMEZONE").strip())
 
-    QUEUE_EVENTS: Optional[Queue] = None
-    QUEUE_CMDS: Optional[Queue] = None
+    QUEUE_WORKER: Optional[Queue] = None
 
     EVENT_WORKERS_COUNT: int = int(os.getenv("EVENT_WORKERS_COUNT").strip())
     CMD_WORKERS_COUNT: int = int(os.getenv("CMD_WORKERS_COUNT").strip())

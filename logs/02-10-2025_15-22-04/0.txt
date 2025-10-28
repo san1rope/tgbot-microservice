@@ -1,7 +1,0 @@
-mtprotosender.py:228 #INFO     [2025-10-02 15:22:04,910] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
-mtprotosender.py:279 #INFO     [2025-10-02 15:22:04,973] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
-handlers.py:207 #INFO     [2025-10-02 15:22:42,736] - root - 0| Handler called. MessageDeleted
-mtprotosender.py:319 #INFO     [2025-10-02 15:25:34,031] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
-mtprotosender.py:339 #INFO     [2025-10-02 15:25:34,031] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
-base_events.py:1758 #ERROR    [2025-10-02 15:25:34,091] - asyncio - 0| Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x000001E648376110>

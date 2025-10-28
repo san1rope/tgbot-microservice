@@ -1,3 +1,0 @@
-mtprotosender.py:228 #INFO     [2025-10-05 18:15:17,780] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.92:443/TcpFull...
-mtprotosender.py:279 #INFO     [2025-10-05 18:15:17,816] - telethon.network.mtprotosender - 0| Connection to 149.154.167.92:443/TcpFull complete!
-utils.py:64 #INFO     [2025-10-05 18:15:18,212] - root - 0| Client has been connected!

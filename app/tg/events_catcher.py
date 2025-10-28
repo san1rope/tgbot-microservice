@@ -35,17 +35,17 @@ class EventsCatcher:
 
         topic_id = await TgTools.get_topic_data_from_msg(msg_obj=event.message, only_id=True)
         if topic_id and (topic_id + 1 == event.message.id):
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_create_topic(event))
+            await Config.QUEUE_WORKER.put(HandleEvents.processing_create_topic(event))
 
         else:
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_new_message(event))
+            await Config.QUEUE_WORKER.put(HandleEvents.processing_new_message(event))
 
     @staticmethod
-    async def event_message_edited(event: events.MessageEdited.Event):
+    async def event_message_edited(event: events.MessageEdited.Event) -> bool:
         Config.LOGGER.info("New event: MessageEdited")
 
         if await EventsCatcher.check_chat_id(event.message.peer_id):
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_message_edited(event))
+            await Config.QUEUE_WORKER.put(HandleEvents.processing_message_edited(event))
 
     @staticmethod
     async def event_message_deleted(event: events.MessageDeleted.Event):
@@ -58,7 +58,7 @@ class EventsCatcher:
         elif isinstance(org_upd, types.UpdateDeleteMessages):
             chat_id = None
             for msg_id in org_upd.messages:
-                chat_id = int(await Config.REDIS.get(f"msg:{msg_id}"))
+                chat_id = await Config.REDIS.get(f"msg:{msg_id}")
                 if chat_id:
                     break
 
@@ -68,8 +68,8 @@ class EventsCatcher:
         else:
             return
 
-        if await EventsCatcher.check_chat_id(chat_id):
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_message_deleted(event))
+        if await EventsCatcher.check_chat_id(int(chat_id)):
+            await Config.QUEUE_WORKER.put(HandleEvents.processing_message_deleted(event))
 
     @staticmethod
     async def event_chat_action(event: events.ChatAction.Event):
@@ -81,10 +81,10 @@ class EventsCatcher:
 
         me = await Config.TG_CLIENT.get_me()
         if isinstance(act_msg.action, types.MessageActionChatAddUser) and me.id in act_msg.action.users:
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_action_add_chat_user(event))
+            await Config.QUEUE_WORKER.put(HandleEvents.processing_action_add_chat_user(event))
 
         elif isinstance(act_msg.action, types.MessageActionChatDeleteUser) and me.id == act_msg.action.user_id:
-            await Config.QUEUE_EVENTS.put(HandleEvents.processing_action_chat_delete_user(event))
+            await Config.QUEUE_WORKER.put(HandleEvents.processing_action_chat_delete_user(event))
 
     @staticmethod
     async def event_raw(event: events.Raw):
@@ -98,4 +98,4 @@ class EventsCatcher:
                 if not await EventsCatcher.check_chat_id(event.message.peer_id):
                     return
 
-                await Config.QUEUE_EVENTS.put(HandleEvents.processing_topic_edited(event))
+                await Config.QUEUE_WORKER.put(HandleEvents.processing_topic_edited(event))

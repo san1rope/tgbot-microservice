@@ -2,37 +2,28 @@ import asyncio
 from datetime import datetime
 
 from aiohttp import ClientSession
-from fastapi import FastAPI
 from redis.asyncio import Redis
 from telethon import events, TelegramClient
 
+from app.api.kafka import KafkaInterface
 from app.config import Config
 from app.tg.events_catcher import EventsCatcher
 from app.utils import Utils as Ut
 
 
-async def worker(worker_id: int, event: bool = False, cmd: bool = False):
-    if event:
-        text = f"Events worker {worker_id} has been started!"
-        current_queue = Config.QUEUE_EVENTS
+async def worker():
+    await Ut.log("Queue worker has been started!")
 
-    elif cmd:
-        text = f"Commands worker {worker_id} has been started!"
-        current_queue = Config.QUEUE_CMDS
-
-    else:
-        return
-
-    await Ut.log(text)
     while True:
         await asyncio.sleep(1)
-        try:
-            task = await current_queue.get()
-            for retry in range(1, 4):
-                result = await task
+        task = await Config.QUEUE_WORKER.get()
+        for retry in range(1, 4):
+            try:
+                await task
+                break
 
-        except Exception as ex:
-            pass
+            except Exception as ex:
+                print(ex)
 
 
 async def main():
@@ -42,8 +33,7 @@ async def main():
     logger = await Ut.add_logging(datetime_of_start=datetime_of_start, process_id=process_id)
     Config.LOGGER = logger
     Config.AIOHTTP_SESSION = ClientSession()
-    Config.QUEUE_EVENTS = asyncio.Queue()
-    Config.QUEUE_CMDS = asyncio.Queue()
+    Config.QUEUE_WORKER = asyncio.Queue()
 
     loop = asyncio.get_event_loop()
     loop.create_task(Ut.logging_queue())
@@ -59,8 +49,9 @@ async def main():
     await Ut.log("Redis has been initialized!")
     await Ut.load_data_in_redis()
 
-    workers_events = [asyncio.create_task(worker(n, event=True)) for n in range(Config.EVENT_WORKERS_COUNT)]
-    worker_cmds = [asyncio.create_task(worker(n, cmd=True)) for n in range(Config.CMD_WORKERS_COUNT)]
+    # for n in range(Config.EVENT_WORKERS_COUNT):
+    asyncio.create_task(worker())
+    asyncio.create_task(KafkaInterface().start_polling())
 
     Config.TG_CLIENT.add_event_handler(EventsCatcher.event_new_message, events.NewMessage())
     Config.TG_CLIENT.add_event_handler(EventsCatcher.event_message_edited, events.MessageEdited())

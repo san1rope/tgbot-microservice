@@ -1,6 +1,0 @@
-mtprotosender.py:228 #INFO     [2025-10-03 23:56:57,754] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.51:443/TcpFull...
-mtprotosender.py:279 #INFO     [2025-10-03 23:56:57,791] - telethon.network.mtprotosender - 0| Connection to 149.154.167.51:443/TcpFull complete!
-updates.py:443 #INFO     [2025-10-03 23:57:00,987] - telethon.client.updates - 0| Got difference for channel 1680980716 updates
-handlers.py:97 #INFO     [2025-10-03 23:57:02,036] - root - 0| Handler called. MessageDeleted
-mtprotosender.py:319 #INFO     [2025-10-03 23:57:04,506] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.51:443/TcpFull...
-mtprotosender.py:339 #INFO     [2025-10-03 23:57:04,506] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.51:443/TcpFull complete!
