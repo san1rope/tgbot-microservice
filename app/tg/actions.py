@@ -1,11 +1,37 @@
+from typing import Union
+
+from telethon.tl.types import PeerChannel, PeerChat, PeerUser
+
 from app.api.kafka import *
 
 
 class UserActions:
 
     @staticmethod
+    async def get_peer_from_id(chat_id: Union[str, int]):
+        chat_id = str(chat_id)
+        if chat_id.startswith("-100"):
+            return PeerChannel(channel_id=int(chat_id[4:]))
+
+        elif chat_id.startswith("-"):
+            return PeerChat(chat_id=int(chat_id[1:]))
+
+        else:
+            return PeerUser(user_id=int(chat_id))
+
+    @staticmethod
     async def send_message(payload: SendMessageRequest):
-        pass
+        try:
+            result = await Config.TG_CLIENT.send_message(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                message=payload.text,
+                parse_mode=payload.parse_mode,
+                silent=payload.disable_notification,
+
+            )
+
+        except Exception:
+            pass
 
     @staticmethod
     async def edit_message(payload: EditMessageRequest):
