@@ -1,8 +1,10 @@
 from typing import Union
 
-from telethon.tl.types import PeerChannel, PeerChat, PeerUser
+from telethon.tl.types import PeerChannel, PeerChat, PeerUser, Config
 
-from app.api.kafka import *
+from app.api.kafka import SendMessageRequest, EditMessageRequest, DeleteMessageRequest, MessagePinRequest, \
+    MessageUnpinRequest, SendPhotoRequest, SendAudioRequest, SendVideoRequest, SendDocumentRequest, SendStickerRequest, \
+    SendVoiceRequest, SendGIFRequest, CreateTopicRequest, EditTopicRequest, DeleteTopicRequest
 
 
 class UserActions:
