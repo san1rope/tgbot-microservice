@@ -1,18 +1,14 @@
 import asyncio
 import os
 import logging
-import traceback
 from datetime import datetime
 from logging import Logger
 from pathlib import Path
-from typing import Dict, Union, List
+from typing import Dict, Union
 
-from telethon.errors import ChatAdminRequiredError
-from telethon.tl.functions.channels import GetAdminLogRequest
-from telethon.tl.functions.messages import GetStickerSetRequest
+from telethon.errors import PeerIdInvalidError
 from telethon.tl import types
 
-from app.api.webhook import MediaPhoto, MediaSticker, MediaAudio, MediaVideoGIF, MediaDocument, FromUser
 from app.config import Config, LOG_LIST
 
 
@@ -120,6 +116,10 @@ class Utils:
                     "\n".join(LOG_LIST),
                     parse_mode="html"
                 )
+
+            except PeerIdInvalidError as ex:
+                Config.LOGGER.error(f"Can't send the log to the Telegram group! \nex = {ex}")
+                continue
 
             except ValueError as ex:
                 Config.LOGGER.error(f"Failed to send log to administrator! {ex}")

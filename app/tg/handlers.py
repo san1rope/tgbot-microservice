@@ -43,17 +43,14 @@ class HandleEvents:
     @staticmethod
     async def processing_new_message(event: events.NewMessage.Event):
         msg_obj = event.message
-        print("abc")
 
         sender = await msg_obj.get_sender()
         from_user = await FromUser.obj_from_sender(sender)
         if not from_user:
-            print(2)
             return
 
         chat_id, chat_info = await ChatInfo.obj_from_peer(msg_obj.peer_id)
         if not chat_id:
-            print(1)
             return
 
         if chat_info.type == "chat":

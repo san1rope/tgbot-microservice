@@ -1,0 +1,460 @@
+mtprotosender.py:234 #INFO     [2026-01-17 21:59:56,791] - telethon.network.mtprotosender - 0| Connecting to 149.154.171.5:443/TcpFull...
+mtprotosender.py:285 #INFO     [2026-01-17 21:59:56,975] - telethon.network.mtprotosender - 0| Connection to 149.154.171.5:443/TcpFull complete!
+utils.py:67 #INFO     [2026-01-17 21:59:58,150] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2026-01-17 21:59:58,150] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2026-01-17 21:59:58,150] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2026-01-17 21:59:58,150] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2026-01-17 22:00:00,844] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2026-01-17 22:00:00,846] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2026-01-17 22:00:00,846] - root - 0| Queue worker has been started!
+utils.py:67 #INFO     [2026-01-17 22:00:00,846] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-17 22:00:00,846] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+group_coordinator.py:594 #INFO     [2026-01-17 22:00:00,861] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:415 #INFO     [2026-01-17 22:00:00,861] - aiokafka.consumer.group_coordinator - 0| Revoking previously assigned partitions set() for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-17 22:00:00,861] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:1360 #INFO     [2026-01-17 22:00:04,119] - aiokafka.consumer.group_coordinator - 0| Joined group 'demo-group' (generation 45) with member_id aiokafka-0.12.0-abef27ae-825d-4d09-8df9-9e010df36c3c
+group_coordinator.py:1368 #INFO     [2026-01-17 22:00:04,119] - aiokafka.consumer.group_coordinator - 0| Elected group leader -- performing partition assignments using roundrobin
+group_coordinator.py:1519 #INFO     [2026-01-17 22:00:04,126] - aiokafka.consumer.group_coordinator - 0| Successfully synced group demo-group with generation 45
+group_coordinator.py:506 #INFO     [2026-01-17 22:00:04,127] - aiokafka.consumer.group_coordinator - 0| Setting newly assigned partitions {TopicPartition(topic='messages', partition=0)} for group demo-group
+updates.py:443 #INFO     [2026-01-17 22:00:12,389] - telethon.client.updates - 0| Got difference for channel 3361812699 updates
+events_catcher.py:31 #INFO     [2026-01-17 22:00:12,390] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:00:13,198] - root - 0| Event: Topic Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/topic_created 
+<pre>{
+  "type": "topic_created",
+  "chat_id": -1003361812699,
+  "topic_id": 4,
+  "title": "asdasdas",
+  "icon_color": 13338331,
+  "created_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 0
+  },
+  "timestamp": "2026-01-17T20:00:13Z"
+}</pre>
+events_catcher.py:31 #INFO     [2026-01-17 22:01:03,331] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:01:03,677] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003361812699,
+  "message_id": 6,
+  "text": "asd",
+  "message_type": 1,
+  "topic_id": 4,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 0
+  },
+  "timestamp": "2026-01-17T20:01:04Z",
+  "media": null
+}</pre>
+events_catcher.py:54 #INFO     [2026-01-17 22:01:11,037] - root - 0| New event: MessageDeleted
+utils.py:67 #INFO     [2026-01-17 22:01:11,446] - root - 0| Could not obtain the event log, insufficient administrator rights! chat_id: -1003361812699
+events_catcher.py:54 #INFO     [2026-01-17 22:01:22,989] - root - 0| New event: MessageDeleted
+utils.py:67 #INFO     [2026-01-17 22:01:24,073] - root - 0| Event: Topic Deleted
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/topicDeleted 
+<pre>{
+  "type": "topic_deleted",
+  "chat_id": -1003361812699,
+  "topic_id": 2,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:01:23Z"
+}</pre>
+events_catcher.py:31 #INFO     [2026-01-17 22:02:06,825] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:02:07,180] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003361812699,
+  "message_id": 7,
+  "text": "jhg",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:02:08Z",
+  "media": null
+}</pre>
+events_catcher.py:47 #INFO     [2026-01-17 22:02:17,321] - root - 0| New event: MessageEdited
+utils.py:67 #INFO     [2026-01-17 22:02:17,613] - root - 0| Event: Message Edited
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/update 
+<pre>{
+  "type": "message_update",
+  "chat_id": -1003361812699,
+  "message_id": 7,
+  "text": "jhgjkhg",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:02:08Z",
+  "media": null
+}</pre>
+events_catcher.py:31 #INFO     [2026-01-17 22:02:29,528] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:02:29,842] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003361812699,
+  "message_id": 8,
+  "text": "bmg",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:02:31Z",
+  "media": null
+}</pre>
+events_catcher.py:31 #INFO     [2026-01-17 22:02:29,952] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:02:31,231] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003361812699,
+  "message_id": 9,
+  "text": "fgh",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:02:31Z",
+  "media": null
+}</pre>
+events_catcher.py:54 #INFO     [2026-01-17 22:02:36,275] - root - 0| New event: MessageDeleted
+utils.py:67 #INFO     [2026-01-17 22:02:37,131] - root - 0| Event: Message Deleted
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/delete 
+<pre>{
+  "type": "message_deleted",
+  "chat_id": -1003361812699,
+  "message_ids": [
+    9
+  ],
+  "topic_id": null,
+  "deleted_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:02:37Z"
+}</pre>
+updates.py:443 #INFO     [2026-01-17 22:05:32,859] - telethon.client.updates - 0| Got difference for channel 3361812699 updates
+events_catcher.py:31 #INFO     [2026-01-17 22:05:32,859] - root - 0| New event: NewMessage
+events_catcher.py:31 #INFO     [2026-01-17 22:05:32,859] - root - 0| New event: NewMessage
+events_catcher.py:31 #INFO     [2026-01-17 22:05:33,284] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:05:33,458] - root - 0| Event: Topic Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/topic_created 
+<pre>{
+  "type": "topic_created",
+  "chat_id": -1003361812699,
+  "topic_id": 10,
+  "title": "asdk",
+  "icon_color": 9367192,
+  "created_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:05:33Z"
+}</pre>
+utils.py:67 #INFO     [2026-01-17 22:05:34,777] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003361812699,
+  "message_id": 12,
+  "text": "ssda",
+  "message_type": 1,
+  "topic_id": 10,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:05:34Z",
+  "media": null
+}</pre>
+utils.py:67 #INFO     [2026-01-17 22:05:36,067] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -1003361812699,
+  "message_id": 13,
+  "text": "asd",
+  "message_type": 1,
+  "topic_id": 10,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:05:34Z",
+  "media": null
+}</pre>
+events_catcher.py:54 #INFO     [2026-01-17 22:05:47,523] - root - 0| New event: MessageDeleted
+utils.py:67 #INFO     [2026-01-17 22:05:48,389] - root - 0| Event: Message Deleted
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/delete 
+<pre>{
+  "type": "message_deleted",
+  "chat_id": -1003361812699,
+  "message_ids": [
+    13
+  ],
+  "topic_id": 10,
+  "deleted_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:05:48Z"
+}</pre>
+events_catcher.py:78 #INFO     [2026-01-17 22:06:31,142] - root - 0| New event: ChatAction
+events_catcher.py:31 #INFO     [2026-01-17 22:06:38,142] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:06:38,670] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -5180718767,
+  "message_id": 89,
+  "text": "asd",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "qwkdlqwd",
+    "username": null,
+    "type": "chat",
+    "is_forum": false,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:06:40Z",
+  "media": null
+}</pre>
+events_catcher.py:31 #INFO     [2026-01-17 22:06:46,243] - root - 0| New event: NewMessage
+utils.py:67 #INFO     [2026-01-17 22:06:46,717] - root - 0| Event: Message Created
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/create 
+<pre>{
+  "type": "message_created",
+  "chat_id": -5180718767,
+  "message_id": 90,
+  "text": "asd",
+  "message_type": 1,
+  "topic_id": null,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "qwkdlqwd",
+    "username": null,
+    "type": "chat",
+    "is_forum": false,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:06:48Z",
+  "media": null
+}</pre>
+events_catcher.py:54 #INFO     [2026-01-17 22:07:24,621] - root - 0| New event: MessageDeleted
+utils.py:67 #INFO     [2026-01-17 22:07:24,939] - root - 0| Event: Message Deleted
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/delete 
+<pre>{
+  "type": "message_deleted",
+  "chat_id": -5180718767,
+  "message_ids": [
+    90
+  ],
+  "topic_id": null,
+  "deleted_by": null,
+  "chat_info": {
+    "title": "qwkdlqwd",
+    "username": null,
+    "type": "chat",
+    "is_forum": false,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:07:24Z"
+}</pre>
+events_catcher.py:78 #INFO     [2026-01-17 22:08:30,736] - root - 0| New event: ChatAction
+events_catcher.py:78 #INFO     [2026-01-17 22:08:34,048] - root - 0| New event: ChatAction
+events_catcher.py:78 #INFO     [2026-01-17 22:10:32,395] - root - 0| New event: ChatAction
+utils.py:67 #INFO     [2026-01-17 22:10:32,802] - root - 0| Event: Bot Deleted From Chat
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/deleteChat 
+<pre>{
+  "type": "bot_deleted_from_chat",
+  "chat_id": -5180718767,
+  "timestamp": "2026-01-17T20:10:34Z"
+}</pre>
+events_catcher.py:78 #INFO     [2026-01-17 22:10:53,641] - root - 0| New event: ChatAction
+utils.py:67 #INFO     [2026-01-17 22:10:54,762] - root - 0| Event: Bot Added To Chat
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/bot_added 
+<pre>{
+  "type": "bot_added_to_chat",
+  "chat_id": -5180718767,
+  "chat_info": {
+    "title": "qwkdlqwd",
+    "username": null,
+    "type": "chat",
+    "is_forum": false,
+    "member_count": 2
+  },
+  "owner_info": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "added_by": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "timestamp": "2026-01-17T20:10:55Z"
+}</pre>
+events_catcher.py:99 #INFO     [2026-01-17 22:11:34,385] - root - 0| New event: Raw:MessageActionTopicEdit
+utils.py:67 #INFO     [2026-01-17 22:11:35,179] - root - 0| Event: Topic Edited
+Request | 200 | https://tenerife.chat/chat/webhook/telegram/topicEdited 
+<pre>{
+  "type": "topic_updated",
+  "chat_id": -1003361812699,
+  "topic_id": 10,
+  "title": "asdknewname",
+  "icon_color": 9367192,
+  "sender": {
+    "id": 1643710214,
+    "first_name": "san1rope",
+    "username": "san1rope",
+    "language_code": null
+  },
+  "chat_info": {
+    "title": "tumbaedk",
+    "username": null,
+    "type": "supergroup",
+    "is_forum": true,
+    "member_count": 2
+  },
+  "timestamp": "2026-01-17T20:11:35Z"
+}</pre>
+mtprotosender.py:325 #INFO     [2026-01-17 22:11:44,003] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.171.5:443/TcpFull...
+mtprotosender.py:345 #INFO     [2026-01-17 22:11:44,003] - telethon.network.mtprotosender - 0| Disconnection from 149.154.171.5:443/TcpFull complete!

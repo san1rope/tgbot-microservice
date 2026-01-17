@@ -2,3 +2,5 @@
 .idea/*
 .env
 __pycache__/
+work-app.session
+work-app.session-journal

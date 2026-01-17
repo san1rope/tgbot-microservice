@@ -1,0 +1,18 @@
+mtprotosender.py:234 #INFO     [2026-01-15 14:43:15,025] - telethon.network.mtprotosender - 0| Connecting to 149.154.171.5:443/TcpFull...
+mtprotosender.py:285 #INFO     [2026-01-15 14:43:15,211] - telethon.network.mtprotosender - 0| Connection to 149.154.171.5:443/TcpFull complete!
+utils.py:67 #INFO     [2026-01-15 14:43:16,469] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2026-01-15 14:43:16,470] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2026-01-15 14:43:16,470] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2026-01-15 14:43:16,470] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2026-01-15 14:43:19,181] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2026-01-15 14:43:19,181] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2026-01-15 14:43:19,182] - root - 0| Queue worker has been started!
+utils.py:67 #INFO     [2026-01-15 14:43:19,182] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-15 14:43:19,182] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+group_coordinator.py:594 #INFO     [2026-01-15 14:43:19,199] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:415 #INFO     [2026-01-15 14:43:19,199] - aiokafka.consumer.group_coordinator - 0| Revoking previously assigned partitions set() for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-15 14:43:19,199] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:1360 #INFO     [2026-01-15 14:43:22,251] - aiokafka.consumer.group_coordinator - 0| Joined group 'demo-group' (generation 17) with member_id aiokafka-0.12.0-2a445d55-b82b-4c9f-8df5-ed0b1edc2bc4
+group_coordinator.py:1368 #INFO     [2026-01-15 14:43:22,251] - aiokafka.consumer.group_coordinator - 0| Elected group leader -- performing partition assignments using roundrobin
+group_coordinator.py:1519 #INFO     [2026-01-15 14:43:22,258] - aiokafka.consumer.group_coordinator - 0| Successfully synced group demo-group with generation 17
+group_coordinator.py:506 #INFO     [2026-01-15 14:43:22,258] - aiokafka.consumer.group_coordinator - 0| Setting newly assigned partitions {TopicPartition(topic='messages', partition=0)} for group demo-group

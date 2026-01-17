@@ -108,7 +108,6 @@ class TgTools:
                     short_name = attr_sticker.stickerset.short_name
 
                 else:
-                    print(f"stickerset = {attr_sticker.stickerset}")
                     sticker_set_res = await Config.TG_CLIENT(
                         GetStickerSetRequest(stickerset=attr_sticker.stickerset, hash=0))
                     short_name = getattr(sticker_set_res.set, "short_name", None)
@@ -174,7 +173,7 @@ class TgTools:
             if only_id:
                 return topic_id
 
-            topic_data = await Config.TG_CLIENT(GetForumTopicsByIDRequest(channel=msg_obj.peer_id, topics=[topic_id]))
+            topic_data = await Config.TG_CLIENT(GetForumTopicsByIDRequest(peer=msg_obj.peer_id, topics=[topic_id]))
             if topic_data:
                 title = topic_data.topics[0].title
                 icon_color = topic_data.topics[0].icon_color

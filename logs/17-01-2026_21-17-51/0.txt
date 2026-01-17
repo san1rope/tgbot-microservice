@@ -1,0 +1,32 @@
+mtprotosender.py:234 #INFO     [2026-01-17 21:17:51,662] - telethon.network.mtprotosender - 0| Connecting to 149.154.171.5:443/TcpFull...
+mtprotosender.py:285 #INFO     [2026-01-17 21:17:51,845] - telethon.network.mtprotosender - 0| Connection to 149.154.171.5:443/TcpFull complete!
+utils.py:67 #INFO     [2026-01-17 21:17:53,012] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2026-01-17 21:17:53,012] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2026-01-17 21:17:53,012] - root - 0| Prepare to load data in redis...
+utils.py:67 #INFO     [2026-01-17 21:17:53,012] - root - 0| Loading messages data from small groups...
+utils.py:67 #INFO     [2026-01-17 21:17:53,223] - root - 0| Data from small groups has been loaded!
+utils.py:67 #INFO     [2026-01-17 21:17:53,223] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2026-01-17 21:17:53,224] - root - 0| Queue worker has been started!
+utils.py:67 #INFO     [2026-01-17 21:17:53,224] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-17 21:17:53,224] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+group_coordinator.py:594 #INFO     [2026-01-17 21:17:53,249] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:415 #INFO     [2026-01-17 21:17:53,249] - aiokafka.consumer.group_coordinator - 0| Revoking previously assigned partitions set() for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-17 21:17:53,249] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+base_events.py:1758 #ERROR    [2026-01-17 21:17:54,894] - asyncio - 0| Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Utils.logging_queue() done, defined at C:\Users\valet\PycharmProjects\tgbot-microservice\app\utils.py:109> exception=PeerIdInvalidError('An invalid Peer was used. Make sure to pass the right peer type and that the value is valid (for instance, bots cannot start conversations) (caused by SendMessageRequest)')>
+Traceback (most recent call last):
+  File "C:\Users\valet\PycharmProjects\tgbot-microservice\app\utils.py", line 119, in logging_queue
+    await Config.TG_CLIENT.send_message(
+  File "C:\Users\valet\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\messages.py", line 926, in send_message
+    result = await self(request)
+  File "C:\Users\valet\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "C:\Users\valet\PycharmProjects\tgbot-microservice\.venv\lib\site-packages\telethon\client\users.py", line 92, in _call
+    result = await future
+telethon.errors.rpcerrorlist.PeerIdInvalidError: An invalid Peer was used. Make sure to pass the right peer type and that the value is valid (for instance, bots cannot start conversations) (caused by SendMessageRequest)
+group_coordinator.py:1360 #INFO     [2026-01-17 21:17:56,526] - aiokafka.consumer.group_coordinator - 0| Joined group 'demo-group' (generation 23) with member_id aiokafka-0.12.0-0e342bc9-b9f7-4533-a0de-f284a6fd97d9
+group_coordinator.py:1368 #INFO     [2026-01-17 21:17:56,526] - aiokafka.consumer.group_coordinator - 0| Elected group leader -- performing partition assignments using roundrobin
+group_coordinator.py:1519 #INFO     [2026-01-17 21:17:56,533] - aiokafka.consumer.group_coordinator - 0| Successfully synced group demo-group with generation 23
+group_coordinator.py:506 #INFO     [2026-01-17 21:17:56,533] - aiokafka.consumer.group_coordinator - 0| Setting newly assigned partitions {TopicPartition(topic='messages', partition=0)} for group demo-group
+mtprotosender.py:325 #INFO     [2026-01-17 21:19:25,614] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.171.5:443/TcpFull...
+mtprotosender.py:345 #INFO     [2026-01-17 21:19:25,614] - telethon.network.mtprotosender - 0| Disconnection from 149.154.171.5:443/TcpFull complete!

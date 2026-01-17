@@ -38,8 +38,7 @@ async def main():
     loop = asyncio.get_event_loop()
     loop.create_task(Ut.logging_queue())
 
-    Config.TG_CLIENT = TelegramClient(session="work-app", api_id=Config.TG_API_ID, api_hash=Config.TG_API_HASH,
-                                      device_model="Desktop", system_version="Windows 11", app_version="6.3")
+    Config.TG_CLIENT = TelegramClient(session="work-app", api_id=Config.TG_API_ID, api_hash=Config.TG_API_HASH)
     await Config.TG_CLIENT.start(phone=Config.PHONE_NUMBER)
 
     await Ut.log("Client has been connected!")

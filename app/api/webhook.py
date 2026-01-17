@@ -19,6 +19,7 @@ class FromUser(BaseModel):
     @staticmethod
     async def obj_from_sender(sender):
         obj = None
+        print(f"sender isinstance; sender = {type(sender)}")
         if isinstance(sender, types.User) and (not sender.bot):
             obj = FromUser(
                 id=sender.id,
