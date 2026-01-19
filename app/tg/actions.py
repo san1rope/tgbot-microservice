@@ -1,6 +1,8 @@
 import traceback
 from typing import Union
 
+from telethon.errors import MessageAuthorRequiredError, MessageNotModifiedError, BadRequestError
+from telethon.tl.functions.messages import CreateForumTopicRequest, EditForumTopicRequest, DeleteTopicHistoryRequest
 from telethon.tl.types import PeerChannel, PeerChat, PeerUser
 
 from app.api.kafka import SendMessageRequest, EditMessageRequest, DeleteMessageRequest, MessagePinRequest, \
@@ -48,6 +50,12 @@ class UserActions:
                 parse_mode=payload.parse_mode
             )
             print(f"result edit_message = {result}")
+
+        except MessageAuthorRequiredError:
+            Config.LOGGER.error("Не удалось отредактировать сообщение! Бот не отправитель")
+
+        except MessageNotModifiedError:
+            Config.LOGGER.error("Не удалось отредактировать сообщение! Присланное содержимое не изменилось")
 
         except Exception:
             print(traceback.format_exc())
@@ -147,7 +155,12 @@ class UserActions:
     @staticmethod
     async def create_topic(payload: CreateTopicRequest):
         try:
-            pass
+            result = await Config.TG_CLIENT(CreateForumTopicRequest(
+                peer=await UserActions.get_peer_from_id(payload.chat_id),
+                title=payload.title,
+                icon_color=payload.icon_color
+            ))
+            print(f"result create_topic = {result}")
 
         except Exception:
             print(traceback.format_exc())
@@ -155,7 +168,15 @@ class UserActions:
     @staticmethod
     async def edit_topic(payload: EditTopicRequest):
         try:
-            pass
+            result = await Config.TG_CLIENT(EditForumTopicRequest(
+                peer=await UserActions.get_peer_from_id(payload.chat_id),
+                topic_id=payload.topic_id,
+                title=payload.title
+            ))
+            print(f"result edit_topic = {result}")
+
+        except BadRequestError as ex:
+            Config.LOGGER.error(f"Не удалось отредактировать топик! ex: {ex}")
 
         except Exception:
             print(traceback.format_exc())
@@ -163,7 +184,11 @@ class UserActions:
     @staticmethod
     async def delete_topic(payload: DeleteTopicRequest):
         try:
-            pass
+            result = await Config.TG_CLIENT(DeleteTopicHistoryRequest(
+                peer=await UserActions.get_peer_from_id(payload.chat_id),
+                top_msg_id=payload.topic_id
+            ))
+            print(f"result delete_topic = {result}")
 
         except Exception:
             print(traceback.format_exc())
