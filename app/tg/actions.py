@@ -99,7 +99,14 @@ class UserActions:
     @staticmethod
     async def send_photo(payload: SendPhotoRequest):
         try:
-            pass
+            result = await Config.TG_CLIENT.send_file(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                file=payload.photo,
+                caption=payload.caption,
+                reply_to=payload.topic_id,
+                parse_mode=payload.parse_mode
+            )
+            print(f"result send_photo = {result}")
 
         except Exception:
             print(traceback.format_exc())
@@ -107,7 +114,14 @@ class UserActions:
     @staticmethod
     async def send_video(payload: SendVideoRequest):
         try:
-            pass
+            result = await Config.TG_CLIENT.send_file(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                file=payload.video,
+                caption=payload.caption,
+                reply_to=payload.topic_id,
+                parse_mode=payload.parse_mode
+            )
+            print(f"result send_photo = {result}")
 
         except Exception:
             print(traceback.format_exc())
@@ -115,7 +129,14 @@ class UserActions:
     @staticmethod
     async def send_audio(payload: SendAudioRequest):
         try:
-            pass
+            result = await Config.TG_CLIENT.send_file(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                file=payload.audio,
+                caption=payload.caption,
+                reply_to=payload.topic_id,
+                parse_mode=payload.parse_mode
+            )
+            print(f"result send_photo = {result}")
 
         except Exception:
             print(traceback.format_exc())
@@ -123,7 +144,14 @@ class UserActions:
     @staticmethod
     async def send_document(payload: SendDocumentRequest):
         try:
-            pass
+            result = await Config.TG_CLIENT.send_file(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                file=payload.document,
+                caption=payload.caption,
+                reply_to=payload.topic_id,
+                parse_mode=payload.parse_mode
+            )
+            print(f"result send_photo = {result}")
 
         except Exception:
             print(traceback.format_exc())
