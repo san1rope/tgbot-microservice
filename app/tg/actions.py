@@ -1,10 +1,12 @@
+import traceback
 from typing import Union
 
-from telethon.tl.types import PeerChannel, PeerChat, PeerUser, Config
+from telethon.tl.types import PeerChannel, PeerChat, PeerUser
 
 from app.api.kafka import SendMessageRequest, EditMessageRequest, DeleteMessageRequest, MessagePinRequest, \
     MessageUnpinRequest, SendPhotoRequest, SendAudioRequest, SendVideoRequest, SendDocumentRequest, SendStickerRequest, \
     SendVoiceRequest, SendGIFRequest, CreateTopicRequest, EditTopicRequest, DeleteTopicRequest
+from app.config import Config
 
 
 class UserActions:
@@ -29,64 +31,139 @@ class UserActions:
                 message=payload.text,
                 parse_mode=payload.parse_mode,
                 silent=payload.disable_notification,
-
+                reply_to=payload.topic_id if payload.topic_id else payload.reply_to_message_id
             )
+            print(f"result send_message = {result}")
 
         except Exception:
-            pass
+            print(traceback.format_exc())
 
     @staticmethod
     async def edit_message(payload: EditMessageRequest):
-        pass
+        try:
+            result = await Config.TG_CLIENT.edit_message(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                message=payload.message_id,
+                text=payload.text,
+                parse_mode=payload.parse_mode
+            )
+            print(f"result edit_message = {result}")
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def delete_message(payload: DeleteMessageRequest):
-        pass
+        try:
+            result = await Config.TG_CLIENT.delete_messages(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                message_ids=payload.message_id
+            )
+            print(f"result delete_message = {result}")
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def message_pin(payload: MessagePinRequest):
-        pass
+        try:
+            result = await Config.TG_CLIENT.pin_message(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                message=payload.message_id
+            )
+            print(f"result message_pin = {result}")
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def message_unpin(payload: MessageUnpinRequest):
-        pass
+        try:
+            result = await Config.TG_CLIENT.unpin_message(
+                entity=await UserActions.get_peer_from_id(payload.chat_id),
+                message=payload.message_id
+            )
+            print(f"result message_unpin = {result}")
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def send_photo(payload: SendPhotoRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def send_video(payload: SendVideoRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def send_audio(payload: SendAudioRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def send_document(payload: SendDocumentRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def send_sticker(payload: SendStickerRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def send_voice(payload: SendVoiceRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def send_gif(payload: SendGIFRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def create_topic(payload: CreateTopicRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def edit_topic(payload: EditTopicRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())
 
     @staticmethod
     async def delete_topic(payload: DeleteTopicRequest):
-        pass
+        try:
+            pass
+
+        except Exception:
+            print(traceback.format_exc())

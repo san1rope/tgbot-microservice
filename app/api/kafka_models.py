@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -61,10 +63,10 @@ class SendMessageRequest(BaseModel):
     request_id: str
     chat_id: int
     text: str
-    topic_id: int
+    topic_id: Optional[int] = None
     parse_mode: str
     disable_notification: bool
-    reply_to_message_id: int
+    reply_to_message_id: Optional[int] = None
 
 
 class EditMessageRequest(BaseModel):
@@ -98,7 +100,7 @@ class SendPhotoRequest(BaseModel):
     chat_id: int
     photo: str
     caption: str
-    topic_id: int
+    topic_id: Optional[int] = None
     parse_mode: str
 
 
@@ -107,7 +109,7 @@ class SendVideoRequest(BaseModel):
     chat_id: int
     video: str
     caption: str
-    topic_id: int
+    topic_id: Optional[int] = None
     parse_mode: str
 
 
@@ -116,7 +118,7 @@ class SendAudioRequest(BaseModel):
     chat_id: int
     audio: str
     caption: str
-    topic_id: int
+    topic_id: Optional[int] = None
     parse_mode: str
 
 
@@ -125,7 +127,7 @@ class SendDocumentRequest(BaseModel):
     chat_id: int
     document: str
     caption: str
-    topic_id: int
+    topic_id: Optional[int] = None
     parse_mode: str
 
 
@@ -141,7 +143,7 @@ class SendVoiceRequest(BaseModel):
     chat_id: int
     voice: str
     caption: str
-    topic_id: int
+    topic_id: Optional[int] = None
 
 
 class SendGIFRequest(BaseModel):
@@ -149,7 +151,7 @@ class SendGIFRequest(BaseModel):
     chat_id: int
     gif: str
     caption: str
-    topic_id: int
+    topic_id: Optional[int] = None
     parse_mode: str
 
 

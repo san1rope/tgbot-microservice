@@ -16,7 +16,8 @@ class KafkaInterface:
         if not rt:
             return None
 
-        rt.pop("request_type")
+        print(f"rt = {rt}")
+        payload.pop("request_type")
         if rt == "send_message":
             return UserActions.send_message(SendMessageRequest(**payload))
 
