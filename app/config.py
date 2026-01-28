@@ -6,6 +6,7 @@ from asyncio import Queue
 
 from aiohttp import ClientSession
 from dotenv import load_dotenv
+from fastapi import FastAPI
 from redis.asyncio import Redis
 from telethon import TelegramClient
 from pytz import timezone
@@ -43,6 +44,10 @@ class Config:
 
     EVENT_WORKERS_COUNT: int = int(os.getenv("EVENT_WORKERS_COUNT").strip())
     CMD_WORKERS_COUNT: int = int(os.getenv("CMD_WORKERS_COUNT").strip())
+
+    REST_APP: Optional[FastAPI] = None
+    UVICORN_HOST: str = os.getenv("UVICORN_HOST").strip()
+    UVICORN_PORT: int = int(os.getenv("UVICORN_PORT").strip())
 
     DATABASE_CLEANUP = bool(int(os.getenv("DATABASE_CLEANUP")))
     DB_USER = os.getenv("DB_USER")

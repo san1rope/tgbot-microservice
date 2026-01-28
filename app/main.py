@@ -1,7 +1,10 @@
 import asyncio
+from contextlib import asynccontextmanager
 from datetime import datetime
 
+import uvicorn
 from aiohttp import ClientSession
+from fastapi import FastAPI
 from redis.asyncio import Redis
 from telethon import events, TelegramClient
 
@@ -26,7 +29,8 @@ async def worker():
                 print(ex)
 
 
-async def main():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     datetime_of_start = datetime.now().strftime(Config.DATETIME_FORMAT)
     process_id = 0
 
@@ -61,8 +65,12 @@ async def main():
     Config.TG_CLIENT.add_event_handler(EventsCatcher.event_raw, events.Raw())
     await Ut.log("Event handlers has been registered!")
 
-    await Config.TG_CLIENT.run_until_disconnected()
+    yield
+
+    await Config.TG_CLIENT.disconnect()
+    await Config.AIOHTTP_SESSION.close()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    Config.REST_APP = FastAPI(lifespan=lifespan)
+    uvicorn.run(Config.REST_APP, host=Config.UVICORN_HOST, port=Config.UVICORN_PORT)
