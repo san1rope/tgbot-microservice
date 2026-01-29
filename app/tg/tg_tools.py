@@ -3,8 +3,8 @@ from typing import List
 
 from telethon.tl import types
 from telethon.errors import ChatAdminRequiredError
-from telethon.tl.functions.channels import GetAdminLogRequest
-from telethon.tl.functions.messages import GetStickerSetRequest, GetForumTopicsByIDRequest
+from telethon.tl.functions.channels import GetAdminLogRequest, GetForumTopicsByIDRequest
+from telethon.tl.functions.messages import GetStickerSetRequest
 
 from app.api.webhook import FromUser, MediaPhoto, MediaSticker, MediaAudio, MediaVideoGIF, MediaDocument
 from app.config import Config

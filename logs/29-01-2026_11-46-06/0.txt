@@ -1,0 +1,43 @@
+mtprotosender.py:228 #INFO     [2026-01-29 11:46:06,069] - telethon.network.mtprotosender - 0| Connecting to 149.154.171.5:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 11:46:06,311] - telethon.network.mtprotosender - 0| Connection to 149.154.171.5:443/TcpFull complete!
+utils.py:63 #INFO     [2026-01-29 11:46:07,665] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2026-01-29 11:46:07,665] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2026-01-29 11:46:07,665] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2026-01-29 11:46:07,665] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2026-01-29 11:46:10,169] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2026-01-29 11:46:10,171] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2026-01-29 11:46:10,172] - root - 0| Queue worker has been started!
+utils.py:63 #INFO     [2026-01-29 11:46:10,172] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-29 11:46:10,172] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+group_coordinator.py:594 #INFO     [2026-01-29 11:46:10,200] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:415 #INFO     [2026-01-29 11:46:10,200] - aiokafka.consumer.group_coordinator - 0| Revoking previously assigned partitions set() for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-29 11:46:10,200] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:1360 #INFO     [2026-01-29 11:46:12,975] - aiokafka.consumer.group_coordinator - 0| Joined group 'demo-group' (generation 30) with member_id aiokafka-0.12.0-8b391252-4f4d-49e3-8f95-0e33bea92230
+group_coordinator.py:1368 #INFO     [2026-01-29 11:46:12,975] - aiokafka.consumer.group_coordinator - 0| Elected group leader -- performing partition assignments using roundrobin
+group_coordinator.py:1519 #INFO     [2026-01-29 11:46:12,986] - aiokafka.consumer.group_coordinator - 0| Successfully synced group demo-group with generation 30
+group_coordinator.py:506 #INFO     [2026-01-29 11:46:12,987] - aiokafka.consumer.group_coordinator - 0| Setting newly assigned partitions {TopicPartition(topic='messages', partition=0)} for group demo-group
+downloads.py:758 #INFO     [2026-01-29 11:46:20,745] - telethon.client.downloads - 0| Starting indirect file download in chunks of 524288 at 0, stride 1048576
+mtprotosender.py:228 #INFO     [2026-01-29 11:46:20,980] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.41:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 11:46:22,765] - telethon.network.mtprotosender - 0| Connection to 149.154.167.41:443/TcpFull complete!
+telegrambaseclient.py:842 #INFO     [2026-01-29 11:46:22,765] - telethon.client.telegrambaseclient - 0| Exporting auth for new borrowed sender in DcOption(id=2, ip_address='149.154.167.41', port=443, ipv6=False, media_only=False, tcpo_only=False, cdn=False, static=False, this_port_only=False, secret=None)
+downloads.py:758 #INFO     [2026-01-29 11:46:35,563] - telethon.client.downloads - 0| Starting indirect file download in chunks of 524288 at 0, stride 1048576
+downloads.py:758 #INFO     [2026-01-29 11:47:09,550] - telethon.client.downloads - 0| Starting indirect file download in chunks of 524288 at 0, stride 1048576
+downloads.py:758 #INFO     [2026-01-29 11:47:26,426] - telethon.client.downloads - 0| Starting indirect file download in chunks of 524288 at 0, stride 1048576
+downloads.py:758 #INFO     [2026-01-29 11:47:32,138] - telethon.client.downloads - 0| Starting indirect file download in chunks of 524288 at 163840, stride 1048576
+base_events.py:1758 #ERROR    [2026-01-29 11:47:37,534] - asyncio - 0| Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Valentyn\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+connection.py:345 #WARNING  [2026-01-29 12:04:46,809] - telethon.network.connection.connection - 0| Server closed the connection: 0 bytes read on a total of 8 expected bytes
+mtprotosender.py:511 #INFO     [2026-01-29 12:04:46,810] - telethon.network.mtprotosender - 0| Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+mtprotosender.py:352 #INFO     [2026-01-29 12:04:46,810] - telethon.network.mtprotosender - 0| Closing current connection to begin reconnect...
+mtprotosender.py:228 #INFO     [2026-01-29 12:04:46,810] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.41:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 12:04:46,852] - telethon.network.mtprotosender - 0| Connection to 149.154.167.41:443/TcpFull complete!
+mtprotosender.py:319 #INFO     [2026-01-29 12:12:58,142] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.171.5:443/TcpFull...
+mtprotosender.py:339 #INFO     [2026-01-29 12:12:58,142] - telethon.network.mtprotosender - 0| Disconnection from 149.154.171.5:443/TcpFull complete!
+mtprotosender.py:319 #INFO     [2026-01-29 12:12:58,143] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.41:443/TcpFull...
+mtprotosender.py:339 #INFO     [2026-01-29 12:12:58,143] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.41:443/TcpFull complete!

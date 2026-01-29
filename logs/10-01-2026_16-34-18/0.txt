@@ -1,0 +1,9 @@
+utils.py:67 #INFO     [2026-01-10 16:34:18,150] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2026-01-10 16:34:18,150] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2026-01-10 16:34:18,151] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2026-01-10 16:34:18,151] - root - 0| Queue worker has been started!
+utils.py:67 #INFO     [2026-01-10 16:34:18,151] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-10 16:34:18,151] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+mtprotosender.py:316 #INFO     [2026-01-10 16:34:18,152] - telethon.network.mtprotosender - 0| Not disconnecting (already have no connection)
+base_events.py:1758 #ERROR    [2026-01-10 16:34:18,160] - asyncio - 0| Unclosed AIOKafkaConsumer
+consumer: <aiokafka.consumer.consumer.AIOKafkaConsumer object at 0x00000194E4EE1240>

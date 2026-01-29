@@ -1,0 +1,29 @@
+mtprotosender.py:228 #INFO     [2026-01-29 12:42:13,164] - telethon.network.mtprotosender - 0| Connecting to 149.154.171.5:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 12:42:13,347] - telethon.network.mtprotosender - 0| Connection to 149.154.171.5:443/TcpFull complete!
+utils.py:63 #INFO     [2026-01-29 12:42:14,686] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2026-01-29 12:42:14,688] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2026-01-29 12:42:14,688] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2026-01-29 12:42:14,689] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2026-01-29 12:42:17,181] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2026-01-29 12:42:17,183] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2026-01-29 12:42:17,183] - root - 0| Queue worker has been started!
+utils.py:63 #INFO     [2026-01-29 12:42:17,183] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-29 12:42:17,184] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+group_coordinator.py:594 #INFO     [2026-01-29 12:42:17,235] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:415 #INFO     [2026-01-29 12:42:17,235] - aiokafka.consumer.group_coordinator - 0| Revoking previously assigned partitions set() for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-29 12:42:17,236] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+downloads.py:754 #INFO     [2026-01-29 12:42:18,830] - telethon.client.downloads - 0| Starting direct file download in chunks of 524288 at 0, stride 524288
+mtprotosender.py:228 #INFO     [2026-01-29 12:42:19,053] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.41:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 12:42:20,465] - telethon.network.mtprotosender - 0| Connection to 149.154.167.41:443/TcpFull complete!
+telegrambaseclient.py:842 #INFO     [2026-01-29 12:42:20,475] - telethon.client.telegrambaseclient - 0| Exporting auth for new borrowed sender in DcOption(id=2, ip_address='149.154.167.41', port=443, ipv6=False, media_only=False, tcpo_only=False, cdn=False, static=False, this_port_only=False, secret=None)
+group_coordinator.py:1360 #INFO     [2026-01-29 12:42:20,610] - aiokafka.consumer.group_coordinator - 0| Joined group 'demo-group' (generation 36) with member_id aiokafka-0.12.0-ee37e6ba-99fe-467e-aa3c-b349b793a924
+group_coordinator.py:1368 #INFO     [2026-01-29 12:42:20,610] - aiokafka.consumer.group_coordinator - 0| Elected group leader -- performing partition assignments using roundrobin
+group_coordinator.py:1519 #INFO     [2026-01-29 12:42:20,610] - aiokafka.consumer.group_coordinator - 0| Successfully synced group demo-group with generation 36
+group_coordinator.py:506 #INFO     [2026-01-29 12:42:20,610] - aiokafka.consumer.group_coordinator - 0| Setting newly assigned partitions {TopicPartition(topic='messages', partition=0)} for group demo-group
+downloads.py:754 #INFO     [2026-01-29 12:42:23,676] - telethon.client.downloads - 0| Starting direct file download in chunks of 524288 at 0, stride 524288
+downloads.py:758 #INFO     [2026-01-29 12:42:24,183] - telethon.client.downloads - 0| Starting indirect file download in chunks of 524288 at 65536, stride 524288
+connection.py:345 #WARNING  [2026-01-29 13:01:24,141] - telethon.network.connection.connection - 0| Server closed the connection: 0 bytes read on a total of 8 expected bytes
+mtprotosender.py:511 #INFO     [2026-01-29 13:01:24,142] - telethon.network.mtprotosender - 0| Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+mtprotosender.py:352 #INFO     [2026-01-29 13:01:24,142] - telethon.network.mtprotosender - 0| Closing current connection to begin reconnect...
+mtprotosender.py:228 #INFO     [2026-01-29 13:01:24,142] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.41:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 13:01:24,180] - telethon.network.mtprotosender - 0| Connection to 149.154.167.41:443/TcpFull complete!

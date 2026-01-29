@@ -1,0 +1,27 @@
+mtprotosender.py:228 #INFO     [2026-01-29 12:36:50,857] - telethon.network.mtprotosender - 0| Connecting to 149.154.171.5:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 12:36:51,039] - telethon.network.mtprotosender - 0| Connection to 149.154.171.5:443/TcpFull complete!
+utils.py:63 #INFO     [2026-01-29 12:36:52,386] - root - 0| Client has been connected!
+utils.py:63 #INFO     [2026-01-29 12:36:52,387] - root - 0| Redis has been initialized!
+utils.py:63 #INFO     [2026-01-29 12:36:52,387] - root - 0| Prepare to load data in redis...
+utils.py:63 #INFO     [2026-01-29 12:36:52,387] - root - 0| Loading messages data from small groups...
+utils.py:63 #INFO     [2026-01-29 12:36:54,883] - root - 0| Data from small groups has been loaded!
+utils.py:63 #INFO     [2026-01-29 12:36:54,884] - root - 0| Event handlers has been registered!
+utils.py:63 #INFO     [2026-01-29 12:36:54,884] - root - 0| Queue worker has been started!
+utils.py:63 #INFO     [2026-01-29 12:36:54,884] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-29 12:36:54,885] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+group_coordinator.py:594 #INFO     [2026-01-29 12:36:54,916] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:415 #INFO     [2026-01-29 12:36:54,917] - aiokafka.consumer.group_coordinator - 0| Revoking previously assigned partitions set() for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-29 12:36:54,917] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:1360 #INFO     [2026-01-29 12:36:55,289] - aiokafka.consumer.group_coordinator - 0| Joined group 'demo-group' (generation 33) with member_id aiokafka-0.12.0-d33b377e-d753-4efb-b8a1-01fe81f7b29c
+group_coordinator.py:1368 #INFO     [2026-01-29 12:36:55,289] - aiokafka.consumer.group_coordinator - 0| Elected group leader -- performing partition assignments using roundrobin
+group_coordinator.py:1519 #INFO     [2026-01-29 12:36:55,298] - aiokafka.consumer.group_coordinator - 0| Successfully synced group demo-group with generation 33
+group_coordinator.py:506 #INFO     [2026-01-29 12:36:55,298] - aiokafka.consumer.group_coordinator - 0| Setting newly assigned partitions {TopicPartition(topic='messages', partition=0)} for group demo-group
+downloads.py:754 #INFO     [2026-01-29 12:36:57,048] - telethon.client.downloads - 0| Starting direct file download in chunks of 524288 at 0, stride 524288
+mtprotosender.py:228 #INFO     [2026-01-29 12:36:57,248] - telethon.network.mtprotosender - 0| Connecting to 149.154.167.41:443/TcpFull...
+mtprotosender.py:279 #INFO     [2026-01-29 12:36:58,648] - telethon.network.mtprotosender - 0| Connection to 149.154.167.41:443/TcpFull complete!
+telegrambaseclient.py:842 #INFO     [2026-01-29 12:36:58,648] - telethon.client.telegrambaseclient - 0| Exporting auth for new borrowed sender in DcOption(id=2, ip_address='149.154.167.41', port=443, ipv6=False, media_only=False, tcpo_only=False, cdn=False, static=False, this_port_only=False, secret=None)
+downloads.py:754 #INFO     [2026-01-29 12:37:02,447] - telethon.client.downloads - 0| Starting direct file download in chunks of 524288 at 0, stride 524288
+mtprotosender.py:319 #INFO     [2026-01-29 12:39:27,033] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.171.5:443/TcpFull...
+mtprotosender.py:339 #INFO     [2026-01-29 12:39:27,034] - telethon.network.mtprotosender - 0| Disconnection from 149.154.171.5:443/TcpFull complete!
+mtprotosender.py:319 #INFO     [2026-01-29 12:39:27,034] - telethon.network.mtprotosender - 0| Disconnecting from 149.154.167.41:443/TcpFull...
+mtprotosender.py:339 #INFO     [2026-01-29 12:39:27,035] - telethon.network.mtprotosender - 0| Disconnection from 149.154.167.41:443/TcpFull complete!

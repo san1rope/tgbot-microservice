@@ -1,0 +1,37 @@
+utils.py:67 #INFO     [2026-01-12 18:40:17,104] - root - 0| Client has been connected!
+utils.py:67 #INFO     [2026-01-12 18:40:17,105] - root - 0| Redis has been initialized!
+utils.py:67 #INFO     [2026-01-12 18:40:17,105] - root - 0| Event handlers has been registered!
+utils.py:67 #INFO     [2026-01-12 18:40:17,106] - root - 0| Queue worker has been started!
+utils.py:67 #INFO     [2026-01-12 18:40:17,106] - root - 0| Kafka listener has been started!
+subscription_state.py:110 #INFO     [2026-01-12 18:40:17,106] - aiokafka.consumer.subscription_state - 0| Updating subscribed topics to: frozenset({'messages'})
+cluster.py:283 #ERROR    [2026-01-12 18:40:17,209] - aiokafka.cluster - 0| Topic messages not found in cluster metadata
+group_coordinator.py:575 #ERROR    [2026-01-12 18:40:17,332] - aiokafka.consumer.group_coordinator - 0| Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:17,482] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:415 #INFO     [2026-01-12 18:40:17,483] - aiokafka.consumer.group_coordinator - 0| Revoking previously assigned partitions set() for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:17,483] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:531 #WARNING  [2026-01-12 18:40:17,505] - aiokafka.consumer.group_coordinator - 0| Marking the coordinator dead (node 1)for group demo-group.
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:17,611] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:17,612] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:531 #WARNING  [2026-01-12 18:40:17,616] - aiokafka.consumer.group_coordinator - 0| Marking the coordinator dead (node 1)for group demo-group.
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:17,734] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:17,734] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:531 #WARNING  [2026-01-12 18:40:17,737] - aiokafka.consumer.group_coordinator - 0| Marking the coordinator dead (node 1)for group demo-group.
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:17,850] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:17,850] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:531 #WARNING  [2026-01-12 18:40:17,852] - aiokafka.consumer.group_coordinator - 0| Marking the coordinator dead (node 1)for group demo-group.
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:17,965] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:17,965] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:531 #WARNING  [2026-01-12 18:40:17,969] - aiokafka.consumer.group_coordinator - 0| Marking the coordinator dead (node 1)for group demo-group.
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:18,076] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:18,076] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:531 #WARNING  [2026-01-12 18:40:18,080] - aiokafka.consumer.group_coordinator - 0| Marking the coordinator dead (node 1)for group demo-group.
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:18,184] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:18,184] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:531 #WARNING  [2026-01-12 18:40:18,187] - aiokafka.consumer.group_coordinator - 0| Marking the coordinator dead (node 1)for group demo-group.
+group_coordinator.py:594 #INFO     [2026-01-12 18:40:18,305] - aiokafka.consumer.group_coordinator - 0| Discovered coordinator 1 for group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:18,305] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:1281 #INFO     [2026-01-12 18:40:18,533] - aiokafka.consumer.group_coordinator - 0| (Re-)joining group demo-group
+group_coordinator.py:1360 #INFO     [2026-01-12 18:40:21,360] - aiokafka.consumer.group_coordinator - 0| Joined group 'demo-group' (generation 1) with member_id aiokafka-0.12.0-8cde20c7-99be-4804-ba56-4bc400e58671
+group_coordinator.py:1368 #INFO     [2026-01-12 18:40:21,360] - aiokafka.consumer.group_coordinator - 0| Elected group leader -- performing partition assignments using roundrobin
+group_coordinator.py:1519 #INFO     [2026-01-12 18:40:21,374] - aiokafka.consumer.group_coordinator - 0| Successfully synced group demo-group with generation 1
+group_coordinator.py:506 #INFO     [2026-01-12 18:40:21,375] - aiokafka.consumer.group_coordinator - 0| Setting newly assigned partitions {TopicPartition(topic='messages', partition=0)} for group demo-group

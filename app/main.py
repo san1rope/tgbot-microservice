@@ -73,4 +73,6 @@ async def lifespan(app: FastAPI):
 
 if __name__ == "__main__":
     Config.REST_APP = FastAPI(lifespan=lifespan)
+    from app.api import endpoints
+
     uvicorn.run(Config.REST_APP, host=Config.UVICORN_HOST, port=Config.UVICORN_PORT)
