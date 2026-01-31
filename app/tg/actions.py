@@ -2,7 +2,7 @@ import traceback
 from typing import Union
 
 from telethon.errors import MessageAuthorRequiredError, MessageNotModifiedError, BadRequestError
-from telethon.tl.functions.channels import CreateForumTopicRequest, EditForumTopicRequest, DeleteTopicHistoryRequest
+from telethon.tl.functions.messages import CreateForumTopicRequest, EditForumTopicRequest, DeleteTopicHistoryRequest
 from telethon.tl.types import PeerChannel, PeerChat, PeerUser
 
 from app.api.kafka import SendMessageRequest, EditMessageRequest, DeleteMessageRequest, MessagePinRequest, \
@@ -184,7 +184,7 @@ class UserActions:
     async def create_topic(payload: CreateTopicRequest):
         try:
             result = await Config.TG_CLIENT(CreateForumTopicRequest(
-                channel=await UserActions.get_peer_from_id(payload.chat_id),
+                peer=await UserActions.get_peer_from_id(payload.chat_id),
                 title=payload.title,
                 icon_color=payload.icon_color
             ))
@@ -197,7 +197,7 @@ class UserActions:
     async def edit_topic(payload: EditTopicRequest):
         try:
             result = await Config.TG_CLIENT(EditForumTopicRequest(
-                channel=await UserActions.get_peer_from_id(payload.chat_id),
+                peer=await UserActions.get_peer_from_id(payload.chat_id),
                 topic_id=payload.topic_id,
                 title=payload.title
             ))
@@ -213,7 +213,7 @@ class UserActions:
     async def delete_topic(payload: DeleteTopicRequest):
         try:
             result = await Config.TG_CLIENT(DeleteTopicHistoryRequest(
-                channel=await UserActions.get_peer_from_id(payload.chat_id),
+                peer=await UserActions.get_peer_from_id(payload.chat_id),
                 top_msg_id=payload.topic_id
             ))
             print(f"result delete_topic = {result}")
